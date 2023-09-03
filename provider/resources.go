@@ -146,7 +146,8 @@ func Provider() tfbridge.ProviderInfo {
 
 	// These are new API's that you may opt to use to automatically compute resource tokens,
 	// and apply auto aliasing for full backwards compatibility.
-	// For more information, please reference: https://pkg.go.dev/github.com/pulumi/pulumi-terraform-bridge/v3/pkg/tfbridge#ProviderInfo.ComputeTokens
+	// For more information, please reference:
+	// https://pkg.go.dev/github.com/pulumi/pulumi-terraform-bridge/v3/pkg/tfbridge#ProviderInfo.ComputeTokens
 	prov.MustComputeTokens(tokens.SingleModule("tencentcloud_", mainMod,
 		tokens.MakeStandard(mainPkg)))
 	// prov.MustApplyAutoAliasing()
