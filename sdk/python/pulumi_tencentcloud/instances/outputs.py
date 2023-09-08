@@ -11,21 +11,21 @@ from .. import _utilities
 from . import outputs
 
 __all__ = [
-    'GetInstancesInstanceListResult',
-    'GetInstancesInstanceListDataDiskResult',
+    'GetInstanceInstanceListResult',
+    'GetInstanceInstanceListDataDiskResult',
     'GetSetInstanceListResult',
     'GetSetInstanceListDataDiskResult',
 ]
 
 @pulumi.output_type
-class GetInstancesInstanceListResult(dict):
+class GetInstanceInstanceListResult(dict):
     def __init__(__self__, *,
                  allocate_public_ip: bool,
                  availability_zone: str,
                  cam_role_name: str,
                  cpu: int,
                  create_time: str,
-                 data_disks: Sequence['outputs.GetInstancesInstanceListDataDiskResult'],
+                 data_disks: Sequence['outputs.GetInstanceInstanceListDataDiskResult'],
                  expired_time: str,
                  image_id: str,
                  instance_charge_type: str,
@@ -102,7 +102,7 @@ class GetInstancesInstanceListResult(dict):
 
     @property
     @pulumi.getter(name="dataDisks")
-    def data_disks(self) -> Sequence['outputs.GetInstancesInstanceListDataDiskResult']:
+    def data_disks(self) -> Sequence['outputs.GetInstanceInstanceListDataDiskResult']:
         return pulumi.get(self, "data_disks")
 
     @property
@@ -212,7 +212,7 @@ class GetInstancesInstanceListResult(dict):
 
 
 @pulumi.output_type
-class GetInstancesInstanceListDataDiskResult(dict):
+class GetInstanceInstanceListDataDiskResult(dict):
     def __init__(__self__, *,
                  data_disk_id: str,
                  data_disk_size: int,

@@ -34,7 +34,7 @@ func GetConflictFieldOfCsharpModule(key string, fields map[string]*schema.Schema
 func ResolveModuleEntity(key string) (module, entity string) {
 	seps := strings.Split(key, "_")[1:] // tencentcloud_foo_bar -> ["foo", "bar"]
 	if len(seps) <= 1 {
-		return seps[0], seps[0]
+		return seps[0], "instance"
 	}
 
 	if prefix := "tencentcloud_api_gateway"; strings.HasPrefix(key, prefix) {

@@ -13,366 +13,366 @@ import (
 
 var _ = internal.GetEnvOrDefault
 
-type GetInstancesInstanceList struct {
-	AllocatePublicIp                   bool                               `pulumi:"allocatePublicIp"`
-	AvailabilityZone                   string                             `pulumi:"availabilityZone"`
-	CamRoleName                        string                             `pulumi:"camRoleName"`
-	Cpu                                int                                `pulumi:"cpu"`
-	CreateTime                         string                             `pulumi:"createTime"`
-	DataDisks                          []GetInstancesInstanceListDataDisk `pulumi:"dataDisks"`
-	ExpiredTime                        string                             `pulumi:"expiredTime"`
-	ImageId                            string                             `pulumi:"imageId"`
-	InstanceChargeType                 string                             `pulumi:"instanceChargeType"`
-	InstanceChargeTypePrepaidRenewFlag string                             `pulumi:"instanceChargeTypePrepaidRenewFlag"`
-	InstanceId                         string                             `pulumi:"instanceId"`
-	InstanceName                       string                             `pulumi:"instanceName"`
-	InstanceType                       string                             `pulumi:"instanceType"`
-	InternetChargeType                 string                             `pulumi:"internetChargeType"`
-	InternetMaxBandwidthOut            int                                `pulumi:"internetMaxBandwidthOut"`
-	Memory                             int                                `pulumi:"memory"`
-	PrivateIp                          string                             `pulumi:"privateIp"`
-	ProjectId                          int                                `pulumi:"projectId"`
-	PublicIp                           string                             `pulumi:"publicIp"`
-	SecurityGroups                     []string                           `pulumi:"securityGroups"`
-	Status                             string                             `pulumi:"status"`
-	SubnetId                           string                             `pulumi:"subnetId"`
-	SystemDiskId                       string                             `pulumi:"systemDiskId"`
-	SystemDiskSize                     int                                `pulumi:"systemDiskSize"`
-	SystemDiskType                     string                             `pulumi:"systemDiskType"`
-	Tags                               map[string]interface{}             `pulumi:"tags"`
-	VpcId                              string                             `pulumi:"vpcId"`
+type GetInstanceInstanceList struct {
+	AllocatePublicIp                   bool                              `pulumi:"allocatePublicIp"`
+	AvailabilityZone                   string                            `pulumi:"availabilityZone"`
+	CamRoleName                        string                            `pulumi:"camRoleName"`
+	Cpu                                int                               `pulumi:"cpu"`
+	CreateTime                         string                            `pulumi:"createTime"`
+	DataDisks                          []GetInstanceInstanceListDataDisk `pulumi:"dataDisks"`
+	ExpiredTime                        string                            `pulumi:"expiredTime"`
+	ImageId                            string                            `pulumi:"imageId"`
+	InstanceChargeType                 string                            `pulumi:"instanceChargeType"`
+	InstanceChargeTypePrepaidRenewFlag string                            `pulumi:"instanceChargeTypePrepaidRenewFlag"`
+	InstanceId                         string                            `pulumi:"instanceId"`
+	InstanceName                       string                            `pulumi:"instanceName"`
+	InstanceType                       string                            `pulumi:"instanceType"`
+	InternetChargeType                 string                            `pulumi:"internetChargeType"`
+	InternetMaxBandwidthOut            int                               `pulumi:"internetMaxBandwidthOut"`
+	Memory                             int                               `pulumi:"memory"`
+	PrivateIp                          string                            `pulumi:"privateIp"`
+	ProjectId                          int                               `pulumi:"projectId"`
+	PublicIp                           string                            `pulumi:"publicIp"`
+	SecurityGroups                     []string                          `pulumi:"securityGroups"`
+	Status                             string                            `pulumi:"status"`
+	SubnetId                           string                            `pulumi:"subnetId"`
+	SystemDiskId                       string                            `pulumi:"systemDiskId"`
+	SystemDiskSize                     int                               `pulumi:"systemDiskSize"`
+	SystemDiskType                     string                            `pulumi:"systemDiskType"`
+	Tags                               map[string]interface{}            `pulumi:"tags"`
+	VpcId                              string                            `pulumi:"vpcId"`
 }
 
-// GetInstancesInstanceListInput is an input type that accepts GetInstancesInstanceListArgs and GetInstancesInstanceListOutput values.
-// You can construct a concrete instance of `GetInstancesInstanceListInput` via:
+// GetInstanceInstanceListInput is an input type that accepts GetInstanceInstanceListArgs and GetInstanceInstanceListOutput values.
+// You can construct a concrete instance of `GetInstanceInstanceListInput` via:
 //
-//	GetInstancesInstanceListArgs{...}
-type GetInstancesInstanceListInput interface {
+//	GetInstanceInstanceListArgs{...}
+type GetInstanceInstanceListInput interface {
 	pulumi.Input
 
-	ToGetInstancesInstanceListOutput() GetInstancesInstanceListOutput
-	ToGetInstancesInstanceListOutputWithContext(context.Context) GetInstancesInstanceListOutput
+	ToGetInstanceInstanceListOutput() GetInstanceInstanceListOutput
+	ToGetInstanceInstanceListOutputWithContext(context.Context) GetInstanceInstanceListOutput
 }
 
-type GetInstancesInstanceListArgs struct {
-	AllocatePublicIp                   pulumi.BoolInput                           `pulumi:"allocatePublicIp"`
-	AvailabilityZone                   pulumi.StringInput                         `pulumi:"availabilityZone"`
-	CamRoleName                        pulumi.StringInput                         `pulumi:"camRoleName"`
-	Cpu                                pulumi.IntInput                            `pulumi:"cpu"`
-	CreateTime                         pulumi.StringInput                         `pulumi:"createTime"`
-	DataDisks                          GetInstancesInstanceListDataDiskArrayInput `pulumi:"dataDisks"`
-	ExpiredTime                        pulumi.StringInput                         `pulumi:"expiredTime"`
-	ImageId                            pulumi.StringInput                         `pulumi:"imageId"`
-	InstanceChargeType                 pulumi.StringInput                         `pulumi:"instanceChargeType"`
-	InstanceChargeTypePrepaidRenewFlag pulumi.StringInput                         `pulumi:"instanceChargeTypePrepaidRenewFlag"`
-	InstanceId                         pulumi.StringInput                         `pulumi:"instanceId"`
-	InstanceName                       pulumi.StringInput                         `pulumi:"instanceName"`
-	InstanceType                       pulumi.StringInput                         `pulumi:"instanceType"`
-	InternetChargeType                 pulumi.StringInput                         `pulumi:"internetChargeType"`
-	InternetMaxBandwidthOut            pulumi.IntInput                            `pulumi:"internetMaxBandwidthOut"`
-	Memory                             pulumi.IntInput                            `pulumi:"memory"`
-	PrivateIp                          pulumi.StringInput                         `pulumi:"privateIp"`
-	ProjectId                          pulumi.IntInput                            `pulumi:"projectId"`
-	PublicIp                           pulumi.StringInput                         `pulumi:"publicIp"`
-	SecurityGroups                     pulumi.StringArrayInput                    `pulumi:"securityGroups"`
-	Status                             pulumi.StringInput                         `pulumi:"status"`
-	SubnetId                           pulumi.StringInput                         `pulumi:"subnetId"`
-	SystemDiskId                       pulumi.StringInput                         `pulumi:"systemDiskId"`
-	SystemDiskSize                     pulumi.IntInput                            `pulumi:"systemDiskSize"`
-	SystemDiskType                     pulumi.StringInput                         `pulumi:"systemDiskType"`
-	Tags                               pulumi.MapInput                            `pulumi:"tags"`
-	VpcId                              pulumi.StringInput                         `pulumi:"vpcId"`
+type GetInstanceInstanceListArgs struct {
+	AllocatePublicIp                   pulumi.BoolInput                          `pulumi:"allocatePublicIp"`
+	AvailabilityZone                   pulumi.StringInput                        `pulumi:"availabilityZone"`
+	CamRoleName                        pulumi.StringInput                        `pulumi:"camRoleName"`
+	Cpu                                pulumi.IntInput                           `pulumi:"cpu"`
+	CreateTime                         pulumi.StringInput                        `pulumi:"createTime"`
+	DataDisks                          GetInstanceInstanceListDataDiskArrayInput `pulumi:"dataDisks"`
+	ExpiredTime                        pulumi.StringInput                        `pulumi:"expiredTime"`
+	ImageId                            pulumi.StringInput                        `pulumi:"imageId"`
+	InstanceChargeType                 pulumi.StringInput                        `pulumi:"instanceChargeType"`
+	InstanceChargeTypePrepaidRenewFlag pulumi.StringInput                        `pulumi:"instanceChargeTypePrepaidRenewFlag"`
+	InstanceId                         pulumi.StringInput                        `pulumi:"instanceId"`
+	InstanceName                       pulumi.StringInput                        `pulumi:"instanceName"`
+	InstanceType                       pulumi.StringInput                        `pulumi:"instanceType"`
+	InternetChargeType                 pulumi.StringInput                        `pulumi:"internetChargeType"`
+	InternetMaxBandwidthOut            pulumi.IntInput                           `pulumi:"internetMaxBandwidthOut"`
+	Memory                             pulumi.IntInput                           `pulumi:"memory"`
+	PrivateIp                          pulumi.StringInput                        `pulumi:"privateIp"`
+	ProjectId                          pulumi.IntInput                           `pulumi:"projectId"`
+	PublicIp                           pulumi.StringInput                        `pulumi:"publicIp"`
+	SecurityGroups                     pulumi.StringArrayInput                   `pulumi:"securityGroups"`
+	Status                             pulumi.StringInput                        `pulumi:"status"`
+	SubnetId                           pulumi.StringInput                        `pulumi:"subnetId"`
+	SystemDiskId                       pulumi.StringInput                        `pulumi:"systemDiskId"`
+	SystemDiskSize                     pulumi.IntInput                           `pulumi:"systemDiskSize"`
+	SystemDiskType                     pulumi.StringInput                        `pulumi:"systemDiskType"`
+	Tags                               pulumi.MapInput                           `pulumi:"tags"`
+	VpcId                              pulumi.StringInput                        `pulumi:"vpcId"`
 }
 
-func (GetInstancesInstanceListArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetInstancesInstanceList)(nil)).Elem()
+func (GetInstanceInstanceListArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetInstanceInstanceList)(nil)).Elem()
 }
 
-func (i GetInstancesInstanceListArgs) ToGetInstancesInstanceListOutput() GetInstancesInstanceListOutput {
-	return i.ToGetInstancesInstanceListOutputWithContext(context.Background())
+func (i GetInstanceInstanceListArgs) ToGetInstanceInstanceListOutput() GetInstanceInstanceListOutput {
+	return i.ToGetInstanceInstanceListOutputWithContext(context.Background())
 }
 
-func (i GetInstancesInstanceListArgs) ToGetInstancesInstanceListOutputWithContext(ctx context.Context) GetInstancesInstanceListOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetInstancesInstanceListOutput)
+func (i GetInstanceInstanceListArgs) ToGetInstanceInstanceListOutputWithContext(ctx context.Context) GetInstanceInstanceListOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetInstanceInstanceListOutput)
 }
 
-// GetInstancesInstanceListArrayInput is an input type that accepts GetInstancesInstanceListArray and GetInstancesInstanceListArrayOutput values.
-// You can construct a concrete instance of `GetInstancesInstanceListArrayInput` via:
+// GetInstanceInstanceListArrayInput is an input type that accepts GetInstanceInstanceListArray and GetInstanceInstanceListArrayOutput values.
+// You can construct a concrete instance of `GetInstanceInstanceListArrayInput` via:
 //
-//	GetInstancesInstanceListArray{ GetInstancesInstanceListArgs{...} }
-type GetInstancesInstanceListArrayInput interface {
+//	GetInstanceInstanceListArray{ GetInstanceInstanceListArgs{...} }
+type GetInstanceInstanceListArrayInput interface {
 	pulumi.Input
 
-	ToGetInstancesInstanceListArrayOutput() GetInstancesInstanceListArrayOutput
-	ToGetInstancesInstanceListArrayOutputWithContext(context.Context) GetInstancesInstanceListArrayOutput
+	ToGetInstanceInstanceListArrayOutput() GetInstanceInstanceListArrayOutput
+	ToGetInstanceInstanceListArrayOutputWithContext(context.Context) GetInstanceInstanceListArrayOutput
 }
 
-type GetInstancesInstanceListArray []GetInstancesInstanceListInput
+type GetInstanceInstanceListArray []GetInstanceInstanceListInput
 
-func (GetInstancesInstanceListArray) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]GetInstancesInstanceList)(nil)).Elem()
+func (GetInstanceInstanceListArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetInstanceInstanceList)(nil)).Elem()
 }
 
-func (i GetInstancesInstanceListArray) ToGetInstancesInstanceListArrayOutput() GetInstancesInstanceListArrayOutput {
-	return i.ToGetInstancesInstanceListArrayOutputWithContext(context.Background())
+func (i GetInstanceInstanceListArray) ToGetInstanceInstanceListArrayOutput() GetInstanceInstanceListArrayOutput {
+	return i.ToGetInstanceInstanceListArrayOutputWithContext(context.Background())
 }
 
-func (i GetInstancesInstanceListArray) ToGetInstancesInstanceListArrayOutputWithContext(ctx context.Context) GetInstancesInstanceListArrayOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetInstancesInstanceListArrayOutput)
+func (i GetInstanceInstanceListArray) ToGetInstanceInstanceListArrayOutputWithContext(ctx context.Context) GetInstanceInstanceListArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetInstanceInstanceListArrayOutput)
 }
 
-type GetInstancesInstanceListOutput struct{ *pulumi.OutputState }
+type GetInstanceInstanceListOutput struct{ *pulumi.OutputState }
 
-func (GetInstancesInstanceListOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetInstancesInstanceList)(nil)).Elem()
+func (GetInstanceInstanceListOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetInstanceInstanceList)(nil)).Elem()
 }
 
-func (o GetInstancesInstanceListOutput) ToGetInstancesInstanceListOutput() GetInstancesInstanceListOutput {
+func (o GetInstanceInstanceListOutput) ToGetInstanceInstanceListOutput() GetInstanceInstanceListOutput {
 	return o
 }
 
-func (o GetInstancesInstanceListOutput) ToGetInstancesInstanceListOutputWithContext(ctx context.Context) GetInstancesInstanceListOutput {
+func (o GetInstanceInstanceListOutput) ToGetInstanceInstanceListOutputWithContext(ctx context.Context) GetInstanceInstanceListOutput {
 	return o
 }
 
-func (o GetInstancesInstanceListOutput) AllocatePublicIp() pulumi.BoolOutput {
-	return o.ApplyT(func(v GetInstancesInstanceList) bool { return v.AllocatePublicIp }).(pulumi.BoolOutput)
+func (o GetInstanceInstanceListOutput) AllocatePublicIp() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetInstanceInstanceList) bool { return v.AllocatePublicIp }).(pulumi.BoolOutput)
 }
 
-func (o GetInstancesInstanceListOutput) AvailabilityZone() pulumi.StringOutput {
-	return o.ApplyT(func(v GetInstancesInstanceList) string { return v.AvailabilityZone }).(pulumi.StringOutput)
+func (o GetInstanceInstanceListOutput) AvailabilityZone() pulumi.StringOutput {
+	return o.ApplyT(func(v GetInstanceInstanceList) string { return v.AvailabilityZone }).(pulumi.StringOutput)
 }
 
-func (o GetInstancesInstanceListOutput) CamRoleName() pulumi.StringOutput {
-	return o.ApplyT(func(v GetInstancesInstanceList) string { return v.CamRoleName }).(pulumi.StringOutput)
+func (o GetInstanceInstanceListOutput) CamRoleName() pulumi.StringOutput {
+	return o.ApplyT(func(v GetInstanceInstanceList) string { return v.CamRoleName }).(pulumi.StringOutput)
 }
 
-func (o GetInstancesInstanceListOutput) Cpu() pulumi.IntOutput {
-	return o.ApplyT(func(v GetInstancesInstanceList) int { return v.Cpu }).(pulumi.IntOutput)
+func (o GetInstanceInstanceListOutput) Cpu() pulumi.IntOutput {
+	return o.ApplyT(func(v GetInstanceInstanceList) int { return v.Cpu }).(pulumi.IntOutput)
 }
 
-func (o GetInstancesInstanceListOutput) CreateTime() pulumi.StringOutput {
-	return o.ApplyT(func(v GetInstancesInstanceList) string { return v.CreateTime }).(pulumi.StringOutput)
+func (o GetInstanceInstanceListOutput) CreateTime() pulumi.StringOutput {
+	return o.ApplyT(func(v GetInstanceInstanceList) string { return v.CreateTime }).(pulumi.StringOutput)
 }
 
-func (o GetInstancesInstanceListOutput) DataDisks() GetInstancesInstanceListDataDiskArrayOutput {
-	return o.ApplyT(func(v GetInstancesInstanceList) []GetInstancesInstanceListDataDisk { return v.DataDisks }).(GetInstancesInstanceListDataDiskArrayOutput)
+func (o GetInstanceInstanceListOutput) DataDisks() GetInstanceInstanceListDataDiskArrayOutput {
+	return o.ApplyT(func(v GetInstanceInstanceList) []GetInstanceInstanceListDataDisk { return v.DataDisks }).(GetInstanceInstanceListDataDiskArrayOutput)
 }
 
-func (o GetInstancesInstanceListOutput) ExpiredTime() pulumi.StringOutput {
-	return o.ApplyT(func(v GetInstancesInstanceList) string { return v.ExpiredTime }).(pulumi.StringOutput)
+func (o GetInstanceInstanceListOutput) ExpiredTime() pulumi.StringOutput {
+	return o.ApplyT(func(v GetInstanceInstanceList) string { return v.ExpiredTime }).(pulumi.StringOutput)
 }
 
-func (o GetInstancesInstanceListOutput) ImageId() pulumi.StringOutput {
-	return o.ApplyT(func(v GetInstancesInstanceList) string { return v.ImageId }).(pulumi.StringOutput)
+func (o GetInstanceInstanceListOutput) ImageId() pulumi.StringOutput {
+	return o.ApplyT(func(v GetInstanceInstanceList) string { return v.ImageId }).(pulumi.StringOutput)
 }
 
-func (o GetInstancesInstanceListOutput) InstanceChargeType() pulumi.StringOutput {
-	return o.ApplyT(func(v GetInstancesInstanceList) string { return v.InstanceChargeType }).(pulumi.StringOutput)
+func (o GetInstanceInstanceListOutput) InstanceChargeType() pulumi.StringOutput {
+	return o.ApplyT(func(v GetInstanceInstanceList) string { return v.InstanceChargeType }).(pulumi.StringOutput)
 }
 
-func (o GetInstancesInstanceListOutput) InstanceChargeTypePrepaidRenewFlag() pulumi.StringOutput {
-	return o.ApplyT(func(v GetInstancesInstanceList) string { return v.InstanceChargeTypePrepaidRenewFlag }).(pulumi.StringOutput)
+func (o GetInstanceInstanceListOutput) InstanceChargeTypePrepaidRenewFlag() pulumi.StringOutput {
+	return o.ApplyT(func(v GetInstanceInstanceList) string { return v.InstanceChargeTypePrepaidRenewFlag }).(pulumi.StringOutput)
 }
 
-func (o GetInstancesInstanceListOutput) InstanceId() pulumi.StringOutput {
-	return o.ApplyT(func(v GetInstancesInstanceList) string { return v.InstanceId }).(pulumi.StringOutput)
+func (o GetInstanceInstanceListOutput) InstanceId() pulumi.StringOutput {
+	return o.ApplyT(func(v GetInstanceInstanceList) string { return v.InstanceId }).(pulumi.StringOutput)
 }
 
-func (o GetInstancesInstanceListOutput) InstanceName() pulumi.StringOutput {
-	return o.ApplyT(func(v GetInstancesInstanceList) string { return v.InstanceName }).(pulumi.StringOutput)
+func (o GetInstanceInstanceListOutput) InstanceName() pulumi.StringOutput {
+	return o.ApplyT(func(v GetInstanceInstanceList) string { return v.InstanceName }).(pulumi.StringOutput)
 }
 
-func (o GetInstancesInstanceListOutput) InstanceType() pulumi.StringOutput {
-	return o.ApplyT(func(v GetInstancesInstanceList) string { return v.InstanceType }).(pulumi.StringOutput)
+func (o GetInstanceInstanceListOutput) InstanceType() pulumi.StringOutput {
+	return o.ApplyT(func(v GetInstanceInstanceList) string { return v.InstanceType }).(pulumi.StringOutput)
 }
 
-func (o GetInstancesInstanceListOutput) InternetChargeType() pulumi.StringOutput {
-	return o.ApplyT(func(v GetInstancesInstanceList) string { return v.InternetChargeType }).(pulumi.StringOutput)
+func (o GetInstanceInstanceListOutput) InternetChargeType() pulumi.StringOutput {
+	return o.ApplyT(func(v GetInstanceInstanceList) string { return v.InternetChargeType }).(pulumi.StringOutput)
 }
 
-func (o GetInstancesInstanceListOutput) InternetMaxBandwidthOut() pulumi.IntOutput {
-	return o.ApplyT(func(v GetInstancesInstanceList) int { return v.InternetMaxBandwidthOut }).(pulumi.IntOutput)
+func (o GetInstanceInstanceListOutput) InternetMaxBandwidthOut() pulumi.IntOutput {
+	return o.ApplyT(func(v GetInstanceInstanceList) int { return v.InternetMaxBandwidthOut }).(pulumi.IntOutput)
 }
 
-func (o GetInstancesInstanceListOutput) Memory() pulumi.IntOutput {
-	return o.ApplyT(func(v GetInstancesInstanceList) int { return v.Memory }).(pulumi.IntOutput)
+func (o GetInstanceInstanceListOutput) Memory() pulumi.IntOutput {
+	return o.ApplyT(func(v GetInstanceInstanceList) int { return v.Memory }).(pulumi.IntOutput)
 }
 
-func (o GetInstancesInstanceListOutput) PrivateIp() pulumi.StringOutput {
-	return o.ApplyT(func(v GetInstancesInstanceList) string { return v.PrivateIp }).(pulumi.StringOutput)
+func (o GetInstanceInstanceListOutput) PrivateIp() pulumi.StringOutput {
+	return o.ApplyT(func(v GetInstanceInstanceList) string { return v.PrivateIp }).(pulumi.StringOutput)
 }
 
-func (o GetInstancesInstanceListOutput) ProjectId() pulumi.IntOutput {
-	return o.ApplyT(func(v GetInstancesInstanceList) int { return v.ProjectId }).(pulumi.IntOutput)
+func (o GetInstanceInstanceListOutput) ProjectId() pulumi.IntOutput {
+	return o.ApplyT(func(v GetInstanceInstanceList) int { return v.ProjectId }).(pulumi.IntOutput)
 }
 
-func (o GetInstancesInstanceListOutput) PublicIp() pulumi.StringOutput {
-	return o.ApplyT(func(v GetInstancesInstanceList) string { return v.PublicIp }).(pulumi.StringOutput)
+func (o GetInstanceInstanceListOutput) PublicIp() pulumi.StringOutput {
+	return o.ApplyT(func(v GetInstanceInstanceList) string { return v.PublicIp }).(pulumi.StringOutput)
 }
 
-func (o GetInstancesInstanceListOutput) SecurityGroups() pulumi.StringArrayOutput {
-	return o.ApplyT(func(v GetInstancesInstanceList) []string { return v.SecurityGroups }).(pulumi.StringArrayOutput)
+func (o GetInstanceInstanceListOutput) SecurityGroups() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v GetInstanceInstanceList) []string { return v.SecurityGroups }).(pulumi.StringArrayOutput)
 }
 
-func (o GetInstancesInstanceListOutput) Status() pulumi.StringOutput {
-	return o.ApplyT(func(v GetInstancesInstanceList) string { return v.Status }).(pulumi.StringOutput)
+func (o GetInstanceInstanceListOutput) Status() pulumi.StringOutput {
+	return o.ApplyT(func(v GetInstanceInstanceList) string { return v.Status }).(pulumi.StringOutput)
 }
 
-func (o GetInstancesInstanceListOutput) SubnetId() pulumi.StringOutput {
-	return o.ApplyT(func(v GetInstancesInstanceList) string { return v.SubnetId }).(pulumi.StringOutput)
+func (o GetInstanceInstanceListOutput) SubnetId() pulumi.StringOutput {
+	return o.ApplyT(func(v GetInstanceInstanceList) string { return v.SubnetId }).(pulumi.StringOutput)
 }
 
-func (o GetInstancesInstanceListOutput) SystemDiskId() pulumi.StringOutput {
-	return o.ApplyT(func(v GetInstancesInstanceList) string { return v.SystemDiskId }).(pulumi.StringOutput)
+func (o GetInstanceInstanceListOutput) SystemDiskId() pulumi.StringOutput {
+	return o.ApplyT(func(v GetInstanceInstanceList) string { return v.SystemDiskId }).(pulumi.StringOutput)
 }
 
-func (o GetInstancesInstanceListOutput) SystemDiskSize() pulumi.IntOutput {
-	return o.ApplyT(func(v GetInstancesInstanceList) int { return v.SystemDiskSize }).(pulumi.IntOutput)
+func (o GetInstanceInstanceListOutput) SystemDiskSize() pulumi.IntOutput {
+	return o.ApplyT(func(v GetInstanceInstanceList) int { return v.SystemDiskSize }).(pulumi.IntOutput)
 }
 
-func (o GetInstancesInstanceListOutput) SystemDiskType() pulumi.StringOutput {
-	return o.ApplyT(func(v GetInstancesInstanceList) string { return v.SystemDiskType }).(pulumi.StringOutput)
+func (o GetInstanceInstanceListOutput) SystemDiskType() pulumi.StringOutput {
+	return o.ApplyT(func(v GetInstanceInstanceList) string { return v.SystemDiskType }).(pulumi.StringOutput)
 }
 
-func (o GetInstancesInstanceListOutput) Tags() pulumi.MapOutput {
-	return o.ApplyT(func(v GetInstancesInstanceList) map[string]interface{} { return v.Tags }).(pulumi.MapOutput)
+func (o GetInstanceInstanceListOutput) Tags() pulumi.MapOutput {
+	return o.ApplyT(func(v GetInstanceInstanceList) map[string]interface{} { return v.Tags }).(pulumi.MapOutput)
 }
 
-func (o GetInstancesInstanceListOutput) VpcId() pulumi.StringOutput {
-	return o.ApplyT(func(v GetInstancesInstanceList) string { return v.VpcId }).(pulumi.StringOutput)
+func (o GetInstanceInstanceListOutput) VpcId() pulumi.StringOutput {
+	return o.ApplyT(func(v GetInstanceInstanceList) string { return v.VpcId }).(pulumi.StringOutput)
 }
 
-type GetInstancesInstanceListArrayOutput struct{ *pulumi.OutputState }
+type GetInstanceInstanceListArrayOutput struct{ *pulumi.OutputState }
 
-func (GetInstancesInstanceListArrayOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]GetInstancesInstanceList)(nil)).Elem()
+func (GetInstanceInstanceListArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetInstanceInstanceList)(nil)).Elem()
 }
 
-func (o GetInstancesInstanceListArrayOutput) ToGetInstancesInstanceListArrayOutput() GetInstancesInstanceListArrayOutput {
+func (o GetInstanceInstanceListArrayOutput) ToGetInstanceInstanceListArrayOutput() GetInstanceInstanceListArrayOutput {
 	return o
 }
 
-func (o GetInstancesInstanceListArrayOutput) ToGetInstancesInstanceListArrayOutputWithContext(ctx context.Context) GetInstancesInstanceListArrayOutput {
+func (o GetInstanceInstanceListArrayOutput) ToGetInstanceInstanceListArrayOutputWithContext(ctx context.Context) GetInstanceInstanceListArrayOutput {
 	return o
 }
 
-func (o GetInstancesInstanceListArrayOutput) Index(i pulumi.IntInput) GetInstancesInstanceListOutput {
-	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetInstancesInstanceList {
-		return vs[0].([]GetInstancesInstanceList)[vs[1].(int)]
-	}).(GetInstancesInstanceListOutput)
+func (o GetInstanceInstanceListArrayOutput) Index(i pulumi.IntInput) GetInstanceInstanceListOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetInstanceInstanceList {
+		return vs[0].([]GetInstanceInstanceList)[vs[1].(int)]
+	}).(GetInstanceInstanceListOutput)
 }
 
-type GetInstancesInstanceListDataDisk struct {
+type GetInstanceInstanceListDataDisk struct {
 	DataDiskId         string `pulumi:"dataDiskId"`
 	DataDiskSize       int    `pulumi:"dataDiskSize"`
 	DataDiskType       string `pulumi:"dataDiskType"`
 	DeleteWithInstance bool   `pulumi:"deleteWithInstance"`
 }
 
-// GetInstancesInstanceListDataDiskInput is an input type that accepts GetInstancesInstanceListDataDiskArgs and GetInstancesInstanceListDataDiskOutput values.
-// You can construct a concrete instance of `GetInstancesInstanceListDataDiskInput` via:
+// GetInstanceInstanceListDataDiskInput is an input type that accepts GetInstanceInstanceListDataDiskArgs and GetInstanceInstanceListDataDiskOutput values.
+// You can construct a concrete instance of `GetInstanceInstanceListDataDiskInput` via:
 //
-//	GetInstancesInstanceListDataDiskArgs{...}
-type GetInstancesInstanceListDataDiskInput interface {
+//	GetInstanceInstanceListDataDiskArgs{...}
+type GetInstanceInstanceListDataDiskInput interface {
 	pulumi.Input
 
-	ToGetInstancesInstanceListDataDiskOutput() GetInstancesInstanceListDataDiskOutput
-	ToGetInstancesInstanceListDataDiskOutputWithContext(context.Context) GetInstancesInstanceListDataDiskOutput
+	ToGetInstanceInstanceListDataDiskOutput() GetInstanceInstanceListDataDiskOutput
+	ToGetInstanceInstanceListDataDiskOutputWithContext(context.Context) GetInstanceInstanceListDataDiskOutput
 }
 
-type GetInstancesInstanceListDataDiskArgs struct {
+type GetInstanceInstanceListDataDiskArgs struct {
 	DataDiskId         pulumi.StringInput `pulumi:"dataDiskId"`
 	DataDiskSize       pulumi.IntInput    `pulumi:"dataDiskSize"`
 	DataDiskType       pulumi.StringInput `pulumi:"dataDiskType"`
 	DeleteWithInstance pulumi.BoolInput   `pulumi:"deleteWithInstance"`
 }
 
-func (GetInstancesInstanceListDataDiskArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetInstancesInstanceListDataDisk)(nil)).Elem()
+func (GetInstanceInstanceListDataDiskArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetInstanceInstanceListDataDisk)(nil)).Elem()
 }
 
-func (i GetInstancesInstanceListDataDiskArgs) ToGetInstancesInstanceListDataDiskOutput() GetInstancesInstanceListDataDiskOutput {
-	return i.ToGetInstancesInstanceListDataDiskOutputWithContext(context.Background())
+func (i GetInstanceInstanceListDataDiskArgs) ToGetInstanceInstanceListDataDiskOutput() GetInstanceInstanceListDataDiskOutput {
+	return i.ToGetInstanceInstanceListDataDiskOutputWithContext(context.Background())
 }
 
-func (i GetInstancesInstanceListDataDiskArgs) ToGetInstancesInstanceListDataDiskOutputWithContext(ctx context.Context) GetInstancesInstanceListDataDiskOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetInstancesInstanceListDataDiskOutput)
+func (i GetInstanceInstanceListDataDiskArgs) ToGetInstanceInstanceListDataDiskOutputWithContext(ctx context.Context) GetInstanceInstanceListDataDiskOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetInstanceInstanceListDataDiskOutput)
 }
 
-// GetInstancesInstanceListDataDiskArrayInput is an input type that accepts GetInstancesInstanceListDataDiskArray and GetInstancesInstanceListDataDiskArrayOutput values.
-// You can construct a concrete instance of `GetInstancesInstanceListDataDiskArrayInput` via:
+// GetInstanceInstanceListDataDiskArrayInput is an input type that accepts GetInstanceInstanceListDataDiskArray and GetInstanceInstanceListDataDiskArrayOutput values.
+// You can construct a concrete instance of `GetInstanceInstanceListDataDiskArrayInput` via:
 //
-//	GetInstancesInstanceListDataDiskArray{ GetInstancesInstanceListDataDiskArgs{...} }
-type GetInstancesInstanceListDataDiskArrayInput interface {
+//	GetInstanceInstanceListDataDiskArray{ GetInstanceInstanceListDataDiskArgs{...} }
+type GetInstanceInstanceListDataDiskArrayInput interface {
 	pulumi.Input
 
-	ToGetInstancesInstanceListDataDiskArrayOutput() GetInstancesInstanceListDataDiskArrayOutput
-	ToGetInstancesInstanceListDataDiskArrayOutputWithContext(context.Context) GetInstancesInstanceListDataDiskArrayOutput
+	ToGetInstanceInstanceListDataDiskArrayOutput() GetInstanceInstanceListDataDiskArrayOutput
+	ToGetInstanceInstanceListDataDiskArrayOutputWithContext(context.Context) GetInstanceInstanceListDataDiskArrayOutput
 }
 
-type GetInstancesInstanceListDataDiskArray []GetInstancesInstanceListDataDiskInput
+type GetInstanceInstanceListDataDiskArray []GetInstanceInstanceListDataDiskInput
 
-func (GetInstancesInstanceListDataDiskArray) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]GetInstancesInstanceListDataDisk)(nil)).Elem()
+func (GetInstanceInstanceListDataDiskArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetInstanceInstanceListDataDisk)(nil)).Elem()
 }
 
-func (i GetInstancesInstanceListDataDiskArray) ToGetInstancesInstanceListDataDiskArrayOutput() GetInstancesInstanceListDataDiskArrayOutput {
-	return i.ToGetInstancesInstanceListDataDiskArrayOutputWithContext(context.Background())
+func (i GetInstanceInstanceListDataDiskArray) ToGetInstanceInstanceListDataDiskArrayOutput() GetInstanceInstanceListDataDiskArrayOutput {
+	return i.ToGetInstanceInstanceListDataDiskArrayOutputWithContext(context.Background())
 }
 
-func (i GetInstancesInstanceListDataDiskArray) ToGetInstancesInstanceListDataDiskArrayOutputWithContext(ctx context.Context) GetInstancesInstanceListDataDiskArrayOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetInstancesInstanceListDataDiskArrayOutput)
+func (i GetInstanceInstanceListDataDiskArray) ToGetInstanceInstanceListDataDiskArrayOutputWithContext(ctx context.Context) GetInstanceInstanceListDataDiskArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetInstanceInstanceListDataDiskArrayOutput)
 }
 
-type GetInstancesInstanceListDataDiskOutput struct{ *pulumi.OutputState }
+type GetInstanceInstanceListDataDiskOutput struct{ *pulumi.OutputState }
 
-func (GetInstancesInstanceListDataDiskOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetInstancesInstanceListDataDisk)(nil)).Elem()
+func (GetInstanceInstanceListDataDiskOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetInstanceInstanceListDataDisk)(nil)).Elem()
 }
 
-func (o GetInstancesInstanceListDataDiskOutput) ToGetInstancesInstanceListDataDiskOutput() GetInstancesInstanceListDataDiskOutput {
+func (o GetInstanceInstanceListDataDiskOutput) ToGetInstanceInstanceListDataDiskOutput() GetInstanceInstanceListDataDiskOutput {
 	return o
 }
 
-func (o GetInstancesInstanceListDataDiskOutput) ToGetInstancesInstanceListDataDiskOutputWithContext(ctx context.Context) GetInstancesInstanceListDataDiskOutput {
+func (o GetInstanceInstanceListDataDiskOutput) ToGetInstanceInstanceListDataDiskOutputWithContext(ctx context.Context) GetInstanceInstanceListDataDiskOutput {
 	return o
 }
 
-func (o GetInstancesInstanceListDataDiskOutput) DataDiskId() pulumi.StringOutput {
-	return o.ApplyT(func(v GetInstancesInstanceListDataDisk) string { return v.DataDiskId }).(pulumi.StringOutput)
+func (o GetInstanceInstanceListDataDiskOutput) DataDiskId() pulumi.StringOutput {
+	return o.ApplyT(func(v GetInstanceInstanceListDataDisk) string { return v.DataDiskId }).(pulumi.StringOutput)
 }
 
-func (o GetInstancesInstanceListDataDiskOutput) DataDiskSize() pulumi.IntOutput {
-	return o.ApplyT(func(v GetInstancesInstanceListDataDisk) int { return v.DataDiskSize }).(pulumi.IntOutput)
+func (o GetInstanceInstanceListDataDiskOutput) DataDiskSize() pulumi.IntOutput {
+	return o.ApplyT(func(v GetInstanceInstanceListDataDisk) int { return v.DataDiskSize }).(pulumi.IntOutput)
 }
 
-func (o GetInstancesInstanceListDataDiskOutput) DataDiskType() pulumi.StringOutput {
-	return o.ApplyT(func(v GetInstancesInstanceListDataDisk) string { return v.DataDiskType }).(pulumi.StringOutput)
+func (o GetInstanceInstanceListDataDiskOutput) DataDiskType() pulumi.StringOutput {
+	return o.ApplyT(func(v GetInstanceInstanceListDataDisk) string { return v.DataDiskType }).(pulumi.StringOutput)
 }
 
-func (o GetInstancesInstanceListDataDiskOutput) DeleteWithInstance() pulumi.BoolOutput {
-	return o.ApplyT(func(v GetInstancesInstanceListDataDisk) bool { return v.DeleteWithInstance }).(pulumi.BoolOutput)
+func (o GetInstanceInstanceListDataDiskOutput) DeleteWithInstance() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetInstanceInstanceListDataDisk) bool { return v.DeleteWithInstance }).(pulumi.BoolOutput)
 }
 
-type GetInstancesInstanceListDataDiskArrayOutput struct{ *pulumi.OutputState }
+type GetInstanceInstanceListDataDiskArrayOutput struct{ *pulumi.OutputState }
 
-func (GetInstancesInstanceListDataDiskArrayOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]GetInstancesInstanceListDataDisk)(nil)).Elem()
+func (GetInstanceInstanceListDataDiskArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetInstanceInstanceListDataDisk)(nil)).Elem()
 }
 
-func (o GetInstancesInstanceListDataDiskArrayOutput) ToGetInstancesInstanceListDataDiskArrayOutput() GetInstancesInstanceListDataDiskArrayOutput {
+func (o GetInstanceInstanceListDataDiskArrayOutput) ToGetInstanceInstanceListDataDiskArrayOutput() GetInstanceInstanceListDataDiskArrayOutput {
 	return o
 }
 
-func (o GetInstancesInstanceListDataDiskArrayOutput) ToGetInstancesInstanceListDataDiskArrayOutputWithContext(ctx context.Context) GetInstancesInstanceListDataDiskArrayOutput {
+func (o GetInstanceInstanceListDataDiskArrayOutput) ToGetInstanceInstanceListDataDiskArrayOutputWithContext(ctx context.Context) GetInstanceInstanceListDataDiskArrayOutput {
 	return o
 }
 
-func (o GetInstancesInstanceListDataDiskArrayOutput) Index(i pulumi.IntInput) GetInstancesInstanceListDataDiskOutput {
-	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetInstancesInstanceListDataDisk {
-		return vs[0].([]GetInstancesInstanceListDataDisk)[vs[1].(int)]
-	}).(GetInstancesInstanceListDataDiskOutput)
+func (o GetInstanceInstanceListDataDiskArrayOutput) Index(i pulumi.IntInput) GetInstanceInstanceListDataDiskOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetInstanceInstanceListDataDisk {
+		return vs[0].([]GetInstanceInstanceListDataDisk)[vs[1].(int)]
+	}).(GetInstanceInstanceListDataDiskOutput)
 }
 
 type GetSetInstanceList struct {
@@ -738,18 +738,18 @@ func (o GetSetInstanceListDataDiskArrayOutput) Index(i pulumi.IntInput) GetSetIn
 }
 
 func init() {
-	pulumi.RegisterInputType(reflect.TypeOf((*GetInstancesInstanceListInput)(nil)).Elem(), GetInstancesInstanceListArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetInstancesInstanceListArrayInput)(nil)).Elem(), GetInstancesInstanceListArray{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetInstancesInstanceListDataDiskInput)(nil)).Elem(), GetInstancesInstanceListDataDiskArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetInstancesInstanceListDataDiskArrayInput)(nil)).Elem(), GetInstancesInstanceListDataDiskArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetInstanceInstanceListInput)(nil)).Elem(), GetInstanceInstanceListArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetInstanceInstanceListArrayInput)(nil)).Elem(), GetInstanceInstanceListArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetInstanceInstanceListDataDiskInput)(nil)).Elem(), GetInstanceInstanceListDataDiskArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetInstanceInstanceListDataDiskArrayInput)(nil)).Elem(), GetInstanceInstanceListDataDiskArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetSetInstanceListInput)(nil)).Elem(), GetSetInstanceListArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetSetInstanceListArrayInput)(nil)).Elem(), GetSetInstanceListArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetSetInstanceListDataDiskInput)(nil)).Elem(), GetSetInstanceListDataDiskArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetSetInstanceListDataDiskArrayInput)(nil)).Elem(), GetSetInstanceListDataDiskArray{})
-	pulumi.RegisterOutputType(GetInstancesInstanceListOutput{})
-	pulumi.RegisterOutputType(GetInstancesInstanceListArrayOutput{})
-	pulumi.RegisterOutputType(GetInstancesInstanceListDataDiskOutput{})
-	pulumi.RegisterOutputType(GetInstancesInstanceListDataDiskArrayOutput{})
+	pulumi.RegisterOutputType(GetInstanceInstanceListOutput{})
+	pulumi.RegisterOutputType(GetInstanceInstanceListArrayOutput{})
+	pulumi.RegisterOutputType(GetInstanceInstanceListDataDiskOutput{})
+	pulumi.RegisterOutputType(GetInstanceInstanceListDataDiskArrayOutput{})
 	pulumi.RegisterOutputType(GetSetInstanceListOutput{})
 	pulumi.RegisterOutputType(GetSetInstanceListArrayOutput{})
 	pulumi.RegisterOutputType(GetSetInstanceListDataDiskOutput{})

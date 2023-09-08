@@ -23,6 +23,8 @@ func (m *module) Construct(ctx *pulumi.Context, name, typ, urn string) (r pulumi
 	switch typ {
 	case "tencentcloud:Ssl/certificate:Certificate":
 		r = &Certificate{}
+	case "tencentcloud:Ssl/commitCertificateInformation:CommitCertificateInformation":
+		r = &CommitCertificateInformation{}
 	case "tencentcloud:Ssl/freeCertificate:FreeCertificate":
 		r = &FreeCertificate{}
 	case "tencentcloud:Ssl/payCertificate:PayCertificate":
@@ -43,6 +45,11 @@ func init() {
 	pulumi.RegisterResourceModule(
 		"tencentcloud",
 		"Ssl/certificate",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"tencentcloud",
+		"Ssl/commitCertificateInformation",
 		&module{version},
 	)
 	pulumi.RegisterResourceModule(

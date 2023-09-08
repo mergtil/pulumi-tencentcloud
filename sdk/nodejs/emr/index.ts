@@ -10,10 +10,10 @@ export type Cluster = import("./cluster").Cluster;
 export const Cluster: typeof import("./cluster").Cluster = null as any;
 utilities.lazyLoad(exports, ["Cluster"], () => require("./cluster"));
 
-export { GetEmrArgs, GetEmrResult, GetEmrOutputArgs } from "./getEmr";
-export const getEmr: typeof import("./getEmr").getEmr = null as any;
-export const getEmrOutput: typeof import("./getEmr").getEmrOutput = null as any;
-utilities.lazyLoad(exports, ["getEmr","getEmrOutput"], () => require("./getEmr"));
+export { GetInstanceArgs, GetInstanceResult, GetInstanceOutputArgs } from "./getInstance";
+export const getInstance: typeof import("./getInstance").getInstance = null as any;
+export const getInstanceOutput: typeof import("./getInstance").getInstanceOutput = null as any;
+utilities.lazyLoad(exports, ["getInstance","getInstanceOutput"], () => require("./getInstance"));
 
 export { GetNodesArgs, GetNodesResult, GetNodesOutputArgs } from "./getNodes";
 export const getNodes: typeof import("./getNodes").getNodes = null as any;

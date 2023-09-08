@@ -54,7 +54,7 @@ export class PayCertificate extends pulumi.CustomResource {
     /**
      * DV certification information.
      */
-    public /*out*/ readonly dvAuths!: pulumi.Output<outputs.Ssl.PayCertificateDvAuth[]>;
+    public readonly dvAuths!: pulumi.Output<outputs.Ssl.PayCertificateDvAuth[]>;
     /**
      * Certificate information.
      */
@@ -107,6 +107,10 @@ export class PayCertificate extends pulumi.CustomResource {
      * Certificate period, currently only supports 1 year certificate purchase.
      */
     public readonly timeSpan!: pulumi.Output<number | undefined>;
+    /**
+     * If `wait_commit_flag` is set to true, info will not be submitted temporarily, false opposite.
+     */
+    public readonly waitCommitFlag!: pulumi.Output<boolean | undefined>;
 
     /**
      * Create a PayCertificate resource with the given unique name, arguments, and options.
@@ -132,6 +136,7 @@ export class PayCertificate extends pulumi.CustomResource {
             resourceInputs["projectId"] = state ? state.projectId : undefined;
             resourceInputs["status"] = state ? state.status : undefined;
             resourceInputs["timeSpan"] = state ? state.timeSpan : undefined;
+            resourceInputs["waitCommitFlag"] = state ? state.waitCommitFlag : undefined;
         } else {
             const args = argsOrState as PayCertificateArgs | undefined;
             if ((!args || args.domainNum === undefined) && !opts.urn) {
@@ -146,12 +151,13 @@ export class PayCertificate extends pulumi.CustomResource {
             resourceInputs["alias"] = args ? args.alias : undefined;
             resourceInputs["confirmLetter"] = args ? args.confirmLetter : undefined;
             resourceInputs["domainNum"] = args ? args.domainNum : undefined;
+            resourceInputs["dvAuths"] = args ? args.dvAuths : undefined;
             resourceInputs["information"] = args ? args.information : undefined;
             resourceInputs["productId"] = args ? args.productId : undefined;
             resourceInputs["projectId"] = args ? args.projectId : undefined;
             resourceInputs["timeSpan"] = args ? args.timeSpan : undefined;
+            resourceInputs["waitCommitFlag"] = args ? args.waitCommitFlag : undefined;
             resourceInputs["certificateId"] = undefined /*out*/;
-            resourceInputs["dvAuths"] = undefined /*out*/;
             resourceInputs["orderId"] = undefined /*out*/;
             resourceInputs["status"] = undefined /*out*/;
         }
@@ -237,6 +243,10 @@ export interface PayCertificateState {
      * Certificate period, currently only supports 1 year certificate purchase.
      */
     timeSpan?: pulumi.Input<number>;
+    /**
+     * If `wait_commit_flag` is set to true, info will not be submitted temporarily, false opposite.
+     */
+    waitCommitFlag?: pulumi.Input<boolean>;
 }
 
 /**
@@ -256,6 +266,10 @@ export interface PayCertificateArgs {
      * Number of domain names included in the certificate.
      */
     domainNum: pulumi.Input<number>;
+    /**
+     * DV certification information.
+     */
+    dvAuths?: pulumi.Input<pulumi.Input<inputs.Ssl.PayCertificateDvAuth>[]>;
     /**
      * Certificate information.
      */
@@ -300,4 +314,8 @@ export interface PayCertificateArgs {
      * Certificate period, currently only supports 1 year certificate purchase.
      */
     timeSpan?: pulumi.Input<number>;
+    /**
+     * If `wait_commit_flag` is set to true, info will not be submitted temporarily, false opposite.
+     */
+    waitCommitFlag?: pulumi.Input<boolean>;
 }

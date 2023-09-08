@@ -11,12 +11,12 @@ from .. import _utilities
 from . import outputs
 
 __all__ = [
-    'GetImagesImageResult',
-    'GetImagesImageSnapshotResult',
+    'GetInstanceImageResult',
+    'GetInstanceImageSnapshotResult',
 ]
 
 @pulumi.output_type
-class GetImagesImageResult(dict):
+class GetInstanceImageResult(dict):
     def __init__(__self__, *,
                  architecture: str,
                  created_time: str,
@@ -30,7 +30,7 @@ class GetImagesImageResult(dict):
                  image_type: str,
                  os_name: str,
                  platform: str,
-                 snapshots: Sequence['outputs.GetImagesImageSnapshotResult'],
+                 snapshots: Sequence['outputs.GetInstanceImageSnapshotResult'],
                  support_cloud_init: bool,
                  sync_percent: int):
         pulumi.set(__self__, "architecture", architecture)
@@ -111,7 +111,7 @@ class GetImagesImageResult(dict):
 
     @property
     @pulumi.getter
-    def snapshots(self) -> Sequence['outputs.GetImagesImageSnapshotResult']:
+    def snapshots(self) -> Sequence['outputs.GetInstanceImageSnapshotResult']:
         return pulumi.get(self, "snapshots")
 
     @property
@@ -126,7 +126,7 @@ class GetImagesImageResult(dict):
 
 
 @pulumi.output_type
-class GetImagesImageSnapshotResult(dict):
+class GetInstanceImageSnapshotResult(dict):
     def __init__(__self__, *,
                  disk_size: int,
                  disk_usage: str,

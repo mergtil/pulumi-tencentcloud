@@ -5,21 +5,21 @@ import * as pulumi from "@pulumi/pulumi";
 import * as utilities from "../utilities";
 
 // Export members:
-export { SubnetArgs, SubnetState } from "./subnet";
-export type Subnet = import("./subnet").Subnet;
-export const Subnet: typeof import("./subnet").Subnet = null as any;
-utilities.lazyLoad(exports, ["Subnet"], () => require("./subnet"));
+export { InstanceArgs, InstanceState } from "./instance";
+export type Instance = import("./instance").Instance;
+export const Instance: typeof import("./instance").Instance = null as any;
+utilities.lazyLoad(exports, ["Instance"], () => require("./instance"));
 
 
 const _module = {
     version: utilities.getVersion(),
     construct: (name: string, type: string, urn: string): pulumi.Resource => {
         switch (type) {
-            case "tencentcloud:Subnet/subnet:Subnet":
-                return new Subnet(name, <any>undefined, { urn })
+            case "tencentcloud:Subnet/instance:Instance":
+                return new Instance(name, <any>undefined, { urn })
             default:
                 throw new Error(`unknown resource type ${type}`);
         }
     },
 };
-pulumi.runtime.registerResourceModule("tencentcloud", "Subnet/subnet", _module)
+pulumi.runtime.registerResourceModule("tencentcloud", "Subnet/instance", _module)

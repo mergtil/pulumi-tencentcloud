@@ -4,8 +4,8 @@
 import * as utilities from "../utilities";
 
 // Export members:
-export { GetEipArgs, GetEipResult, GetEipOutputArgs } from "./getEip";
-export const getEip: typeof import("./getEip").getEip = null as any;
-export const getEipOutput: typeof import("./getEip").getEipOutput = null as any;
-utilities.lazyLoad(exports, ["getEip","getEipOutput"], () => require("./getEip"));
+export { GetInstanceArgs, GetInstanceResult, GetInstanceOutputArgs } from "./getInstance";
+export const getInstance: typeof import("./getInstance").getInstance = null as any;
+export const getInstanceOutput: typeof import("./getInstance").getInstanceOutput = null as any;
+utilities.lazyLoad(exports, ["getInstance","getInstanceOutput"], () => require("./getInstance"));
 

@@ -10,6 +10,11 @@ export type ExternalKey = import("./externalKey").ExternalKey;
 export const ExternalKey: typeof import("./externalKey").ExternalKey = null as any;
 utilities.lazyLoad(exports, ["ExternalKey"], () => require("./externalKey"));
 
+export { GetGetParametersForImportArgs, GetGetParametersForImportResult, GetGetParametersForImportOutputArgs } from "./getGetParametersForImport";
+export const getGetParametersForImport: typeof import("./getGetParametersForImport").getGetParametersForImport = null as any;
+export const getGetParametersForImportOutput: typeof import("./getGetParametersForImport").getGetParametersForImportOutput = null as any;
+utilities.lazyLoad(exports, ["getGetParametersForImport","getGetParametersForImportOutput"], () => require("./getGetParametersForImport"));
+
 export { GetKeysArgs, GetKeysResult, GetKeysOutputArgs } from "./getKeys";
 export const getKeys: typeof import("./getKeys").getKeys = null as any;
 export const getKeysOutput: typeof import("./getKeys").getKeysOutput = null as any;

@@ -11,18 +11,18 @@ from .. import _utilities
 from . import outputs
 
 __all__ = [
-    'GetEnisEniResult',
-    'GetEnisEniIpv4Result',
+    'GetInstanceEniResult',
+    'GetInstanceEniIpv4Result',
 ]
 
 @pulumi.output_type
-class GetEnisEniResult(dict):
+class GetInstanceEniResult(dict):
     def __init__(__self__, *,
                  create_time: str,
                  description: str,
                  id: str,
                  instance_id: str,
-                 ipv4s: Sequence['outputs.GetEnisEniIpv4Result'],
+                 ipv4s: Sequence['outputs.GetInstanceEniIpv4Result'],
                  mac: str,
                  name: str,
                  primary: bool,
@@ -67,7 +67,7 @@ class GetEnisEniResult(dict):
 
     @property
     @pulumi.getter
-    def ipv4s(self) -> Sequence['outputs.GetEnisEniIpv4Result']:
+    def ipv4s(self) -> Sequence['outputs.GetInstanceEniIpv4Result']:
         return pulumi.get(self, "ipv4s")
 
     @property
@@ -112,7 +112,7 @@ class GetEnisEniResult(dict):
 
 
 @pulumi.output_type
-class GetEnisEniIpv4Result(dict):
+class GetInstanceEniIpv4Result(dict):
     def __init__(__self__, *,
                  description: str,
                  ip: str,

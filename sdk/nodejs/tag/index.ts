@@ -10,10 +10,10 @@ export type Attachment = import("./attachment").Attachment;
 export const Attachment: typeof import("./attachment").Attachment = null as any;
 utilities.lazyLoad(exports, ["Attachment"], () => require("./attachment"));
 
-export { TagArgs, TagState } from "./tag";
-export type Tag = import("./tag").Tag;
-export const Tag: typeof import("./tag").Tag = null as any;
-utilities.lazyLoad(exports, ["Tag"], () => require("./tag"));
+export { InstanceArgs, InstanceState } from "./instance";
+export type Instance = import("./instance").Instance;
+export const Instance: typeof import("./instance").Instance = null as any;
+utilities.lazyLoad(exports, ["Instance"], () => require("./instance"));
 
 
 const _module = {
@@ -22,12 +22,12 @@ const _module = {
         switch (type) {
             case "tencentcloud:Tag/attachment:Attachment":
                 return new Attachment(name, <any>undefined, { urn })
-            case "tencentcloud:Tag/tag:Tag":
-                return new Tag(name, <any>undefined, { urn })
+            case "tencentcloud:Tag/instance:Instance":
+                return new Instance(name, <any>undefined, { urn })
             default:
                 throw new Error(`unknown resource type ${type}`);
         }
     },
 };
 pulumi.runtime.registerResourceModule("tencentcloud", "Tag/attachment", _module)
-pulumi.runtime.registerResourceModule("tencentcloud", "Tag/tag", _module)
+pulumi.runtime.registerResourceModule("tencentcloud", "Tag/instance", _module)

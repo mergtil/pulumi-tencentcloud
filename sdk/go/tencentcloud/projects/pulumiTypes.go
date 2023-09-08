@@ -13,7 +13,7 @@ import (
 
 var _ = internal.GetEnvOrDefault
 
-type GetProjectsProject struct {
+type GetInstanceProject struct {
 	CreateTime  string `pulumi:"createTime"`
 	CreatorUin  int    `pulumi:"creatorUin"`
 	ProjectId   int    `pulumi:"projectId"`
@@ -21,18 +21,18 @@ type GetProjectsProject struct {
 	ProjectName string `pulumi:"projectName"`
 }
 
-// GetProjectsProjectInput is an input type that accepts GetProjectsProjectArgs and GetProjectsProjectOutput values.
-// You can construct a concrete instance of `GetProjectsProjectInput` via:
+// GetInstanceProjectInput is an input type that accepts GetInstanceProjectArgs and GetInstanceProjectOutput values.
+// You can construct a concrete instance of `GetInstanceProjectInput` via:
 //
-//	GetProjectsProjectArgs{...}
-type GetProjectsProjectInput interface {
+//	GetInstanceProjectArgs{...}
+type GetInstanceProjectInput interface {
 	pulumi.Input
 
-	ToGetProjectsProjectOutput() GetProjectsProjectOutput
-	ToGetProjectsProjectOutputWithContext(context.Context) GetProjectsProjectOutput
+	ToGetInstanceProjectOutput() GetInstanceProjectOutput
+	ToGetInstanceProjectOutputWithContext(context.Context) GetInstanceProjectOutput
 }
 
-type GetProjectsProjectArgs struct {
+type GetInstanceProjectArgs struct {
 	CreateTime  pulumi.StringInput `pulumi:"createTime"`
 	CreatorUin  pulumi.IntInput    `pulumi:"creatorUin"`
 	ProjectId   pulumi.IntInput    `pulumi:"projectId"`
@@ -40,100 +40,100 @@ type GetProjectsProjectArgs struct {
 	ProjectName pulumi.StringInput `pulumi:"projectName"`
 }
 
-func (GetProjectsProjectArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetProjectsProject)(nil)).Elem()
+func (GetInstanceProjectArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetInstanceProject)(nil)).Elem()
 }
 
-func (i GetProjectsProjectArgs) ToGetProjectsProjectOutput() GetProjectsProjectOutput {
-	return i.ToGetProjectsProjectOutputWithContext(context.Background())
+func (i GetInstanceProjectArgs) ToGetInstanceProjectOutput() GetInstanceProjectOutput {
+	return i.ToGetInstanceProjectOutputWithContext(context.Background())
 }
 
-func (i GetProjectsProjectArgs) ToGetProjectsProjectOutputWithContext(ctx context.Context) GetProjectsProjectOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetProjectsProjectOutput)
+func (i GetInstanceProjectArgs) ToGetInstanceProjectOutputWithContext(ctx context.Context) GetInstanceProjectOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetInstanceProjectOutput)
 }
 
-// GetProjectsProjectArrayInput is an input type that accepts GetProjectsProjectArray and GetProjectsProjectArrayOutput values.
-// You can construct a concrete instance of `GetProjectsProjectArrayInput` via:
+// GetInstanceProjectArrayInput is an input type that accepts GetInstanceProjectArray and GetInstanceProjectArrayOutput values.
+// You can construct a concrete instance of `GetInstanceProjectArrayInput` via:
 //
-//	GetProjectsProjectArray{ GetProjectsProjectArgs{...} }
-type GetProjectsProjectArrayInput interface {
+//	GetInstanceProjectArray{ GetInstanceProjectArgs{...} }
+type GetInstanceProjectArrayInput interface {
 	pulumi.Input
 
-	ToGetProjectsProjectArrayOutput() GetProjectsProjectArrayOutput
-	ToGetProjectsProjectArrayOutputWithContext(context.Context) GetProjectsProjectArrayOutput
+	ToGetInstanceProjectArrayOutput() GetInstanceProjectArrayOutput
+	ToGetInstanceProjectArrayOutputWithContext(context.Context) GetInstanceProjectArrayOutput
 }
 
-type GetProjectsProjectArray []GetProjectsProjectInput
+type GetInstanceProjectArray []GetInstanceProjectInput
 
-func (GetProjectsProjectArray) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]GetProjectsProject)(nil)).Elem()
+func (GetInstanceProjectArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetInstanceProject)(nil)).Elem()
 }
 
-func (i GetProjectsProjectArray) ToGetProjectsProjectArrayOutput() GetProjectsProjectArrayOutput {
-	return i.ToGetProjectsProjectArrayOutputWithContext(context.Background())
+func (i GetInstanceProjectArray) ToGetInstanceProjectArrayOutput() GetInstanceProjectArrayOutput {
+	return i.ToGetInstanceProjectArrayOutputWithContext(context.Background())
 }
 
-func (i GetProjectsProjectArray) ToGetProjectsProjectArrayOutputWithContext(ctx context.Context) GetProjectsProjectArrayOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetProjectsProjectArrayOutput)
+func (i GetInstanceProjectArray) ToGetInstanceProjectArrayOutputWithContext(ctx context.Context) GetInstanceProjectArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetInstanceProjectArrayOutput)
 }
 
-type GetProjectsProjectOutput struct{ *pulumi.OutputState }
+type GetInstanceProjectOutput struct{ *pulumi.OutputState }
 
-func (GetProjectsProjectOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetProjectsProject)(nil)).Elem()
+func (GetInstanceProjectOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetInstanceProject)(nil)).Elem()
 }
 
-func (o GetProjectsProjectOutput) ToGetProjectsProjectOutput() GetProjectsProjectOutput {
+func (o GetInstanceProjectOutput) ToGetInstanceProjectOutput() GetInstanceProjectOutput {
 	return o
 }
 
-func (o GetProjectsProjectOutput) ToGetProjectsProjectOutputWithContext(ctx context.Context) GetProjectsProjectOutput {
+func (o GetInstanceProjectOutput) ToGetInstanceProjectOutputWithContext(ctx context.Context) GetInstanceProjectOutput {
 	return o
 }
 
-func (o GetProjectsProjectOutput) CreateTime() pulumi.StringOutput {
-	return o.ApplyT(func(v GetProjectsProject) string { return v.CreateTime }).(pulumi.StringOutput)
+func (o GetInstanceProjectOutput) CreateTime() pulumi.StringOutput {
+	return o.ApplyT(func(v GetInstanceProject) string { return v.CreateTime }).(pulumi.StringOutput)
 }
 
-func (o GetProjectsProjectOutput) CreatorUin() pulumi.IntOutput {
-	return o.ApplyT(func(v GetProjectsProject) int { return v.CreatorUin }).(pulumi.IntOutput)
+func (o GetInstanceProjectOutput) CreatorUin() pulumi.IntOutput {
+	return o.ApplyT(func(v GetInstanceProject) int { return v.CreatorUin }).(pulumi.IntOutput)
 }
 
-func (o GetProjectsProjectOutput) ProjectId() pulumi.IntOutput {
-	return o.ApplyT(func(v GetProjectsProject) int { return v.ProjectId }).(pulumi.IntOutput)
+func (o GetInstanceProjectOutput) ProjectId() pulumi.IntOutput {
+	return o.ApplyT(func(v GetInstanceProject) int { return v.ProjectId }).(pulumi.IntOutput)
 }
 
-func (o GetProjectsProjectOutput) ProjectInfo() pulumi.StringOutput {
-	return o.ApplyT(func(v GetProjectsProject) string { return v.ProjectInfo }).(pulumi.StringOutput)
+func (o GetInstanceProjectOutput) ProjectInfo() pulumi.StringOutput {
+	return o.ApplyT(func(v GetInstanceProject) string { return v.ProjectInfo }).(pulumi.StringOutput)
 }
 
-func (o GetProjectsProjectOutput) ProjectName() pulumi.StringOutput {
-	return o.ApplyT(func(v GetProjectsProject) string { return v.ProjectName }).(pulumi.StringOutput)
+func (o GetInstanceProjectOutput) ProjectName() pulumi.StringOutput {
+	return o.ApplyT(func(v GetInstanceProject) string { return v.ProjectName }).(pulumi.StringOutput)
 }
 
-type GetProjectsProjectArrayOutput struct{ *pulumi.OutputState }
+type GetInstanceProjectArrayOutput struct{ *pulumi.OutputState }
 
-func (GetProjectsProjectArrayOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]GetProjectsProject)(nil)).Elem()
+func (GetInstanceProjectArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetInstanceProject)(nil)).Elem()
 }
 
-func (o GetProjectsProjectArrayOutput) ToGetProjectsProjectArrayOutput() GetProjectsProjectArrayOutput {
+func (o GetInstanceProjectArrayOutput) ToGetInstanceProjectArrayOutput() GetInstanceProjectArrayOutput {
 	return o
 }
 
-func (o GetProjectsProjectArrayOutput) ToGetProjectsProjectArrayOutputWithContext(ctx context.Context) GetProjectsProjectArrayOutput {
+func (o GetInstanceProjectArrayOutput) ToGetInstanceProjectArrayOutputWithContext(ctx context.Context) GetInstanceProjectArrayOutput {
 	return o
 }
 
-func (o GetProjectsProjectArrayOutput) Index(i pulumi.IntInput) GetProjectsProjectOutput {
-	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetProjectsProject {
-		return vs[0].([]GetProjectsProject)[vs[1].(int)]
-	}).(GetProjectsProjectOutput)
+func (o GetInstanceProjectArrayOutput) Index(i pulumi.IntInput) GetInstanceProjectOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetInstanceProject {
+		return vs[0].([]GetInstanceProject)[vs[1].(int)]
+	}).(GetInstanceProjectOutput)
 }
 
 func init() {
-	pulumi.RegisterInputType(reflect.TypeOf((*GetProjectsProjectInput)(nil)).Elem(), GetProjectsProjectArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetProjectsProjectArrayInput)(nil)).Elem(), GetProjectsProjectArray{})
-	pulumi.RegisterOutputType(GetProjectsProjectOutput{})
-	pulumi.RegisterOutputType(GetProjectsProjectArrayOutput{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetInstanceProjectInput)(nil)).Elem(), GetInstanceProjectArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetInstanceProjectArrayInput)(nil)).Elem(), GetInstanceProjectArray{})
+	pulumi.RegisterOutputType(GetInstanceProjectOutput{})
+	pulumi.RegisterOutputType(GetInstanceProjectArrayOutput{})
 }

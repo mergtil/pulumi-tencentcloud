@@ -13,7 +13,7 @@ import (
 
 var _ = internal.GetEnvOrDefault
 
-type GetAuditsAuditList struct {
+type GetInstanceAuditList struct {
 	AuditSwitch   bool   `pulumi:"auditSwitch"`
 	CosBucket     string `pulumi:"cosBucket"`
 	Id            string `pulumi:"id"`
@@ -21,18 +21,18 @@ type GetAuditsAuditList struct {
 	Name          string `pulumi:"name"`
 }
 
-// GetAuditsAuditListInput is an input type that accepts GetAuditsAuditListArgs and GetAuditsAuditListOutput values.
-// You can construct a concrete instance of `GetAuditsAuditListInput` via:
+// GetInstanceAuditListInput is an input type that accepts GetInstanceAuditListArgs and GetInstanceAuditListOutput values.
+// You can construct a concrete instance of `GetInstanceAuditListInput` via:
 //
-//	GetAuditsAuditListArgs{...}
-type GetAuditsAuditListInput interface {
+//	GetInstanceAuditListArgs{...}
+type GetInstanceAuditListInput interface {
 	pulumi.Input
 
-	ToGetAuditsAuditListOutput() GetAuditsAuditListOutput
-	ToGetAuditsAuditListOutputWithContext(context.Context) GetAuditsAuditListOutput
+	ToGetInstanceAuditListOutput() GetInstanceAuditListOutput
+	ToGetInstanceAuditListOutputWithContext(context.Context) GetInstanceAuditListOutput
 }
 
-type GetAuditsAuditListArgs struct {
+type GetInstanceAuditListArgs struct {
 	AuditSwitch   pulumi.BoolInput   `pulumi:"auditSwitch"`
 	CosBucket     pulumi.StringInput `pulumi:"cosBucket"`
 	Id            pulumi.StringInput `pulumi:"id"`
@@ -40,100 +40,100 @@ type GetAuditsAuditListArgs struct {
 	Name          pulumi.StringInput `pulumi:"name"`
 }
 
-func (GetAuditsAuditListArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetAuditsAuditList)(nil)).Elem()
+func (GetInstanceAuditListArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetInstanceAuditList)(nil)).Elem()
 }
 
-func (i GetAuditsAuditListArgs) ToGetAuditsAuditListOutput() GetAuditsAuditListOutput {
-	return i.ToGetAuditsAuditListOutputWithContext(context.Background())
+func (i GetInstanceAuditListArgs) ToGetInstanceAuditListOutput() GetInstanceAuditListOutput {
+	return i.ToGetInstanceAuditListOutputWithContext(context.Background())
 }
 
-func (i GetAuditsAuditListArgs) ToGetAuditsAuditListOutputWithContext(ctx context.Context) GetAuditsAuditListOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetAuditsAuditListOutput)
+func (i GetInstanceAuditListArgs) ToGetInstanceAuditListOutputWithContext(ctx context.Context) GetInstanceAuditListOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetInstanceAuditListOutput)
 }
 
-// GetAuditsAuditListArrayInput is an input type that accepts GetAuditsAuditListArray and GetAuditsAuditListArrayOutput values.
-// You can construct a concrete instance of `GetAuditsAuditListArrayInput` via:
+// GetInstanceAuditListArrayInput is an input type that accepts GetInstanceAuditListArray and GetInstanceAuditListArrayOutput values.
+// You can construct a concrete instance of `GetInstanceAuditListArrayInput` via:
 //
-//	GetAuditsAuditListArray{ GetAuditsAuditListArgs{...} }
-type GetAuditsAuditListArrayInput interface {
+//	GetInstanceAuditListArray{ GetInstanceAuditListArgs{...} }
+type GetInstanceAuditListArrayInput interface {
 	pulumi.Input
 
-	ToGetAuditsAuditListArrayOutput() GetAuditsAuditListArrayOutput
-	ToGetAuditsAuditListArrayOutputWithContext(context.Context) GetAuditsAuditListArrayOutput
+	ToGetInstanceAuditListArrayOutput() GetInstanceAuditListArrayOutput
+	ToGetInstanceAuditListArrayOutputWithContext(context.Context) GetInstanceAuditListArrayOutput
 }
 
-type GetAuditsAuditListArray []GetAuditsAuditListInput
+type GetInstanceAuditListArray []GetInstanceAuditListInput
 
-func (GetAuditsAuditListArray) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]GetAuditsAuditList)(nil)).Elem()
+func (GetInstanceAuditListArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetInstanceAuditList)(nil)).Elem()
 }
 
-func (i GetAuditsAuditListArray) ToGetAuditsAuditListArrayOutput() GetAuditsAuditListArrayOutput {
-	return i.ToGetAuditsAuditListArrayOutputWithContext(context.Background())
+func (i GetInstanceAuditListArray) ToGetInstanceAuditListArrayOutput() GetInstanceAuditListArrayOutput {
+	return i.ToGetInstanceAuditListArrayOutputWithContext(context.Background())
 }
 
-func (i GetAuditsAuditListArray) ToGetAuditsAuditListArrayOutputWithContext(ctx context.Context) GetAuditsAuditListArrayOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetAuditsAuditListArrayOutput)
+func (i GetInstanceAuditListArray) ToGetInstanceAuditListArrayOutputWithContext(ctx context.Context) GetInstanceAuditListArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetInstanceAuditListArrayOutput)
 }
 
-type GetAuditsAuditListOutput struct{ *pulumi.OutputState }
+type GetInstanceAuditListOutput struct{ *pulumi.OutputState }
 
-func (GetAuditsAuditListOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetAuditsAuditList)(nil)).Elem()
+func (GetInstanceAuditListOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetInstanceAuditList)(nil)).Elem()
 }
 
-func (o GetAuditsAuditListOutput) ToGetAuditsAuditListOutput() GetAuditsAuditListOutput {
+func (o GetInstanceAuditListOutput) ToGetInstanceAuditListOutput() GetInstanceAuditListOutput {
 	return o
 }
 
-func (o GetAuditsAuditListOutput) ToGetAuditsAuditListOutputWithContext(ctx context.Context) GetAuditsAuditListOutput {
+func (o GetInstanceAuditListOutput) ToGetInstanceAuditListOutputWithContext(ctx context.Context) GetInstanceAuditListOutput {
 	return o
 }
 
-func (o GetAuditsAuditListOutput) AuditSwitch() pulumi.BoolOutput {
-	return o.ApplyT(func(v GetAuditsAuditList) bool { return v.AuditSwitch }).(pulumi.BoolOutput)
+func (o GetInstanceAuditListOutput) AuditSwitch() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetInstanceAuditList) bool { return v.AuditSwitch }).(pulumi.BoolOutput)
 }
 
-func (o GetAuditsAuditListOutput) CosBucket() pulumi.StringOutput {
-	return o.ApplyT(func(v GetAuditsAuditList) string { return v.CosBucket }).(pulumi.StringOutput)
+func (o GetInstanceAuditListOutput) CosBucket() pulumi.StringOutput {
+	return o.ApplyT(func(v GetInstanceAuditList) string { return v.CosBucket }).(pulumi.StringOutput)
 }
 
-func (o GetAuditsAuditListOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v GetAuditsAuditList) string { return v.Id }).(pulumi.StringOutput)
+func (o GetInstanceAuditListOutput) Id() pulumi.StringOutput {
+	return o.ApplyT(func(v GetInstanceAuditList) string { return v.Id }).(pulumi.StringOutput)
 }
 
-func (o GetAuditsAuditListOutput) LogFilePrefix() pulumi.StringOutput {
-	return o.ApplyT(func(v GetAuditsAuditList) string { return v.LogFilePrefix }).(pulumi.StringOutput)
+func (o GetInstanceAuditListOutput) LogFilePrefix() pulumi.StringOutput {
+	return o.ApplyT(func(v GetInstanceAuditList) string { return v.LogFilePrefix }).(pulumi.StringOutput)
 }
 
-func (o GetAuditsAuditListOutput) Name() pulumi.StringOutput {
-	return o.ApplyT(func(v GetAuditsAuditList) string { return v.Name }).(pulumi.StringOutput)
+func (o GetInstanceAuditListOutput) Name() pulumi.StringOutput {
+	return o.ApplyT(func(v GetInstanceAuditList) string { return v.Name }).(pulumi.StringOutput)
 }
 
-type GetAuditsAuditListArrayOutput struct{ *pulumi.OutputState }
+type GetInstanceAuditListArrayOutput struct{ *pulumi.OutputState }
 
-func (GetAuditsAuditListArrayOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]GetAuditsAuditList)(nil)).Elem()
+func (GetInstanceAuditListArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetInstanceAuditList)(nil)).Elem()
 }
 
-func (o GetAuditsAuditListArrayOutput) ToGetAuditsAuditListArrayOutput() GetAuditsAuditListArrayOutput {
+func (o GetInstanceAuditListArrayOutput) ToGetInstanceAuditListArrayOutput() GetInstanceAuditListArrayOutput {
 	return o
 }
 
-func (o GetAuditsAuditListArrayOutput) ToGetAuditsAuditListArrayOutputWithContext(ctx context.Context) GetAuditsAuditListArrayOutput {
+func (o GetInstanceAuditListArrayOutput) ToGetInstanceAuditListArrayOutputWithContext(ctx context.Context) GetInstanceAuditListArrayOutput {
 	return o
 }
 
-func (o GetAuditsAuditListArrayOutput) Index(i pulumi.IntInput) GetAuditsAuditListOutput {
-	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetAuditsAuditList {
-		return vs[0].([]GetAuditsAuditList)[vs[1].(int)]
-	}).(GetAuditsAuditListOutput)
+func (o GetInstanceAuditListArrayOutput) Index(i pulumi.IntInput) GetInstanceAuditListOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetInstanceAuditList {
+		return vs[0].([]GetInstanceAuditList)[vs[1].(int)]
+	}).(GetInstanceAuditListOutput)
 }
 
 func init() {
-	pulumi.RegisterInputType(reflect.TypeOf((*GetAuditsAuditListInput)(nil)).Elem(), GetAuditsAuditListArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetAuditsAuditListArrayInput)(nil)).Elem(), GetAuditsAuditListArray{})
-	pulumi.RegisterOutputType(GetAuditsAuditListOutput{})
-	pulumi.RegisterOutputType(GetAuditsAuditListArrayOutput{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetInstanceAuditListInput)(nil)).Elem(), GetInstanceAuditListArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetInstanceAuditListArrayInput)(nil)).Elem(), GetInstanceAuditListArray{})
+	pulumi.RegisterOutputType(GetInstanceAuditListOutput{})
+	pulumi.RegisterOutputType(GetInstanceAuditListArrayOutput{})
 }

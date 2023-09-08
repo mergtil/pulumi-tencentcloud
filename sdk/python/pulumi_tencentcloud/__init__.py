@@ -890,10 +890,10 @@ _utilities.register(
  },
  {
   "pkg": "tencentcloud",
-  "mod": "Ccn/ccn",
+  "mod": "Ccn/instance",
   "fqn": "pulumi_tencentcloud.ccn",
   "classes": {
-   "tencentcloud:Ccn/ccn:Ccn": "Ccn"
+   "tencentcloud:Ccn/instance:Instance": "Instance"
   }
  },
  {
@@ -2450,18 +2450,18 @@ _utilities.register(
  },
  {
   "pkg": "tencentcloud",
-  "mod": "Dcx/dcx",
-  "fqn": "pulumi_tencentcloud.dcx",
-  "classes": {
-   "tencentcloud:Dcx/dcx:Dcx": "Dcx"
-  }
- },
- {
-  "pkg": "tencentcloud",
   "mod": "Dcx/extraConfig",
   "fqn": "pulumi_tencentcloud.dcx",
   "classes": {
    "tencentcloud:Dcx/extraConfig:ExtraConfig": "ExtraConfig"
+  }
+ },
+ {
+  "pkg": "tencentcloud",
+  "mod": "Dcx/instance",
+  "fqn": "pulumi_tencentcloud.dcx",
+  "classes": {
+   "tencentcloud:Dcx/instance:Instance": "Instance"
   }
  },
  {
@@ -2474,10 +2474,10 @@ _utilities.register(
  },
  {
   "pkg": "tencentcloud",
-  "mod": "Deprecatedaudit/audit",
+  "mod": "Deprecatedaudit/instance",
   "fqn": "pulumi_tencentcloud.deprecatedaudit",
   "classes": {
-   "tencentcloud:Deprecatedaudit/audit:Audit": "Audit"
+   "tencentcloud:Deprecatedaudit/instance:Instance": "Instance"
   }
  },
  {
@@ -2522,10 +2522,10 @@ _utilities.register(
  },
  {
   "pkg": "tencentcloud",
-  "mod": "Deprecatedlb/lb",
+  "mod": "Deprecatedlb/instance",
   "fqn": "pulumi_tencentcloud.deprecatedlb",
   "classes": {
-   "tencentcloud:Deprecatedlb/lb:Lb": "Lb"
+   "tencentcloud:Deprecatedlb/instance:Instance": "Instance"
   }
  },
  {
@@ -2586,10 +2586,10 @@ _utilities.register(
  },
  {
   "pkg": "tencentcloud",
-  "mod": "Dnat/dnat",
+  "mod": "Dnat/instance",
   "fqn": "pulumi_tencentcloud.dnat",
   "classes": {
-   "tencentcloud:Dnat/dnat:Dnat": "Dnat"
+   "tencentcloud:Dnat/instance:Instance": "Instance"
   }
  },
  {
@@ -2818,10 +2818,10 @@ _utilities.register(
  },
  {
   "pkg": "tencentcloud",
-  "mod": "Eip/eip",
+  "mod": "Eip/instance",
   "fqn": "pulumi_tencentcloud.eip",
   "classes": {
-   "tencentcloud:Eip/eip:Eip": "Eip"
+   "tencentcloud:Eip/instance:Instance": "Instance"
   }
  },
  {
@@ -2874,10 +2874,10 @@ _utilities.register(
  },
  {
   "pkg": "tencentcloud",
-  "mod": "Eni/eni",
+  "mod": "Eni/instance",
   "fqn": "pulumi_tencentcloud.eni",
   "classes": {
-   "tencentcloud:Eni/eni:Eni": "Eni"
+   "tencentcloud:Eni/instance:Instance": "Instance"
   }
  },
  {
@@ -2986,10 +2986,10 @@ _utilities.register(
  },
  {
   "pkg": "tencentcloud",
-  "mod": "Image/image",
+  "mod": "Image/instance",
   "fqn": "pulumi_tencentcloud.image",
   "classes": {
-   "tencentcloud:Image/image:Image": "Image"
+   "tencentcloud:Image/instance:Instance": "Instance"
   }
  },
  {
@@ -4226,10 +4226,10 @@ _utilities.register(
  },
  {
   "pkg": "tencentcloud",
-  "mod": "Project/project",
+  "mod": "Project/instance",
   "fqn": "pulumi_tencentcloud.project",
   "classes": {
-   "tencentcloud:Project/project:Project": "Project"
+   "tencentcloud:Project/instance:Instance": "Instance"
   }
  },
  {
@@ -4978,6 +4978,14 @@ _utilities.register(
  },
  {
   "pkg": "tencentcloud",
+  "mod": "Ssl/commitCertificateInformation",
+  "fqn": "pulumi_tencentcloud.ssl",
+  "classes": {
+   "tencentcloud:Ssl/commitCertificateInformation:CommitCertificateInformation": "CommitCertificateInformation"
+  }
+ },
+ {
+  "pkg": "tencentcloud",
   "mod": "Ssl/freeCertificate",
   "fqn": "pulumi_tencentcloud.ssl",
   "classes": {
@@ -5026,10 +5034,10 @@ _utilities.register(
  },
  {
   "pkg": "tencentcloud",
-  "mod": "Subnet/subnet",
+  "mod": "Subnet/instance",
   "fqn": "pulumi_tencentcloud.subnet",
   "classes": {
-   "tencentcloud:Subnet/subnet:Subnet": "Subnet"
+   "tencentcloud:Subnet/instance:Instance": "Instance"
   }
  },
  {
@@ -5042,10 +5050,10 @@ _utilities.register(
  },
  {
   "pkg": "tencentcloud",
-  "mod": "Tag/tag",
+  "mod": "Tag/instance",
   "fqn": "pulumi_tencentcloud.tag",
   "classes": {
-   "tencentcloud:Tag/tag:Tag": "Tag"
+   "tencentcloud:Tag/instance:Instance": "Instance"
   }
  },
  {
@@ -6010,6 +6018,14 @@ _utilities.register(
  },
  {
   "pkg": "tencentcloud",
+  "mod": "Vpc/instance",
+  "fqn": "pulumi_tencentcloud.vpc",
+  "classes": {
+   "tencentcloud:Vpc/instance:Instance": "Instance"
+  }
+ },
+ {
+  "pkg": "tencentcloud",
   "mod": "Vpc/ipv6CidrBlock",
   "fqn": "pulumi_tencentcloud.vpc",
   "classes": {
@@ -6102,14 +6118,6 @@ _utilities.register(
   "fqn": "pulumi_tencentcloud.vpc",
   "classes": {
    "tencentcloud:Vpc/trafficPackage:TrafficPackage": "TrafficPackage"
-  }
- },
- {
-  "pkg": "tencentcloud",
-  "mod": "Vpc/vpc",
-  "fqn": "pulumi_tencentcloud.vpc",
-  "classes": {
-   "tencentcloud:Vpc/vpc:Vpc": "Vpc"
   }
  },
  {

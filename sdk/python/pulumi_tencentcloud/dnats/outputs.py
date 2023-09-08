@@ -10,11 +10,11 @@ from typing import Any, Mapping, Optional, Sequence, Union, overload
 from .. import _utilities
 
 __all__ = [
-    'GetDnatsDnatListResult',
+    'GetInstanceDnatListResult',
 ]
 
 @pulumi.output_type
-class GetDnatsDnatListResult(dict):
+class GetInstanceDnatListResult(dict):
     def __init__(__self__, *,
                  elastic_ip: str,
                  elastic_port: str,

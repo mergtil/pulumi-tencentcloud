@@ -5,11 +5,6 @@ import * as pulumi from "@pulumi/pulumi";
 import * as utilities from "../utilities";
 
 // Export members:
-export { DcxArgs, DcxState } from "./dcx";
-export type Dcx = import("./dcx").Dcx;
-export const Dcx: typeof import("./dcx").Dcx = null as any;
-utilities.lazyLoad(exports, ["Dcx"], () => require("./dcx"));
-
 export { ExtraConfigArgs, ExtraConfigState } from "./extraConfig";
 export type ExtraConfig = import("./extraConfig").ExtraConfig;
 export const ExtraConfig: typeof import("./extraConfig").ExtraConfig = null as any;
@@ -20,19 +15,24 @@ export const getInstances: typeof import("./getInstances").getInstances = null a
 export const getInstancesOutput: typeof import("./getInstances").getInstancesOutput = null as any;
 utilities.lazyLoad(exports, ["getInstances","getInstancesOutput"], () => require("./getInstances"));
 
+export { InstanceArgs, InstanceState } from "./instance";
+export type Instance = import("./instance").Instance;
+export const Instance: typeof import("./instance").Instance = null as any;
+utilities.lazyLoad(exports, ["Instance"], () => require("./instance"));
+
 
 const _module = {
     version: utilities.getVersion(),
     construct: (name: string, type: string, urn: string): pulumi.Resource => {
         switch (type) {
-            case "tencentcloud:Dcx/dcx:Dcx":
-                return new Dcx(name, <any>undefined, { urn })
             case "tencentcloud:Dcx/extraConfig:ExtraConfig":
                 return new ExtraConfig(name, <any>undefined, { urn })
+            case "tencentcloud:Dcx/instance:Instance":
+                return new Instance(name, <any>undefined, { urn })
             default:
                 throw new Error(`unknown resource type ${type}`);
         }
     },
 };
-pulumi.runtime.registerResourceModule("tencentcloud", "Dcx/dcx", _module)
 pulumi.runtime.registerResourceModule("tencentcloud", "Dcx/extraConfig", _module)
+pulumi.runtime.registerResourceModule("tencentcloud", "Dcx/instance", _module)

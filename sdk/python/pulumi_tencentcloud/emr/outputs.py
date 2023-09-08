@@ -16,7 +16,7 @@ __all__ = [
     'ClusterResourceSpecCoreResourceSpec',
     'ClusterResourceSpecMasterResourceSpec',
     'ClusterResourceSpecTaskResourceSpec',
-    'GetEmrClusterResult',
+    'GetInstanceClusterResult',
     'GetNodesNodeResult',
     'GetNodesNodeCdbNodeInfoResult',
     'GetNodesNodeMcMultiDiskResult',
@@ -468,7 +468,7 @@ class ClusterResourceSpecTaskResourceSpec(dict):
 
 
 @pulumi.output_type
-class GetEmrClusterResult(dict):
+class GetInstanceClusterResult(dict):
     def __init__(__self__, *,
                  add_time: str,
                  charge_type: int,

@@ -25,8 +25,8 @@ func (m *module) Construct(ctx *pulumi.Context, name, typ, urn string) (r pulumi
 		r = &AddressTransform{}
 	case "tencentcloud:Eip/association:Association":
 		r = &Association{}
-	case "tencentcloud:Eip/eip:Eip":
-		r = &Eip{}
+	case "tencentcloud:Eip/instance:Instance":
+		r = &Instance{}
 	case "tencentcloud:Eip/normalAddressReturn:NormalAddressReturn":
 		r = &NormalAddressReturn{}
 	case "tencentcloud:Eip/publicAddressAdjust:PublicAddressAdjust":
@@ -56,7 +56,7 @@ func init() {
 	)
 	pulumi.RegisterResourceModule(
 		"tencentcloud",
-		"Eip/eip",
+		"Eip/instance",
 		&module{version},
 	)
 	pulumi.RegisterResourceModule(

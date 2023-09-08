@@ -10,12 +10,12 @@ from typing import Any, Mapping, Optional, Sequence, Union, overload
 from .. import _utilities
 
 __all__ = [
-    'EniIpv4',
-    'EniIpv4Info',
+    'InstanceIpv4',
+    'InstanceIpv4Info',
 ]
 
 @pulumi.output_type
-class EniIpv4(dict):
+class InstanceIpv4(dict):
     def __init__(__self__, *,
                  ip: str,
                  primary: bool,
@@ -42,7 +42,7 @@ class EniIpv4(dict):
 
 
 @pulumi.output_type
-class EniIpv4Info(dict):
+class InstanceIpv4Info(dict):
     def __init__(__self__, *,
                  description: Optional[str] = None,
                  ip: Optional[str] = None,

@@ -13,109 +13,109 @@ import (
 
 var _ = internal.GetEnvOrDefault
 
-type GetEipFilter struct {
+type GetInstanceFilter struct {
 	Name   string   `pulumi:"name"`
 	Values []string `pulumi:"values"`
 }
 
-// GetEipFilterInput is an input type that accepts GetEipFilterArgs and GetEipFilterOutput values.
-// You can construct a concrete instance of `GetEipFilterInput` via:
+// GetInstanceFilterInput is an input type that accepts GetInstanceFilterArgs and GetInstanceFilterOutput values.
+// You can construct a concrete instance of `GetInstanceFilterInput` via:
 //
-//	GetEipFilterArgs{...}
-type GetEipFilterInput interface {
+//	GetInstanceFilterArgs{...}
+type GetInstanceFilterInput interface {
 	pulumi.Input
 
-	ToGetEipFilterOutput() GetEipFilterOutput
-	ToGetEipFilterOutputWithContext(context.Context) GetEipFilterOutput
+	ToGetInstanceFilterOutput() GetInstanceFilterOutput
+	ToGetInstanceFilterOutputWithContext(context.Context) GetInstanceFilterOutput
 }
 
-type GetEipFilterArgs struct {
+type GetInstanceFilterArgs struct {
 	Name   pulumi.StringInput      `pulumi:"name"`
 	Values pulumi.StringArrayInput `pulumi:"values"`
 }
 
-func (GetEipFilterArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetEipFilter)(nil)).Elem()
+func (GetInstanceFilterArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetInstanceFilter)(nil)).Elem()
 }
 
-func (i GetEipFilterArgs) ToGetEipFilterOutput() GetEipFilterOutput {
-	return i.ToGetEipFilterOutputWithContext(context.Background())
+func (i GetInstanceFilterArgs) ToGetInstanceFilterOutput() GetInstanceFilterOutput {
+	return i.ToGetInstanceFilterOutputWithContext(context.Background())
 }
 
-func (i GetEipFilterArgs) ToGetEipFilterOutputWithContext(ctx context.Context) GetEipFilterOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetEipFilterOutput)
+func (i GetInstanceFilterArgs) ToGetInstanceFilterOutputWithContext(ctx context.Context) GetInstanceFilterOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetInstanceFilterOutput)
 }
 
-// GetEipFilterArrayInput is an input type that accepts GetEipFilterArray and GetEipFilterArrayOutput values.
-// You can construct a concrete instance of `GetEipFilterArrayInput` via:
+// GetInstanceFilterArrayInput is an input type that accepts GetInstanceFilterArray and GetInstanceFilterArrayOutput values.
+// You can construct a concrete instance of `GetInstanceFilterArrayInput` via:
 //
-//	GetEipFilterArray{ GetEipFilterArgs{...} }
-type GetEipFilterArrayInput interface {
+//	GetInstanceFilterArray{ GetInstanceFilterArgs{...} }
+type GetInstanceFilterArrayInput interface {
 	pulumi.Input
 
-	ToGetEipFilterArrayOutput() GetEipFilterArrayOutput
-	ToGetEipFilterArrayOutputWithContext(context.Context) GetEipFilterArrayOutput
+	ToGetInstanceFilterArrayOutput() GetInstanceFilterArrayOutput
+	ToGetInstanceFilterArrayOutputWithContext(context.Context) GetInstanceFilterArrayOutput
 }
 
-type GetEipFilterArray []GetEipFilterInput
+type GetInstanceFilterArray []GetInstanceFilterInput
 
-func (GetEipFilterArray) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]GetEipFilter)(nil)).Elem()
+func (GetInstanceFilterArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetInstanceFilter)(nil)).Elem()
 }
 
-func (i GetEipFilterArray) ToGetEipFilterArrayOutput() GetEipFilterArrayOutput {
-	return i.ToGetEipFilterArrayOutputWithContext(context.Background())
+func (i GetInstanceFilterArray) ToGetInstanceFilterArrayOutput() GetInstanceFilterArrayOutput {
+	return i.ToGetInstanceFilterArrayOutputWithContext(context.Background())
 }
 
-func (i GetEipFilterArray) ToGetEipFilterArrayOutputWithContext(ctx context.Context) GetEipFilterArrayOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetEipFilterArrayOutput)
+func (i GetInstanceFilterArray) ToGetInstanceFilterArrayOutputWithContext(ctx context.Context) GetInstanceFilterArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetInstanceFilterArrayOutput)
 }
 
-type GetEipFilterOutput struct{ *pulumi.OutputState }
+type GetInstanceFilterOutput struct{ *pulumi.OutputState }
 
-func (GetEipFilterOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetEipFilter)(nil)).Elem()
+func (GetInstanceFilterOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetInstanceFilter)(nil)).Elem()
 }
 
-func (o GetEipFilterOutput) ToGetEipFilterOutput() GetEipFilterOutput {
+func (o GetInstanceFilterOutput) ToGetInstanceFilterOutput() GetInstanceFilterOutput {
 	return o
 }
 
-func (o GetEipFilterOutput) ToGetEipFilterOutputWithContext(ctx context.Context) GetEipFilterOutput {
+func (o GetInstanceFilterOutput) ToGetInstanceFilterOutputWithContext(ctx context.Context) GetInstanceFilterOutput {
 	return o
 }
 
-func (o GetEipFilterOutput) Name() pulumi.StringOutput {
-	return o.ApplyT(func(v GetEipFilter) string { return v.Name }).(pulumi.StringOutput)
+func (o GetInstanceFilterOutput) Name() pulumi.StringOutput {
+	return o.ApplyT(func(v GetInstanceFilter) string { return v.Name }).(pulumi.StringOutput)
 }
 
-func (o GetEipFilterOutput) Values() pulumi.StringArrayOutput {
-	return o.ApplyT(func(v GetEipFilter) []string { return v.Values }).(pulumi.StringArrayOutput)
+func (o GetInstanceFilterOutput) Values() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v GetInstanceFilter) []string { return v.Values }).(pulumi.StringArrayOutput)
 }
 
-type GetEipFilterArrayOutput struct{ *pulumi.OutputState }
+type GetInstanceFilterArrayOutput struct{ *pulumi.OutputState }
 
-func (GetEipFilterArrayOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]GetEipFilter)(nil)).Elem()
+func (GetInstanceFilterArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetInstanceFilter)(nil)).Elem()
 }
 
-func (o GetEipFilterArrayOutput) ToGetEipFilterArrayOutput() GetEipFilterArrayOutput {
+func (o GetInstanceFilterArrayOutput) ToGetInstanceFilterArrayOutput() GetInstanceFilterArrayOutput {
 	return o
 }
 
-func (o GetEipFilterArrayOutput) ToGetEipFilterArrayOutputWithContext(ctx context.Context) GetEipFilterArrayOutput {
+func (o GetInstanceFilterArrayOutput) ToGetInstanceFilterArrayOutputWithContext(ctx context.Context) GetInstanceFilterArrayOutput {
 	return o
 }
 
-func (o GetEipFilterArrayOutput) Index(i pulumi.IntInput) GetEipFilterOutput {
-	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetEipFilter {
-		return vs[0].([]GetEipFilter)[vs[1].(int)]
-	}).(GetEipFilterOutput)
+func (o GetInstanceFilterArrayOutput) Index(i pulumi.IntInput) GetInstanceFilterOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetInstanceFilter {
+		return vs[0].([]GetInstanceFilter)[vs[1].(int)]
+	}).(GetInstanceFilterOutput)
 }
 
 func init() {
-	pulumi.RegisterInputType(reflect.TypeOf((*GetEipFilterInput)(nil)).Elem(), GetEipFilterArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetEipFilterArrayInput)(nil)).Elem(), GetEipFilterArray{})
-	pulumi.RegisterOutputType(GetEipFilterOutput{})
-	pulumi.RegisterOutputType(GetEipFilterArrayOutput{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetInstanceFilterInput)(nil)).Elem(), GetInstanceFilterArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetInstanceFilterArrayInput)(nil)).Elem(), GetInstanceFilterArray{})
+	pulumi.RegisterOutputType(GetInstanceFilterOutput{})
+	pulumi.RegisterOutputType(GetInstanceFilterArrayOutput{})
 }

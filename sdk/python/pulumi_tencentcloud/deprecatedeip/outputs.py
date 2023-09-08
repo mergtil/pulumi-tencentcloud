@@ -10,11 +10,11 @@ from typing import Any, Mapping, Optional, Sequence, Union, overload
 from .. import _utilities
 
 __all__ = [
-    'GetEipFilterResult',
+    'GetInstanceFilterResult',
 ]
 
 @pulumi.output_type
-class GetEipFilterResult(dict):
+class GetInstanceFilterResult(dict):
     def __init__(__self__, *,
                  name: str,
                  values: Sequence[str]):

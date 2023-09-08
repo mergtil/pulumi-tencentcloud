@@ -13,7 +13,7 @@ import (
 
 var _ = internal.GetEnvOrDefault
 
-type GetDomainsList struct {
+type GetInstanceList struct {
 	AutoRenew      int    `pulumi:"autoRenew"`
 	BuyStatus      string `pulumi:"buyStatus"`
 	CodeTld        string `pulumi:"codeTld"`
@@ -25,18 +25,18 @@ type GetDomainsList struct {
 	Tld            string `pulumi:"tld"`
 }
 
-// GetDomainsListInput is an input type that accepts GetDomainsListArgs and GetDomainsListOutput values.
-// You can construct a concrete instance of `GetDomainsListInput` via:
+// GetInstanceListInput is an input type that accepts GetInstanceListArgs and GetInstanceListOutput values.
+// You can construct a concrete instance of `GetInstanceListInput` via:
 //
-//	GetDomainsListArgs{...}
-type GetDomainsListInput interface {
+//	GetInstanceListArgs{...}
+type GetInstanceListInput interface {
 	pulumi.Input
 
-	ToGetDomainsListOutput() GetDomainsListOutput
-	ToGetDomainsListOutputWithContext(context.Context) GetDomainsListOutput
+	ToGetInstanceListOutput() GetInstanceListOutput
+	ToGetInstanceListOutputWithContext(context.Context) GetInstanceListOutput
 }
 
-type GetDomainsListArgs struct {
+type GetInstanceListArgs struct {
 	AutoRenew      pulumi.IntInput    `pulumi:"autoRenew"`
 	BuyStatus      pulumi.StringInput `pulumi:"buyStatus"`
 	CodeTld        pulumi.StringInput `pulumi:"codeTld"`
@@ -48,116 +48,116 @@ type GetDomainsListArgs struct {
 	Tld            pulumi.StringInput `pulumi:"tld"`
 }
 
-func (GetDomainsListArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetDomainsList)(nil)).Elem()
+func (GetInstanceListArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetInstanceList)(nil)).Elem()
 }
 
-func (i GetDomainsListArgs) ToGetDomainsListOutput() GetDomainsListOutput {
-	return i.ToGetDomainsListOutputWithContext(context.Background())
+func (i GetInstanceListArgs) ToGetInstanceListOutput() GetInstanceListOutput {
+	return i.ToGetInstanceListOutputWithContext(context.Background())
 }
 
-func (i GetDomainsListArgs) ToGetDomainsListOutputWithContext(ctx context.Context) GetDomainsListOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetDomainsListOutput)
+func (i GetInstanceListArgs) ToGetInstanceListOutputWithContext(ctx context.Context) GetInstanceListOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetInstanceListOutput)
 }
 
-// GetDomainsListArrayInput is an input type that accepts GetDomainsListArray and GetDomainsListArrayOutput values.
-// You can construct a concrete instance of `GetDomainsListArrayInput` via:
+// GetInstanceListArrayInput is an input type that accepts GetInstanceListArray and GetInstanceListArrayOutput values.
+// You can construct a concrete instance of `GetInstanceListArrayInput` via:
 //
-//	GetDomainsListArray{ GetDomainsListArgs{...} }
-type GetDomainsListArrayInput interface {
+//	GetInstanceListArray{ GetInstanceListArgs{...} }
+type GetInstanceListArrayInput interface {
 	pulumi.Input
 
-	ToGetDomainsListArrayOutput() GetDomainsListArrayOutput
-	ToGetDomainsListArrayOutputWithContext(context.Context) GetDomainsListArrayOutput
+	ToGetInstanceListArrayOutput() GetInstanceListArrayOutput
+	ToGetInstanceListArrayOutputWithContext(context.Context) GetInstanceListArrayOutput
 }
 
-type GetDomainsListArray []GetDomainsListInput
+type GetInstanceListArray []GetInstanceListInput
 
-func (GetDomainsListArray) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]GetDomainsList)(nil)).Elem()
+func (GetInstanceListArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetInstanceList)(nil)).Elem()
 }
 
-func (i GetDomainsListArray) ToGetDomainsListArrayOutput() GetDomainsListArrayOutput {
-	return i.ToGetDomainsListArrayOutputWithContext(context.Background())
+func (i GetInstanceListArray) ToGetInstanceListArrayOutput() GetInstanceListArrayOutput {
+	return i.ToGetInstanceListArrayOutputWithContext(context.Background())
 }
 
-func (i GetDomainsListArray) ToGetDomainsListArrayOutputWithContext(ctx context.Context) GetDomainsListArrayOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetDomainsListArrayOutput)
+func (i GetInstanceListArray) ToGetInstanceListArrayOutputWithContext(ctx context.Context) GetInstanceListArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetInstanceListArrayOutput)
 }
 
-type GetDomainsListOutput struct{ *pulumi.OutputState }
+type GetInstanceListOutput struct{ *pulumi.OutputState }
 
-func (GetDomainsListOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetDomainsList)(nil)).Elem()
+func (GetInstanceListOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetInstanceList)(nil)).Elem()
 }
 
-func (o GetDomainsListOutput) ToGetDomainsListOutput() GetDomainsListOutput {
+func (o GetInstanceListOutput) ToGetInstanceListOutput() GetInstanceListOutput {
 	return o
 }
 
-func (o GetDomainsListOutput) ToGetDomainsListOutputWithContext(ctx context.Context) GetDomainsListOutput {
+func (o GetInstanceListOutput) ToGetInstanceListOutputWithContext(ctx context.Context) GetInstanceListOutput {
 	return o
 }
 
-func (o GetDomainsListOutput) AutoRenew() pulumi.IntOutput {
-	return o.ApplyT(func(v GetDomainsList) int { return v.AutoRenew }).(pulumi.IntOutput)
+func (o GetInstanceListOutput) AutoRenew() pulumi.IntOutput {
+	return o.ApplyT(func(v GetInstanceList) int { return v.AutoRenew }).(pulumi.IntOutput)
 }
 
-func (o GetDomainsListOutput) BuyStatus() pulumi.StringOutput {
-	return o.ApplyT(func(v GetDomainsList) string { return v.BuyStatus }).(pulumi.StringOutput)
+func (o GetInstanceListOutput) BuyStatus() pulumi.StringOutput {
+	return o.ApplyT(func(v GetInstanceList) string { return v.BuyStatus }).(pulumi.StringOutput)
 }
 
-func (o GetDomainsListOutput) CodeTld() pulumi.StringOutput {
-	return o.ApplyT(func(v GetDomainsList) string { return v.CodeTld }).(pulumi.StringOutput)
+func (o GetInstanceListOutput) CodeTld() pulumi.StringOutput {
+	return o.ApplyT(func(v GetInstanceList) string { return v.CodeTld }).(pulumi.StringOutput)
 }
 
-func (o GetDomainsListOutput) CreationDate() pulumi.StringOutput {
-	return o.ApplyT(func(v GetDomainsList) string { return v.CreationDate }).(pulumi.StringOutput)
+func (o GetInstanceListOutput) CreationDate() pulumi.StringOutput {
+	return o.ApplyT(func(v GetInstanceList) string { return v.CreationDate }).(pulumi.StringOutput)
 }
 
-func (o GetDomainsListOutput) DomainId() pulumi.StringOutput {
-	return o.ApplyT(func(v GetDomainsList) string { return v.DomainId }).(pulumi.StringOutput)
+func (o GetInstanceListOutput) DomainId() pulumi.StringOutput {
+	return o.ApplyT(func(v GetInstanceList) string { return v.DomainId }).(pulumi.StringOutput)
 }
 
-func (o GetDomainsListOutput) DomainName() pulumi.StringOutput {
-	return o.ApplyT(func(v GetDomainsList) string { return v.DomainName }).(pulumi.StringOutput)
+func (o GetInstanceListOutput) DomainName() pulumi.StringOutput {
+	return o.ApplyT(func(v GetInstanceList) string { return v.DomainName }).(pulumi.StringOutput)
 }
 
-func (o GetDomainsListOutput) ExpirationDate() pulumi.StringOutput {
-	return o.ApplyT(func(v GetDomainsList) string { return v.ExpirationDate }).(pulumi.StringOutput)
+func (o GetInstanceListOutput) ExpirationDate() pulumi.StringOutput {
+	return o.ApplyT(func(v GetInstanceList) string { return v.ExpirationDate }).(pulumi.StringOutput)
 }
 
-func (o GetDomainsListOutput) IsPremium() pulumi.BoolOutput {
-	return o.ApplyT(func(v GetDomainsList) bool { return v.IsPremium }).(pulumi.BoolOutput)
+func (o GetInstanceListOutput) IsPremium() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetInstanceList) bool { return v.IsPremium }).(pulumi.BoolOutput)
 }
 
-func (o GetDomainsListOutput) Tld() pulumi.StringOutput {
-	return o.ApplyT(func(v GetDomainsList) string { return v.Tld }).(pulumi.StringOutput)
+func (o GetInstanceListOutput) Tld() pulumi.StringOutput {
+	return o.ApplyT(func(v GetInstanceList) string { return v.Tld }).(pulumi.StringOutput)
 }
 
-type GetDomainsListArrayOutput struct{ *pulumi.OutputState }
+type GetInstanceListArrayOutput struct{ *pulumi.OutputState }
 
-func (GetDomainsListArrayOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]GetDomainsList)(nil)).Elem()
+func (GetInstanceListArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetInstanceList)(nil)).Elem()
 }
 
-func (o GetDomainsListArrayOutput) ToGetDomainsListArrayOutput() GetDomainsListArrayOutput {
+func (o GetInstanceListArrayOutput) ToGetInstanceListArrayOutput() GetInstanceListArrayOutput {
 	return o
 }
 
-func (o GetDomainsListArrayOutput) ToGetDomainsListArrayOutputWithContext(ctx context.Context) GetDomainsListArrayOutput {
+func (o GetInstanceListArrayOutput) ToGetInstanceListArrayOutputWithContext(ctx context.Context) GetInstanceListArrayOutput {
 	return o
 }
 
-func (o GetDomainsListArrayOutput) Index(i pulumi.IntInput) GetDomainsListOutput {
-	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetDomainsList {
-		return vs[0].([]GetDomainsList)[vs[1].(int)]
-	}).(GetDomainsListOutput)
+func (o GetInstanceListArrayOutput) Index(i pulumi.IntInput) GetInstanceListOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetInstanceList {
+		return vs[0].([]GetInstanceList)[vs[1].(int)]
+	}).(GetInstanceListOutput)
 }
 
 func init() {
-	pulumi.RegisterInputType(reflect.TypeOf((*GetDomainsListInput)(nil)).Elem(), GetDomainsListArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetDomainsListArrayInput)(nil)).Elem(), GetDomainsListArray{})
-	pulumi.RegisterOutputType(GetDomainsListOutput{})
-	pulumi.RegisterOutputType(GetDomainsListArrayOutput{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetInstanceListInput)(nil)).Elem(), GetInstanceListArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetInstanceListArrayInput)(nil)).Elem(), GetInstanceListArray{})
+	pulumi.RegisterOutputType(GetInstanceListOutput{})
+	pulumi.RegisterOutputType(GetInstanceListArrayOutput{})
 }

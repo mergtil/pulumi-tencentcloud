@@ -23,8 +23,8 @@ func (m *module) Construct(ctx *pulumi.Context, name, typ, urn string) (r pulumi
 	switch typ {
 	case "tencentcloud:Tag/attachment:Attachment":
 		r = &Attachment{}
-	case "tencentcloud:Tag/tag:Tag":
-		r = &Tag{}
+	case "tencentcloud:Tag/instance:Instance":
+		r = &Instance{}
 	default:
 		return nil, fmt.Errorf("unknown resource type: %s", typ)
 	}
@@ -45,7 +45,7 @@ func init() {
 	)
 	pulumi.RegisterResourceModule(
 		"tencentcloud",
-		"Tag/tag",
+		"Tag/instance",
 		&module{version},
 	)
 }

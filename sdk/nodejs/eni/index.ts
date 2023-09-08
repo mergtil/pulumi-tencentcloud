@@ -10,10 +10,10 @@ export type Attachment = import("./attachment").Attachment;
 export const Attachment: typeof import("./attachment").Attachment = null as any;
 utilities.lazyLoad(exports, ["Attachment"], () => require("./attachment"));
 
-export { EniArgs, EniState } from "./eni";
-export type Eni = import("./eni").Eni;
-export const Eni: typeof import("./eni").Eni = null as any;
-utilities.lazyLoad(exports, ["Eni"], () => require("./eni"));
+export { InstanceArgs, InstanceState } from "./instance";
+export type Instance = import("./instance").Instance;
+export const Instance: typeof import("./instance").Instance = null as any;
+utilities.lazyLoad(exports, ["Instance"], () => require("./instance"));
 
 export { SgAttachmentArgs, SgAttachmentState } from "./sgAttachment";
 export type SgAttachment = import("./sgAttachment").SgAttachment;
@@ -27,8 +27,8 @@ const _module = {
         switch (type) {
             case "tencentcloud:Eni/attachment:Attachment":
                 return new Attachment(name, <any>undefined, { urn })
-            case "tencentcloud:Eni/eni:Eni":
-                return new Eni(name, <any>undefined, { urn })
+            case "tencentcloud:Eni/instance:Instance":
+                return new Instance(name, <any>undefined, { urn })
             case "tencentcloud:Eni/sgAttachment:SgAttachment":
                 return new SgAttachment(name, <any>undefined, { urn })
             default:
@@ -37,5 +37,5 @@ const _module = {
     },
 };
 pulumi.runtime.registerResourceModule("tencentcloud", "Eni/attachment", _module)
-pulumi.runtime.registerResourceModule("tencentcloud", "Eni/eni", _module)
+pulumi.runtime.registerResourceModule("tencentcloud", "Eni/instance", _module)
 pulumi.runtime.registerResourceModule("tencentcloud", "Eni/sgAttachment", _module)

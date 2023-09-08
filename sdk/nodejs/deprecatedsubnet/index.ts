@@ -4,8 +4,8 @@
 import * as utilities from "../utilities";
 
 // Export members:
-export { GetSubnetArgs, GetSubnetResult, GetSubnetOutputArgs } from "./getSubnet";
-export const getSubnet: typeof import("./getSubnet").getSubnet = null as any;
-export const getSubnetOutput: typeof import("./getSubnet").getSubnetOutput = null as any;
-utilities.lazyLoad(exports, ["getSubnet","getSubnetOutput"], () => require("./getSubnet"));
+export { GetInstanceArgs, GetInstanceResult, GetInstanceOutputArgs } from "./getInstance";
+export const getInstance: typeof import("./getInstance").getInstance = null as any;
+export const getInstanceOutput: typeof import("./getInstance").getInstanceOutput = null as any;
+utilities.lazyLoad(exports, ["getInstance","getInstanceOutput"], () => require("./getInstance"));
 

@@ -13,109 +13,109 @@ import (
 
 var _ = internal.GetEnvOrDefault
 
-type GetImageFilter struct {
+type GetInstanceFilter struct {
 	Name   string   `pulumi:"name"`
 	Values []string `pulumi:"values"`
 }
 
-// GetImageFilterInput is an input type that accepts GetImageFilterArgs and GetImageFilterOutput values.
-// You can construct a concrete instance of `GetImageFilterInput` via:
+// GetInstanceFilterInput is an input type that accepts GetInstanceFilterArgs and GetInstanceFilterOutput values.
+// You can construct a concrete instance of `GetInstanceFilterInput` via:
 //
-//	GetImageFilterArgs{...}
-type GetImageFilterInput interface {
+//	GetInstanceFilterArgs{...}
+type GetInstanceFilterInput interface {
 	pulumi.Input
 
-	ToGetImageFilterOutput() GetImageFilterOutput
-	ToGetImageFilterOutputWithContext(context.Context) GetImageFilterOutput
+	ToGetInstanceFilterOutput() GetInstanceFilterOutput
+	ToGetInstanceFilterOutputWithContext(context.Context) GetInstanceFilterOutput
 }
 
-type GetImageFilterArgs struct {
+type GetInstanceFilterArgs struct {
 	Name   pulumi.StringInput      `pulumi:"name"`
 	Values pulumi.StringArrayInput `pulumi:"values"`
 }
 
-func (GetImageFilterArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetImageFilter)(nil)).Elem()
+func (GetInstanceFilterArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetInstanceFilter)(nil)).Elem()
 }
 
-func (i GetImageFilterArgs) ToGetImageFilterOutput() GetImageFilterOutput {
-	return i.ToGetImageFilterOutputWithContext(context.Background())
+func (i GetInstanceFilterArgs) ToGetInstanceFilterOutput() GetInstanceFilterOutput {
+	return i.ToGetInstanceFilterOutputWithContext(context.Background())
 }
 
-func (i GetImageFilterArgs) ToGetImageFilterOutputWithContext(ctx context.Context) GetImageFilterOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetImageFilterOutput)
+func (i GetInstanceFilterArgs) ToGetInstanceFilterOutputWithContext(ctx context.Context) GetInstanceFilterOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetInstanceFilterOutput)
 }
 
-// GetImageFilterArrayInput is an input type that accepts GetImageFilterArray and GetImageFilterArrayOutput values.
-// You can construct a concrete instance of `GetImageFilterArrayInput` via:
+// GetInstanceFilterArrayInput is an input type that accepts GetInstanceFilterArray and GetInstanceFilterArrayOutput values.
+// You can construct a concrete instance of `GetInstanceFilterArrayInput` via:
 //
-//	GetImageFilterArray{ GetImageFilterArgs{...} }
-type GetImageFilterArrayInput interface {
+//	GetInstanceFilterArray{ GetInstanceFilterArgs{...} }
+type GetInstanceFilterArrayInput interface {
 	pulumi.Input
 
-	ToGetImageFilterArrayOutput() GetImageFilterArrayOutput
-	ToGetImageFilterArrayOutputWithContext(context.Context) GetImageFilterArrayOutput
+	ToGetInstanceFilterArrayOutput() GetInstanceFilterArrayOutput
+	ToGetInstanceFilterArrayOutputWithContext(context.Context) GetInstanceFilterArrayOutput
 }
 
-type GetImageFilterArray []GetImageFilterInput
+type GetInstanceFilterArray []GetInstanceFilterInput
 
-func (GetImageFilterArray) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]GetImageFilter)(nil)).Elem()
+func (GetInstanceFilterArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetInstanceFilter)(nil)).Elem()
 }
 
-func (i GetImageFilterArray) ToGetImageFilterArrayOutput() GetImageFilterArrayOutput {
-	return i.ToGetImageFilterArrayOutputWithContext(context.Background())
+func (i GetInstanceFilterArray) ToGetInstanceFilterArrayOutput() GetInstanceFilterArrayOutput {
+	return i.ToGetInstanceFilterArrayOutputWithContext(context.Background())
 }
 
-func (i GetImageFilterArray) ToGetImageFilterArrayOutputWithContext(ctx context.Context) GetImageFilterArrayOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetImageFilterArrayOutput)
+func (i GetInstanceFilterArray) ToGetInstanceFilterArrayOutputWithContext(ctx context.Context) GetInstanceFilterArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetInstanceFilterArrayOutput)
 }
 
-type GetImageFilterOutput struct{ *pulumi.OutputState }
+type GetInstanceFilterOutput struct{ *pulumi.OutputState }
 
-func (GetImageFilterOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetImageFilter)(nil)).Elem()
+func (GetInstanceFilterOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetInstanceFilter)(nil)).Elem()
 }
 
-func (o GetImageFilterOutput) ToGetImageFilterOutput() GetImageFilterOutput {
+func (o GetInstanceFilterOutput) ToGetInstanceFilterOutput() GetInstanceFilterOutput {
 	return o
 }
 
-func (o GetImageFilterOutput) ToGetImageFilterOutputWithContext(ctx context.Context) GetImageFilterOutput {
+func (o GetInstanceFilterOutput) ToGetInstanceFilterOutputWithContext(ctx context.Context) GetInstanceFilterOutput {
 	return o
 }
 
-func (o GetImageFilterOutput) Name() pulumi.StringOutput {
-	return o.ApplyT(func(v GetImageFilter) string { return v.Name }).(pulumi.StringOutput)
+func (o GetInstanceFilterOutput) Name() pulumi.StringOutput {
+	return o.ApplyT(func(v GetInstanceFilter) string { return v.Name }).(pulumi.StringOutput)
 }
 
-func (o GetImageFilterOutput) Values() pulumi.StringArrayOutput {
-	return o.ApplyT(func(v GetImageFilter) []string { return v.Values }).(pulumi.StringArrayOutput)
+func (o GetInstanceFilterOutput) Values() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v GetInstanceFilter) []string { return v.Values }).(pulumi.StringArrayOutput)
 }
 
-type GetImageFilterArrayOutput struct{ *pulumi.OutputState }
+type GetInstanceFilterArrayOutput struct{ *pulumi.OutputState }
 
-func (GetImageFilterArrayOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]GetImageFilter)(nil)).Elem()
+func (GetInstanceFilterArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetInstanceFilter)(nil)).Elem()
 }
 
-func (o GetImageFilterArrayOutput) ToGetImageFilterArrayOutput() GetImageFilterArrayOutput {
+func (o GetInstanceFilterArrayOutput) ToGetInstanceFilterArrayOutput() GetInstanceFilterArrayOutput {
 	return o
 }
 
-func (o GetImageFilterArrayOutput) ToGetImageFilterArrayOutputWithContext(ctx context.Context) GetImageFilterArrayOutput {
+func (o GetInstanceFilterArrayOutput) ToGetInstanceFilterArrayOutputWithContext(ctx context.Context) GetInstanceFilterArrayOutput {
 	return o
 }
 
-func (o GetImageFilterArrayOutput) Index(i pulumi.IntInput) GetImageFilterOutput {
-	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetImageFilter {
-		return vs[0].([]GetImageFilter)[vs[1].(int)]
-	}).(GetImageFilterOutput)
+func (o GetInstanceFilterArrayOutput) Index(i pulumi.IntInput) GetInstanceFilterOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetInstanceFilter {
+		return vs[0].([]GetInstanceFilter)[vs[1].(int)]
+	}).(GetInstanceFilterOutput)
 }
 
 func init() {
-	pulumi.RegisterInputType(reflect.TypeOf((*GetImageFilterInput)(nil)).Elem(), GetImageFilterArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetImageFilterArrayInput)(nil)).Elem(), GetImageFilterArray{})
-	pulumi.RegisterOutputType(GetImageFilterOutput{})
-	pulumi.RegisterOutputType(GetImageFilterArrayOutput{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetInstanceFilterInput)(nil)).Elem(), GetInstanceFilterArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetInstanceFilterArrayInput)(nil)).Elem(), GetInstanceFilterArray{})
+	pulumi.RegisterOutputType(GetInstanceFilterOutput{})
+	pulumi.RegisterOutputType(GetInstanceFilterArrayOutput{})
 }

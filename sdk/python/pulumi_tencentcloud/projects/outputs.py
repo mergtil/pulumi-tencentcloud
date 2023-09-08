@@ -10,11 +10,11 @@ from typing import Any, Mapping, Optional, Sequence, Union, overload
 from .. import _utilities
 
 __all__ = [
-    'GetProjectsProjectResult',
+    'GetInstanceProjectResult',
 ]
 
 @pulumi.output_type
-class GetProjectsProjectResult(dict):
+class GetInstanceProjectResult(dict):
     def __init__(__self__, *,
                  create_time: str,
                  creator_uin: int,

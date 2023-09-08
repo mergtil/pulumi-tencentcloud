@@ -21,8 +21,10 @@ class PayCertificateArgs:
                  product_id: pulumi.Input[int],
                  alias: Optional[pulumi.Input[str]] = None,
                  confirm_letter: Optional[pulumi.Input[str]] = None,
+                 dv_auths: Optional[pulumi.Input[Sequence[pulumi.Input['PayCertificateDvAuthArgs']]]] = None,
                  project_id: Optional[pulumi.Input[int]] = None,
-                 time_span: Optional[pulumi.Input[int]] = None):
+                 time_span: Optional[pulumi.Input[int]] = None,
+                 wait_commit_flag: Optional[pulumi.Input[bool]] = None):
         """
         The set of arguments for constructing a PayCertificate resource.
         :param pulumi.Input[int] domain_num: Number of domain names included in the certificate.
@@ -59,8 +61,10 @@ class PayCertificateArgs:
         :param pulumi.Input[str] alias: Remark name.
         :param pulumi.Input[str] confirm_letter: The base64-encoded certificate confirmation file should be in jpg, jpeg, png, pdf, and the size should be between 1kb
                and 1.4M. Note: it only works when product_id is set to 8, 9 or 10.
+        :param pulumi.Input[Sequence[pulumi.Input['PayCertificateDvAuthArgs']]] dv_auths: DV certification information.
         :param pulumi.Input[int] project_id: The ID of project.
         :param pulumi.Input[int] time_span: Certificate period, currently only supports 1 year certificate purchase.
+        :param pulumi.Input[bool] wait_commit_flag: If `wait_commit_flag` is set to true, info will not be submitted temporarily, false opposite.
         """
         pulumi.set(__self__, "domain_num", domain_num)
         pulumi.set(__self__, "information", information)
@@ -69,10 +73,14 @@ class PayCertificateArgs:
             pulumi.set(__self__, "alias", alias)
         if confirm_letter is not None:
             pulumi.set(__self__, "confirm_letter", confirm_letter)
+        if dv_auths is not None:
+            pulumi.set(__self__, "dv_auths", dv_auths)
         if project_id is not None:
             pulumi.set(__self__, "project_id", project_id)
         if time_span is not None:
             pulumi.set(__self__, "time_span", time_span)
+        if wait_commit_flag is not None:
+            pulumi.set(__self__, "wait_commit_flag", wait_commit_flag)
 
     @property
     @pulumi.getter(name="domainNum")
@@ -164,6 +172,18 @@ class PayCertificateArgs:
         pulumi.set(self, "confirm_letter", value)
 
     @property
+    @pulumi.getter(name="dvAuths")
+    def dv_auths(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['PayCertificateDvAuthArgs']]]]:
+        """
+        DV certification information.
+        """
+        return pulumi.get(self, "dv_auths")
+
+    @dv_auths.setter
+    def dv_auths(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['PayCertificateDvAuthArgs']]]]):
+        pulumi.set(self, "dv_auths", value)
+
+    @property
     @pulumi.getter(name="projectId")
     def project_id(self) -> Optional[pulumi.Input[int]]:
         """
@@ -187,6 +207,18 @@ class PayCertificateArgs:
     def time_span(self, value: Optional[pulumi.Input[int]]):
         pulumi.set(self, "time_span", value)
 
+    @property
+    @pulumi.getter(name="waitCommitFlag")
+    def wait_commit_flag(self) -> Optional[pulumi.Input[bool]]:
+        """
+        If `wait_commit_flag` is set to true, info will not be submitted temporarily, false opposite.
+        """
+        return pulumi.get(self, "wait_commit_flag")
+
+    @wait_commit_flag.setter
+    def wait_commit_flag(self, value: Optional[pulumi.Input[bool]]):
+        pulumi.set(self, "wait_commit_flag", value)
+
 
 @pulumi.input_type
 class _PayCertificateState:
@@ -201,7 +233,8 @@ class _PayCertificateState:
                  product_id: Optional[pulumi.Input[int]] = None,
                  project_id: Optional[pulumi.Input[int]] = None,
                  status: Optional[pulumi.Input[int]] = None,
-                 time_span: Optional[pulumi.Input[int]] = None):
+                 time_span: Optional[pulumi.Input[int]] = None,
+                 wait_commit_flag: Optional[pulumi.Input[bool]] = None):
         """
         Input properties used for looking up and filtering PayCertificate resources.
         :param pulumi.Input[str] alias: Remark name.
@@ -244,6 +277,7 @@ class _PayCertificateState:
         :param pulumi.Input[int] project_id: The ID of project.
         :param pulumi.Input[int] status: SSL certificate status.
         :param pulumi.Input[int] time_span: Certificate period, currently only supports 1 year certificate purchase.
+        :param pulumi.Input[bool] wait_commit_flag: If `wait_commit_flag` is set to true, info will not be submitted temporarily, false opposite.
         """
         if alias is not None:
             pulumi.set(__self__, "alias", alias)
@@ -267,6 +301,8 @@ class _PayCertificateState:
             pulumi.set(__self__, "status", status)
         if time_span is not None:
             pulumi.set(__self__, "time_span", time_span)
+        if wait_commit_flag is not None:
+            pulumi.set(__self__, "wait_commit_flag", wait_commit_flag)
 
     @property
     @pulumi.getter
@@ -429,6 +465,18 @@ class _PayCertificateState:
     def time_span(self, value: Optional[pulumi.Input[int]]):
         pulumi.set(self, "time_span", value)
 
+    @property
+    @pulumi.getter(name="waitCommitFlag")
+    def wait_commit_flag(self) -> Optional[pulumi.Input[bool]]:
+        """
+        If `wait_commit_flag` is set to true, info will not be submitted temporarily, false opposite.
+        """
+        return pulumi.get(self, "wait_commit_flag")
+
+    @wait_commit_flag.setter
+    def wait_commit_flag(self, value: Optional[pulumi.Input[bool]]):
+        pulumi.set(self, "wait_commit_flag", value)
+
 
 class PayCertificate(pulumi.CustomResource):
     @overload
@@ -438,10 +486,12 @@ class PayCertificate(pulumi.CustomResource):
                  alias: Optional[pulumi.Input[str]] = None,
                  confirm_letter: Optional[pulumi.Input[str]] = None,
                  domain_num: Optional[pulumi.Input[int]] = None,
+                 dv_auths: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['PayCertificateDvAuthArgs']]]]] = None,
                  information: Optional[pulumi.Input[pulumi.InputType['PayCertificateInformationArgs']]] = None,
                  product_id: Optional[pulumi.Input[int]] = None,
                  project_id: Optional[pulumi.Input[int]] = None,
                  time_span: Optional[pulumi.Input[int]] = None,
+                 wait_commit_flag: Optional[pulumi.Input[bool]] = None,
                  __props__=None):
         """
         Create a PayCertificate resource with the given unique name, props, and options.
@@ -451,6 +501,7 @@ class PayCertificate(pulumi.CustomResource):
         :param pulumi.Input[str] confirm_letter: The base64-encoded certificate confirmation file should be in jpg, jpeg, png, pdf, and the size should be between 1kb
                and 1.4M. Note: it only works when product_id is set to 8, 9 or 10.
         :param pulumi.Input[int] domain_num: Number of domain names included in the certificate.
+        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['PayCertificateDvAuthArgs']]]] dv_auths: DV certification information.
         :param pulumi.Input[pulumi.InputType['PayCertificateInformationArgs']] information: Certificate information.
         :param pulumi.Input[int] product_id: Certificate commodity ID. Valid value ranges: (3~42). `3` means SecureSite enhanced Enterprise Edition (EV Pro), `4`
                means SecureSite enhanced (EV), `5` means SecureSite Enterprise Professional Edition (OV Pro), `6` means SecureSite
@@ -483,6 +534,7 @@ class PayCertificate(pulumi.CustomResource):
                Domain Name Type (DV) multi-domain SSL certificate.
         :param pulumi.Input[int] project_id: The ID of project.
         :param pulumi.Input[int] time_span: Certificate period, currently only supports 1 year certificate purchase.
+        :param pulumi.Input[bool] wait_commit_flag: If `wait_commit_flag` is set to true, info will not be submitted temporarily, false opposite.
         """
         ...
     @overload
@@ -510,10 +562,12 @@ class PayCertificate(pulumi.CustomResource):
                  alias: Optional[pulumi.Input[str]] = None,
                  confirm_letter: Optional[pulumi.Input[str]] = None,
                  domain_num: Optional[pulumi.Input[int]] = None,
+                 dv_auths: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['PayCertificateDvAuthArgs']]]]] = None,
                  information: Optional[pulumi.Input[pulumi.InputType['PayCertificateInformationArgs']]] = None,
                  product_id: Optional[pulumi.Input[int]] = None,
                  project_id: Optional[pulumi.Input[int]] = None,
                  time_span: Optional[pulumi.Input[int]] = None,
+                 wait_commit_flag: Optional[pulumi.Input[bool]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -528,6 +582,7 @@ class PayCertificate(pulumi.CustomResource):
             if domain_num is None and not opts.urn:
                 raise TypeError("Missing required property 'domain_num'")
             __props__.__dict__["domain_num"] = domain_num
+            __props__.__dict__["dv_auths"] = dv_auths
             if information is None and not opts.urn:
                 raise TypeError("Missing required property 'information'")
             __props__.__dict__["information"] = information
@@ -536,8 +591,8 @@ class PayCertificate(pulumi.CustomResource):
             __props__.__dict__["product_id"] = product_id
             __props__.__dict__["project_id"] = project_id
             __props__.__dict__["time_span"] = time_span
+            __props__.__dict__["wait_commit_flag"] = wait_commit_flag
             __props__.__dict__["certificate_id"] = None
-            __props__.__dict__["dv_auths"] = None
             __props__.__dict__["order_id"] = None
             __props__.__dict__["status"] = None
         super(PayCertificate, __self__).__init__(
@@ -560,7 +615,8 @@ class PayCertificate(pulumi.CustomResource):
             product_id: Optional[pulumi.Input[int]] = None,
             project_id: Optional[pulumi.Input[int]] = None,
             status: Optional[pulumi.Input[int]] = None,
-            time_span: Optional[pulumi.Input[int]] = None) -> 'PayCertificate':
+            time_span: Optional[pulumi.Input[int]] = None,
+            wait_commit_flag: Optional[pulumi.Input[bool]] = None) -> 'PayCertificate':
         """
         Get an existing PayCertificate resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.
@@ -608,6 +664,7 @@ class PayCertificate(pulumi.CustomResource):
         :param pulumi.Input[int] project_id: The ID of project.
         :param pulumi.Input[int] status: SSL certificate status.
         :param pulumi.Input[int] time_span: Certificate period, currently only supports 1 year certificate purchase.
+        :param pulumi.Input[bool] wait_commit_flag: If `wait_commit_flag` is set to true, info will not be submitted temporarily, false opposite.
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 
@@ -624,6 +681,7 @@ class PayCertificate(pulumi.CustomResource):
         __props__.__dict__["project_id"] = project_id
         __props__.__dict__["status"] = status
         __props__.__dict__["time_span"] = time_span
+        __props__.__dict__["wait_commit_flag"] = wait_commit_flag
         return PayCertificate(resource_name, opts=opts, __props__=__props__)
 
     @property
@@ -742,4 +800,12 @@ class PayCertificate(pulumi.CustomResource):
         Certificate period, currently only supports 1 year certificate purchase.
         """
         return pulumi.get(self, "time_span")
+
+    @property
+    @pulumi.getter(name="waitCommitFlag")
+    def wait_commit_flag(self) -> pulumi.Output[Optional[bool]]:
+        """
+        If `wait_commit_flag` is set to true, info will not be submitted temporarily, false opposite.
+        """
+        return pulumi.get(self, "wait_commit_flag")
 

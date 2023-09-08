@@ -4,8 +4,8 @@
 import * as utilities from "../utilities";
 
 // Export members:
-export { GetProjectsArgs, GetProjectsResult, GetProjectsOutputArgs } from "./getProjects";
-export const getProjects: typeof import("./getProjects").getProjects = null as any;
-export const getProjectsOutput: typeof import("./getProjects").getProjectsOutput = null as any;
-utilities.lazyLoad(exports, ["getProjects","getProjectsOutput"], () => require("./getProjects"));
+export { GetInstanceArgs, GetInstanceResult, GetInstanceOutputArgs } from "./getInstance";
+export const getInstance: typeof import("./getInstance").getInstance = null as any;
+export const getInstanceOutput: typeof import("./getInstance").getInstanceOutput = null as any;
+utilities.lazyLoad(exports, ["getInstance","getInstanceOutput"], () => require("./getInstance"));
 

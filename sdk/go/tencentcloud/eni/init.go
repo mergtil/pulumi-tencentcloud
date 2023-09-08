@@ -23,8 +23,8 @@ func (m *module) Construct(ctx *pulumi.Context, name, typ, urn string) (r pulumi
 	switch typ {
 	case "tencentcloud:Eni/attachment:Attachment":
 		r = &Attachment{}
-	case "tencentcloud:Eni/eni:Eni":
-		r = &Eni{}
+	case "tencentcloud:Eni/instance:Instance":
+		r = &Instance{}
 	case "tencentcloud:Eni/sgAttachment:SgAttachment":
 		r = &SgAttachment{}
 	default:
@@ -47,7 +47,7 @@ func init() {
 	)
 	pulumi.RegisterResourceModule(
 		"tencentcloud",
-		"Eni/eni",
+		"Eni/instance",
 		&module{version},
 	)
 	pulumi.RegisterResourceModule(

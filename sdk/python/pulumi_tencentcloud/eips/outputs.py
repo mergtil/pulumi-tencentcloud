@@ -10,11 +10,11 @@ from typing import Any, Mapping, Optional, Sequence, Union, overload
 from .. import _utilities
 
 __all__ = [
-    'GetEipsEipListResult',
+    'GetInstanceEipListResult',
 ]
 
 @pulumi.output_type
-class GetEipsEipListResult(dict):
+class GetInstanceEipListResult(dict):
     def __init__(__self__, *,
                  create_time: str,
                  eip_id: str,

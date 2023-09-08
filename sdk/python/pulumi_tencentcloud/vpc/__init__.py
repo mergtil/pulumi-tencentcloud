@@ -44,6 +44,7 @@ from .get_subnet_resource_dashboard import *
 from .get_subnets import *
 from .get_template_limits import *
 from .get_used_ip_address import *
+from .instance import *
 from .ipv6_cidr_block import *
 from .ipv6_eni_address import *
 from .ipv6_subnet_cidr_block import *
@@ -56,6 +57,5 @@ from .snapshot_policy import *
 from .snapshot_policy_attachment import *
 from .snapshot_policy_config import *
 from .traffic_package import *
-from .vpc import *
 from ._inputs import *
 from . import outputs

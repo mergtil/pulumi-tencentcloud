@@ -10,11 +10,11 @@ from typing import Any, Mapping, Optional, Sequence, Union, overload
 from .. import _utilities
 
 __all__ = [
-    'GetDomainsListResult',
+    'GetInstanceListResult',
 ]
 
 @pulumi.output_type
-class GetDomainsListResult(dict):
+class GetInstanceListResult(dict):
     def __init__(__self__, *,
                  auto_renew: int,
                  buy_status: str,

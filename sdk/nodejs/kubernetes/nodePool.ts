@@ -59,7 +59,7 @@ export class NodePool extends pulumi.CustomResource {
      */
     public readonly deleteKeepInstance!: pulumi.Output<boolean | undefined>;
     /**
-     * Desired capacity ot the node. If `enable_auto_scale` is set `true`, this will be a computed parameter.
+     * Desired capacity of the node. If `enable_auto_scale` is set `true`, this will be a computed parameter.
      */
     public readonly desiredCapacity!: pulumi.Output<number>;
     /**
@@ -296,7 +296,7 @@ export interface NodePoolState {
      */
     deleteKeepInstance?: pulumi.Input<boolean>;
     /**
-     * Desired capacity ot the node. If `enable_auto_scale` is set `true`, this will be a computed parameter.
+     * Desired capacity of the node. If `enable_auto_scale` is set `true`, this will be a computed parameter.
      */
     desiredCapacity?: pulumi.Input<number>;
     /**
@@ -428,7 +428,7 @@ export interface NodePoolArgs {
      */
     deleteKeepInstance?: pulumi.Input<boolean>;
     /**
-     * Desired capacity ot the node. If `enable_auto_scale` is set `true`, this will be a computed parameter.
+     * Desired capacity of the node. If `enable_auto_scale` is set `true`, this will be a computed parameter.
      */
     desiredCapacity?: pulumi.Input<number>;
     /**

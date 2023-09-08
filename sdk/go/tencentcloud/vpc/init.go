@@ -47,6 +47,8 @@ func (m *module) Construct(ctx *pulumi.Context, name, typ, urn string) (r pulumi
 		r = &FlowLog{}
 	case "tencentcloud:Vpc/flowLogConfig:FlowLogConfig":
 		r = &FlowLogConfig{}
+	case "tencentcloud:Vpc/instance:Instance":
+		r = &Instance{}
 	case "tencentcloud:Vpc/ipv6CidrBlock:Ipv6CidrBlock":
 		r = &Ipv6CidrBlock{}
 	case "tencentcloud:Vpc/ipv6EniAddress:Ipv6EniAddress":
@@ -71,8 +73,6 @@ func (m *module) Construct(ctx *pulumi.Context, name, typ, urn string) (r pulumi
 		r = &SnapshotPolicyConfig{}
 	case "tencentcloud:Vpc/trafficPackage:TrafficPackage":
 		r = &TrafficPackage{}
-	case "tencentcloud:Vpc/vpc:Vpc":
-		r = &Vpc{}
 	default:
 		return nil, fmt.Errorf("unknown resource type: %s", typ)
 	}
@@ -153,6 +153,11 @@ func init() {
 	)
 	pulumi.RegisterResourceModule(
 		"tencentcloud",
+		"Vpc/instance",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"tencentcloud",
 		"Vpc/ipv6CidrBlock",
 		&module{version},
 	)
@@ -209,11 +214,6 @@ func init() {
 	pulumi.RegisterResourceModule(
 		"tencentcloud",
 		"Vpc/trafficPackage",
-		&module{version},
-	)
-	pulumi.RegisterResourceModule(
-		"tencentcloud",
-		"Vpc/vpc",
 		&module{version},
 	)
 }

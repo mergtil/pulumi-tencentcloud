@@ -4,8 +4,8 @@
 import * as utilities from "../utilities";
 
 // Export members:
-export { GetVpcArgs, GetVpcResult, GetVpcOutputArgs } from "./getVpc";
-export const getVpc: typeof import("./getVpc").getVpc = null as any;
-export const getVpcOutput: typeof import("./getVpc").getVpcOutput = null as any;
-utilities.lazyLoad(exports, ["getVpc","getVpcOutput"], () => require("./getVpc"));
+export { GetInstanceArgs, GetInstanceResult, GetInstanceOutputArgs } from "./getInstance";
+export const getInstance: typeof import("./getInstance").getInstance = null as any;
+export const getInstanceOutput: typeof import("./getInstance").getInstanceOutput = null as any;
+utilities.lazyLoad(exports, ["getInstance","getInstanceOutput"], () => require("./getInstance"));
 

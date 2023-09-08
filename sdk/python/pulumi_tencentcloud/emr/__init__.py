@@ -6,7 +6,7 @@ from .. import _utilities
 import typing
 # Export this package's modules as members:
 from .cluster import *
-from .get_emr import *
+from .get_instance import *
 from .get_nodes import *
 from ._inputs import *
 from . import outputs

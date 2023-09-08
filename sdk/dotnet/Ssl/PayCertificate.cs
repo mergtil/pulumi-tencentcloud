@@ -107,6 +107,12 @@ namespace Pulumi.Tencentcloud.Ssl
         [Output("timeSpan")]
         public Output<int?> TimeSpan { get; private set; } = null!;
 
+        /// <summary>
+        /// If `wait_commit_flag` is set to true, info will not be submitted temporarily, false opposite.
+        /// </summary>
+        [Output("waitCommitFlag")]
+        public Output<bool?> WaitCommitFlag { get; private set; } = null!;
+
 
         /// <summary>
         /// Create a PayCertificate resource with the given unique name, arguments, and options.
@@ -172,6 +178,18 @@ namespace Pulumi.Tencentcloud.Ssl
         [Input("domainNum", required: true)]
         public Input<int> DomainNum { get; set; } = null!;
 
+        [Input("dvAuths")]
+        private InputList<Inputs.PayCertificateDvAuthArgs>? _dvAuths;
+
+        /// <summary>
+        /// DV certification information.
+        /// </summary>
+        public InputList<Inputs.PayCertificateDvAuthArgs> DvAuths
+        {
+            get => _dvAuths ?? (_dvAuths = new InputList<Inputs.PayCertificateDvAuthArgs>());
+            set => _dvAuths = value;
+        }
+
         /// <summary>
         /// Certificate information.
         /// </summary>
@@ -223,6 +241,12 @@ namespace Pulumi.Tencentcloud.Ssl
         /// </summary>
         [Input("timeSpan")]
         public Input<int>? TimeSpan { get; set; }
+
+        /// <summary>
+        /// If `wait_commit_flag` is set to true, info will not be submitted temporarily, false opposite.
+        /// </summary>
+        [Input("waitCommitFlag")]
+        public Input<bool>? WaitCommitFlag { get; set; }
 
         public PayCertificateArgs()
         {
@@ -332,6 +356,12 @@ namespace Pulumi.Tencentcloud.Ssl
         /// </summary>
         [Input("timeSpan")]
         public Input<int>? TimeSpan { get; set; }
+
+        /// <summary>
+        /// If `wait_commit_flag` is set to true, info will not be submitted temporarily, false opposite.
+        /// </summary>
+        [Input("waitCommitFlag")]
+        public Input<bool>? WaitCommitFlag { get; set; }
 
         public PayCertificateState()
         {

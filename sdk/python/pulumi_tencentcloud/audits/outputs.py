@@ -10,11 +10,11 @@ from typing import Any, Mapping, Optional, Sequence, Union, overload
 from .. import _utilities
 
 __all__ = [
-    'GetAuditsAuditListResult',
+    'GetInstanceAuditListResult',
 ]
 
 @pulumi.output_type
-class GetAuditsAuditListResult(dict):
+class GetInstanceAuditListResult(dict):
     def __init__(__self__, *,
                  audit_switch: bool,
                  cos_bucket: str,

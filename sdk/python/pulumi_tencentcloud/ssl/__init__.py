@@ -6,6 +6,7 @@ from .. import _utilities
 import typing
 # Export this package's modules as members:
 from .certificate import *
+from .commit_certificate_information import *
 from .free_certificate import *
 from .get_certificates import *
 from .pay_certificate import *

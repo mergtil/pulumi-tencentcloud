@@ -5,21 +5,21 @@ import * as pulumi from "@pulumi/pulumi";
 import * as utilities from "../utilities";
 
 // Export members:
-export { LbArgs, LbState } from "./lb";
-export type Lb = import("./lb").Lb;
-export const Lb: typeof import("./lb").Lb = null as any;
-utilities.lazyLoad(exports, ["Lb"], () => require("./lb"));
+export { InstanceArgs, InstanceState } from "./instance";
+export type Instance = import("./instance").Instance;
+export const Instance: typeof import("./instance").Instance = null as any;
+utilities.lazyLoad(exports, ["Instance"], () => require("./instance"));
 
 
 const _module = {
     version: utilities.getVersion(),
     construct: (name: string, type: string, urn: string): pulumi.Resource => {
         switch (type) {
-            case "tencentcloud:Deprecatedlb/lb:Lb":
-                return new Lb(name, <any>undefined, { urn })
+            case "tencentcloud:Deprecatedlb/instance:Instance":
+                return new Instance(name, <any>undefined, { urn })
             default:
                 throw new Error(`unknown resource type ${type}`);
         }
     },
 };
-pulumi.runtime.registerResourceModule("tencentcloud", "Deprecatedlb/lb", _module)
+pulumi.runtime.registerResourceModule("tencentcloud", "Deprecatedlb/instance", _module)

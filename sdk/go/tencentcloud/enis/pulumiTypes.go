@@ -13,12 +13,12 @@ import (
 
 var _ = internal.GetEnvOrDefault
 
-type GetEnisEni struct {
+type GetInstanceEni struct {
 	CreateTime     string                 `pulumi:"createTime"`
 	Description    string                 `pulumi:"description"`
 	Id             string                 `pulumi:"id"`
 	InstanceId     string                 `pulumi:"instanceId"`
-	Ipv4s          []GetEnisEniIpv4       `pulumi:"ipv4s"`
+	Ipv4s          []GetInstanceEniIpv4   `pulumi:"ipv4s"`
 	Mac            string                 `pulumi:"mac"`
 	Name           string                 `pulumi:"name"`
 	Primary        bool                   `pulumi:"primary"`
@@ -29,269 +29,269 @@ type GetEnisEni struct {
 	VpcId          string                 `pulumi:"vpcId"`
 }
 
-// GetEnisEniInput is an input type that accepts GetEnisEniArgs and GetEnisEniOutput values.
-// You can construct a concrete instance of `GetEnisEniInput` via:
+// GetInstanceEniInput is an input type that accepts GetInstanceEniArgs and GetInstanceEniOutput values.
+// You can construct a concrete instance of `GetInstanceEniInput` via:
 //
-//	GetEnisEniArgs{...}
-type GetEnisEniInput interface {
+//	GetInstanceEniArgs{...}
+type GetInstanceEniInput interface {
 	pulumi.Input
 
-	ToGetEnisEniOutput() GetEnisEniOutput
-	ToGetEnisEniOutputWithContext(context.Context) GetEnisEniOutput
+	ToGetInstanceEniOutput() GetInstanceEniOutput
+	ToGetInstanceEniOutputWithContext(context.Context) GetInstanceEniOutput
 }
 
-type GetEnisEniArgs struct {
-	CreateTime     pulumi.StringInput       `pulumi:"createTime"`
-	Description    pulumi.StringInput       `pulumi:"description"`
-	Id             pulumi.StringInput       `pulumi:"id"`
-	InstanceId     pulumi.StringInput       `pulumi:"instanceId"`
-	Ipv4s          GetEnisEniIpv4ArrayInput `pulumi:"ipv4s"`
-	Mac            pulumi.StringInput       `pulumi:"mac"`
-	Name           pulumi.StringInput       `pulumi:"name"`
-	Primary        pulumi.BoolInput         `pulumi:"primary"`
-	SecurityGroups pulumi.StringArrayInput  `pulumi:"securityGroups"`
-	State          pulumi.StringInput       `pulumi:"state"`
-	SubnetId       pulumi.StringInput       `pulumi:"subnetId"`
-	Tags           pulumi.MapInput          `pulumi:"tags"`
-	VpcId          pulumi.StringInput       `pulumi:"vpcId"`
+type GetInstanceEniArgs struct {
+	CreateTime     pulumi.StringInput           `pulumi:"createTime"`
+	Description    pulumi.StringInput           `pulumi:"description"`
+	Id             pulumi.StringInput           `pulumi:"id"`
+	InstanceId     pulumi.StringInput           `pulumi:"instanceId"`
+	Ipv4s          GetInstanceEniIpv4ArrayInput `pulumi:"ipv4s"`
+	Mac            pulumi.StringInput           `pulumi:"mac"`
+	Name           pulumi.StringInput           `pulumi:"name"`
+	Primary        pulumi.BoolInput             `pulumi:"primary"`
+	SecurityGroups pulumi.StringArrayInput      `pulumi:"securityGroups"`
+	State          pulumi.StringInput           `pulumi:"state"`
+	SubnetId       pulumi.StringInput           `pulumi:"subnetId"`
+	Tags           pulumi.MapInput              `pulumi:"tags"`
+	VpcId          pulumi.StringInput           `pulumi:"vpcId"`
 }
 
-func (GetEnisEniArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetEnisEni)(nil)).Elem()
+func (GetInstanceEniArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetInstanceEni)(nil)).Elem()
 }
 
-func (i GetEnisEniArgs) ToGetEnisEniOutput() GetEnisEniOutput {
-	return i.ToGetEnisEniOutputWithContext(context.Background())
+func (i GetInstanceEniArgs) ToGetInstanceEniOutput() GetInstanceEniOutput {
+	return i.ToGetInstanceEniOutputWithContext(context.Background())
 }
 
-func (i GetEnisEniArgs) ToGetEnisEniOutputWithContext(ctx context.Context) GetEnisEniOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetEnisEniOutput)
+func (i GetInstanceEniArgs) ToGetInstanceEniOutputWithContext(ctx context.Context) GetInstanceEniOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetInstanceEniOutput)
 }
 
-// GetEnisEniArrayInput is an input type that accepts GetEnisEniArray and GetEnisEniArrayOutput values.
-// You can construct a concrete instance of `GetEnisEniArrayInput` via:
+// GetInstanceEniArrayInput is an input type that accepts GetInstanceEniArray and GetInstanceEniArrayOutput values.
+// You can construct a concrete instance of `GetInstanceEniArrayInput` via:
 //
-//	GetEnisEniArray{ GetEnisEniArgs{...} }
-type GetEnisEniArrayInput interface {
+//	GetInstanceEniArray{ GetInstanceEniArgs{...} }
+type GetInstanceEniArrayInput interface {
 	pulumi.Input
 
-	ToGetEnisEniArrayOutput() GetEnisEniArrayOutput
-	ToGetEnisEniArrayOutputWithContext(context.Context) GetEnisEniArrayOutput
+	ToGetInstanceEniArrayOutput() GetInstanceEniArrayOutput
+	ToGetInstanceEniArrayOutputWithContext(context.Context) GetInstanceEniArrayOutput
 }
 
-type GetEnisEniArray []GetEnisEniInput
+type GetInstanceEniArray []GetInstanceEniInput
 
-func (GetEnisEniArray) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]GetEnisEni)(nil)).Elem()
+func (GetInstanceEniArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetInstanceEni)(nil)).Elem()
 }
 
-func (i GetEnisEniArray) ToGetEnisEniArrayOutput() GetEnisEniArrayOutput {
-	return i.ToGetEnisEniArrayOutputWithContext(context.Background())
+func (i GetInstanceEniArray) ToGetInstanceEniArrayOutput() GetInstanceEniArrayOutput {
+	return i.ToGetInstanceEniArrayOutputWithContext(context.Background())
 }
 
-func (i GetEnisEniArray) ToGetEnisEniArrayOutputWithContext(ctx context.Context) GetEnisEniArrayOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetEnisEniArrayOutput)
+func (i GetInstanceEniArray) ToGetInstanceEniArrayOutputWithContext(ctx context.Context) GetInstanceEniArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetInstanceEniArrayOutput)
 }
 
-type GetEnisEniOutput struct{ *pulumi.OutputState }
+type GetInstanceEniOutput struct{ *pulumi.OutputState }
 
-func (GetEnisEniOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetEnisEni)(nil)).Elem()
+func (GetInstanceEniOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetInstanceEni)(nil)).Elem()
 }
 
-func (o GetEnisEniOutput) ToGetEnisEniOutput() GetEnisEniOutput {
+func (o GetInstanceEniOutput) ToGetInstanceEniOutput() GetInstanceEniOutput {
 	return o
 }
 
-func (o GetEnisEniOutput) ToGetEnisEniOutputWithContext(ctx context.Context) GetEnisEniOutput {
+func (o GetInstanceEniOutput) ToGetInstanceEniOutputWithContext(ctx context.Context) GetInstanceEniOutput {
 	return o
 }
 
-func (o GetEnisEniOutput) CreateTime() pulumi.StringOutput {
-	return o.ApplyT(func(v GetEnisEni) string { return v.CreateTime }).(pulumi.StringOutput)
+func (o GetInstanceEniOutput) CreateTime() pulumi.StringOutput {
+	return o.ApplyT(func(v GetInstanceEni) string { return v.CreateTime }).(pulumi.StringOutput)
 }
 
-func (o GetEnisEniOutput) Description() pulumi.StringOutput {
-	return o.ApplyT(func(v GetEnisEni) string { return v.Description }).(pulumi.StringOutput)
+func (o GetInstanceEniOutput) Description() pulumi.StringOutput {
+	return o.ApplyT(func(v GetInstanceEni) string { return v.Description }).(pulumi.StringOutput)
 }
 
-func (o GetEnisEniOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v GetEnisEni) string { return v.Id }).(pulumi.StringOutput)
+func (o GetInstanceEniOutput) Id() pulumi.StringOutput {
+	return o.ApplyT(func(v GetInstanceEni) string { return v.Id }).(pulumi.StringOutput)
 }
 
-func (o GetEnisEniOutput) InstanceId() pulumi.StringOutput {
-	return o.ApplyT(func(v GetEnisEni) string { return v.InstanceId }).(pulumi.StringOutput)
+func (o GetInstanceEniOutput) InstanceId() pulumi.StringOutput {
+	return o.ApplyT(func(v GetInstanceEni) string { return v.InstanceId }).(pulumi.StringOutput)
 }
 
-func (o GetEnisEniOutput) Ipv4s() GetEnisEniIpv4ArrayOutput {
-	return o.ApplyT(func(v GetEnisEni) []GetEnisEniIpv4 { return v.Ipv4s }).(GetEnisEniIpv4ArrayOutput)
+func (o GetInstanceEniOutput) Ipv4s() GetInstanceEniIpv4ArrayOutput {
+	return o.ApplyT(func(v GetInstanceEni) []GetInstanceEniIpv4 { return v.Ipv4s }).(GetInstanceEniIpv4ArrayOutput)
 }
 
-func (o GetEnisEniOutput) Mac() pulumi.StringOutput {
-	return o.ApplyT(func(v GetEnisEni) string { return v.Mac }).(pulumi.StringOutput)
+func (o GetInstanceEniOutput) Mac() pulumi.StringOutput {
+	return o.ApplyT(func(v GetInstanceEni) string { return v.Mac }).(pulumi.StringOutput)
 }
 
-func (o GetEnisEniOutput) Name() pulumi.StringOutput {
-	return o.ApplyT(func(v GetEnisEni) string { return v.Name }).(pulumi.StringOutput)
+func (o GetInstanceEniOutput) Name() pulumi.StringOutput {
+	return o.ApplyT(func(v GetInstanceEni) string { return v.Name }).(pulumi.StringOutput)
 }
 
-func (o GetEnisEniOutput) Primary() pulumi.BoolOutput {
-	return o.ApplyT(func(v GetEnisEni) bool { return v.Primary }).(pulumi.BoolOutput)
+func (o GetInstanceEniOutput) Primary() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetInstanceEni) bool { return v.Primary }).(pulumi.BoolOutput)
 }
 
-func (o GetEnisEniOutput) SecurityGroups() pulumi.StringArrayOutput {
-	return o.ApplyT(func(v GetEnisEni) []string { return v.SecurityGroups }).(pulumi.StringArrayOutput)
+func (o GetInstanceEniOutput) SecurityGroups() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v GetInstanceEni) []string { return v.SecurityGroups }).(pulumi.StringArrayOutput)
 }
 
-func (o GetEnisEniOutput) State() pulumi.StringOutput {
-	return o.ApplyT(func(v GetEnisEni) string { return v.State }).(pulumi.StringOutput)
+func (o GetInstanceEniOutput) State() pulumi.StringOutput {
+	return o.ApplyT(func(v GetInstanceEni) string { return v.State }).(pulumi.StringOutput)
 }
 
-func (o GetEnisEniOutput) SubnetId() pulumi.StringOutput {
-	return o.ApplyT(func(v GetEnisEni) string { return v.SubnetId }).(pulumi.StringOutput)
+func (o GetInstanceEniOutput) SubnetId() pulumi.StringOutput {
+	return o.ApplyT(func(v GetInstanceEni) string { return v.SubnetId }).(pulumi.StringOutput)
 }
 
-func (o GetEnisEniOutput) Tags() pulumi.MapOutput {
-	return o.ApplyT(func(v GetEnisEni) map[string]interface{} { return v.Tags }).(pulumi.MapOutput)
+func (o GetInstanceEniOutput) Tags() pulumi.MapOutput {
+	return o.ApplyT(func(v GetInstanceEni) map[string]interface{} { return v.Tags }).(pulumi.MapOutput)
 }
 
-func (o GetEnisEniOutput) VpcId() pulumi.StringOutput {
-	return o.ApplyT(func(v GetEnisEni) string { return v.VpcId }).(pulumi.StringOutput)
+func (o GetInstanceEniOutput) VpcId() pulumi.StringOutput {
+	return o.ApplyT(func(v GetInstanceEni) string { return v.VpcId }).(pulumi.StringOutput)
 }
 
-type GetEnisEniArrayOutput struct{ *pulumi.OutputState }
+type GetInstanceEniArrayOutput struct{ *pulumi.OutputState }
 
-func (GetEnisEniArrayOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]GetEnisEni)(nil)).Elem()
+func (GetInstanceEniArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetInstanceEni)(nil)).Elem()
 }
 
-func (o GetEnisEniArrayOutput) ToGetEnisEniArrayOutput() GetEnisEniArrayOutput {
+func (o GetInstanceEniArrayOutput) ToGetInstanceEniArrayOutput() GetInstanceEniArrayOutput {
 	return o
 }
 
-func (o GetEnisEniArrayOutput) ToGetEnisEniArrayOutputWithContext(ctx context.Context) GetEnisEniArrayOutput {
+func (o GetInstanceEniArrayOutput) ToGetInstanceEniArrayOutputWithContext(ctx context.Context) GetInstanceEniArrayOutput {
 	return o
 }
 
-func (o GetEnisEniArrayOutput) Index(i pulumi.IntInput) GetEnisEniOutput {
-	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetEnisEni {
-		return vs[0].([]GetEnisEni)[vs[1].(int)]
-	}).(GetEnisEniOutput)
+func (o GetInstanceEniArrayOutput) Index(i pulumi.IntInput) GetInstanceEniOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetInstanceEni {
+		return vs[0].([]GetInstanceEni)[vs[1].(int)]
+	}).(GetInstanceEniOutput)
 }
 
-type GetEnisEniIpv4 struct {
+type GetInstanceEniIpv4 struct {
 	Description string `pulumi:"description"`
 	Ip          string `pulumi:"ip"`
 	Primary     bool   `pulumi:"primary"`
 }
 
-// GetEnisEniIpv4Input is an input type that accepts GetEnisEniIpv4Args and GetEnisEniIpv4Output values.
-// You can construct a concrete instance of `GetEnisEniIpv4Input` via:
+// GetInstanceEniIpv4Input is an input type that accepts GetInstanceEniIpv4Args and GetInstanceEniIpv4Output values.
+// You can construct a concrete instance of `GetInstanceEniIpv4Input` via:
 //
-//	GetEnisEniIpv4Args{...}
-type GetEnisEniIpv4Input interface {
+//	GetInstanceEniIpv4Args{...}
+type GetInstanceEniIpv4Input interface {
 	pulumi.Input
 
-	ToGetEnisEniIpv4Output() GetEnisEniIpv4Output
-	ToGetEnisEniIpv4OutputWithContext(context.Context) GetEnisEniIpv4Output
+	ToGetInstanceEniIpv4Output() GetInstanceEniIpv4Output
+	ToGetInstanceEniIpv4OutputWithContext(context.Context) GetInstanceEniIpv4Output
 }
 
-type GetEnisEniIpv4Args struct {
+type GetInstanceEniIpv4Args struct {
 	Description pulumi.StringInput `pulumi:"description"`
 	Ip          pulumi.StringInput `pulumi:"ip"`
 	Primary     pulumi.BoolInput   `pulumi:"primary"`
 }
 
-func (GetEnisEniIpv4Args) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetEnisEniIpv4)(nil)).Elem()
+func (GetInstanceEniIpv4Args) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetInstanceEniIpv4)(nil)).Elem()
 }
 
-func (i GetEnisEniIpv4Args) ToGetEnisEniIpv4Output() GetEnisEniIpv4Output {
-	return i.ToGetEnisEniIpv4OutputWithContext(context.Background())
+func (i GetInstanceEniIpv4Args) ToGetInstanceEniIpv4Output() GetInstanceEniIpv4Output {
+	return i.ToGetInstanceEniIpv4OutputWithContext(context.Background())
 }
 
-func (i GetEnisEniIpv4Args) ToGetEnisEniIpv4OutputWithContext(ctx context.Context) GetEnisEniIpv4Output {
-	return pulumi.ToOutputWithContext(ctx, i).(GetEnisEniIpv4Output)
+func (i GetInstanceEniIpv4Args) ToGetInstanceEniIpv4OutputWithContext(ctx context.Context) GetInstanceEniIpv4Output {
+	return pulumi.ToOutputWithContext(ctx, i).(GetInstanceEniIpv4Output)
 }
 
-// GetEnisEniIpv4ArrayInput is an input type that accepts GetEnisEniIpv4Array and GetEnisEniIpv4ArrayOutput values.
-// You can construct a concrete instance of `GetEnisEniIpv4ArrayInput` via:
+// GetInstanceEniIpv4ArrayInput is an input type that accepts GetInstanceEniIpv4Array and GetInstanceEniIpv4ArrayOutput values.
+// You can construct a concrete instance of `GetInstanceEniIpv4ArrayInput` via:
 //
-//	GetEnisEniIpv4Array{ GetEnisEniIpv4Args{...} }
-type GetEnisEniIpv4ArrayInput interface {
+//	GetInstanceEniIpv4Array{ GetInstanceEniIpv4Args{...} }
+type GetInstanceEniIpv4ArrayInput interface {
 	pulumi.Input
 
-	ToGetEnisEniIpv4ArrayOutput() GetEnisEniIpv4ArrayOutput
-	ToGetEnisEniIpv4ArrayOutputWithContext(context.Context) GetEnisEniIpv4ArrayOutput
+	ToGetInstanceEniIpv4ArrayOutput() GetInstanceEniIpv4ArrayOutput
+	ToGetInstanceEniIpv4ArrayOutputWithContext(context.Context) GetInstanceEniIpv4ArrayOutput
 }
 
-type GetEnisEniIpv4Array []GetEnisEniIpv4Input
+type GetInstanceEniIpv4Array []GetInstanceEniIpv4Input
 
-func (GetEnisEniIpv4Array) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]GetEnisEniIpv4)(nil)).Elem()
+func (GetInstanceEniIpv4Array) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetInstanceEniIpv4)(nil)).Elem()
 }
 
-func (i GetEnisEniIpv4Array) ToGetEnisEniIpv4ArrayOutput() GetEnisEniIpv4ArrayOutput {
-	return i.ToGetEnisEniIpv4ArrayOutputWithContext(context.Background())
+func (i GetInstanceEniIpv4Array) ToGetInstanceEniIpv4ArrayOutput() GetInstanceEniIpv4ArrayOutput {
+	return i.ToGetInstanceEniIpv4ArrayOutputWithContext(context.Background())
 }
 
-func (i GetEnisEniIpv4Array) ToGetEnisEniIpv4ArrayOutputWithContext(ctx context.Context) GetEnisEniIpv4ArrayOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetEnisEniIpv4ArrayOutput)
+func (i GetInstanceEniIpv4Array) ToGetInstanceEniIpv4ArrayOutputWithContext(ctx context.Context) GetInstanceEniIpv4ArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetInstanceEniIpv4ArrayOutput)
 }
 
-type GetEnisEniIpv4Output struct{ *pulumi.OutputState }
+type GetInstanceEniIpv4Output struct{ *pulumi.OutputState }
 
-func (GetEnisEniIpv4Output) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetEnisEniIpv4)(nil)).Elem()
+func (GetInstanceEniIpv4Output) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetInstanceEniIpv4)(nil)).Elem()
 }
 
-func (o GetEnisEniIpv4Output) ToGetEnisEniIpv4Output() GetEnisEniIpv4Output {
+func (o GetInstanceEniIpv4Output) ToGetInstanceEniIpv4Output() GetInstanceEniIpv4Output {
 	return o
 }
 
-func (o GetEnisEniIpv4Output) ToGetEnisEniIpv4OutputWithContext(ctx context.Context) GetEnisEniIpv4Output {
+func (o GetInstanceEniIpv4Output) ToGetInstanceEniIpv4OutputWithContext(ctx context.Context) GetInstanceEniIpv4Output {
 	return o
 }
 
-func (o GetEnisEniIpv4Output) Description() pulumi.StringOutput {
-	return o.ApplyT(func(v GetEnisEniIpv4) string { return v.Description }).(pulumi.StringOutput)
+func (o GetInstanceEniIpv4Output) Description() pulumi.StringOutput {
+	return o.ApplyT(func(v GetInstanceEniIpv4) string { return v.Description }).(pulumi.StringOutput)
 }
 
-func (o GetEnisEniIpv4Output) Ip() pulumi.StringOutput {
-	return o.ApplyT(func(v GetEnisEniIpv4) string { return v.Ip }).(pulumi.StringOutput)
+func (o GetInstanceEniIpv4Output) Ip() pulumi.StringOutput {
+	return o.ApplyT(func(v GetInstanceEniIpv4) string { return v.Ip }).(pulumi.StringOutput)
 }
 
-func (o GetEnisEniIpv4Output) Primary() pulumi.BoolOutput {
-	return o.ApplyT(func(v GetEnisEniIpv4) bool { return v.Primary }).(pulumi.BoolOutput)
+func (o GetInstanceEniIpv4Output) Primary() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetInstanceEniIpv4) bool { return v.Primary }).(pulumi.BoolOutput)
 }
 
-type GetEnisEniIpv4ArrayOutput struct{ *pulumi.OutputState }
+type GetInstanceEniIpv4ArrayOutput struct{ *pulumi.OutputState }
 
-func (GetEnisEniIpv4ArrayOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]GetEnisEniIpv4)(nil)).Elem()
+func (GetInstanceEniIpv4ArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetInstanceEniIpv4)(nil)).Elem()
 }
 
-func (o GetEnisEniIpv4ArrayOutput) ToGetEnisEniIpv4ArrayOutput() GetEnisEniIpv4ArrayOutput {
+func (o GetInstanceEniIpv4ArrayOutput) ToGetInstanceEniIpv4ArrayOutput() GetInstanceEniIpv4ArrayOutput {
 	return o
 }
 
-func (o GetEnisEniIpv4ArrayOutput) ToGetEnisEniIpv4ArrayOutputWithContext(ctx context.Context) GetEnisEniIpv4ArrayOutput {
+func (o GetInstanceEniIpv4ArrayOutput) ToGetInstanceEniIpv4ArrayOutputWithContext(ctx context.Context) GetInstanceEniIpv4ArrayOutput {
 	return o
 }
 
-func (o GetEnisEniIpv4ArrayOutput) Index(i pulumi.IntInput) GetEnisEniIpv4Output {
-	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetEnisEniIpv4 {
-		return vs[0].([]GetEnisEniIpv4)[vs[1].(int)]
-	}).(GetEnisEniIpv4Output)
+func (o GetInstanceEniIpv4ArrayOutput) Index(i pulumi.IntInput) GetInstanceEniIpv4Output {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetInstanceEniIpv4 {
+		return vs[0].([]GetInstanceEniIpv4)[vs[1].(int)]
+	}).(GetInstanceEniIpv4Output)
 }
 
 func init() {
-	pulumi.RegisterInputType(reflect.TypeOf((*GetEnisEniInput)(nil)).Elem(), GetEnisEniArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetEnisEniArrayInput)(nil)).Elem(), GetEnisEniArray{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetEnisEniIpv4Input)(nil)).Elem(), GetEnisEniIpv4Args{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetEnisEniIpv4ArrayInput)(nil)).Elem(), GetEnisEniIpv4Array{})
-	pulumi.RegisterOutputType(GetEnisEniOutput{})
-	pulumi.RegisterOutputType(GetEnisEniArrayOutput{})
-	pulumi.RegisterOutputType(GetEnisEniIpv4Output{})
-	pulumi.RegisterOutputType(GetEnisEniIpv4ArrayOutput{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetInstanceEniInput)(nil)).Elem(), GetInstanceEniArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetInstanceEniArrayInput)(nil)).Elem(), GetInstanceEniArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetInstanceEniIpv4Input)(nil)).Elem(), GetInstanceEniIpv4Args{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetInstanceEniIpv4ArrayInput)(nil)).Elem(), GetInstanceEniIpv4Array{})
+	pulumi.RegisterOutputType(GetInstanceEniOutput{})
+	pulumi.RegisterOutputType(GetInstanceEniArrayOutput{})
+	pulumi.RegisterOutputType(GetInstanceEniIpv4Output{})
+	pulumi.RegisterOutputType(GetInstanceEniIpv4ArrayOutput{})
 }

@@ -6,7 +6,7 @@ from .. import _utilities
 import typing
 # Export this package's modules as members:
 from .attachment import *
-from .eni import *
+from .instance import *
 from .sg_attachment import *
 from ._inputs import *
 from . import outputs

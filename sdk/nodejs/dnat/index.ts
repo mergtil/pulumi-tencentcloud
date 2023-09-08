@@ -5,21 +5,21 @@ import * as pulumi from "@pulumi/pulumi";
 import * as utilities from "../utilities";
 
 // Export members:
-export { DnatArgs, DnatState } from "./dnat";
-export type Dnat = import("./dnat").Dnat;
-export const Dnat: typeof import("./dnat").Dnat = null as any;
-utilities.lazyLoad(exports, ["Dnat"], () => require("./dnat"));
+export { InstanceArgs, InstanceState } from "./instance";
+export type Instance = import("./instance").Instance;
+export const Instance: typeof import("./instance").Instance = null as any;
+utilities.lazyLoad(exports, ["Instance"], () => require("./instance"));
 
 
 const _module = {
     version: utilities.getVersion(),
     construct: (name: string, type: string, urn: string): pulumi.Resource => {
         switch (type) {
-            case "tencentcloud:Dnat/dnat:Dnat":
-                return new Dnat(name, <any>undefined, { urn })
+            case "tencentcloud:Dnat/instance:Instance":
+                return new Instance(name, <any>undefined, { urn })
             default:
                 throw new Error(`unknown resource type ${type}`);
         }
     },
 };
-pulumi.runtime.registerResourceModule("tencentcloud", "Dnat/dnat", _module)
+pulumi.runtime.registerResourceModule("tencentcloud", "Dnat/instance", _module)

@@ -5,4 +5,4 @@
 from .. import _utilities
 import typing
 # Export this package's modules as members:
-from .get_subnet import *
+from .get_instance import *

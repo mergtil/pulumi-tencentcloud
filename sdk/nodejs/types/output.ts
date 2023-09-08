@@ -680,7 +680,7 @@ export namespace Audit {
 }
 
 export namespace Audits {
-    export interface GetAuditsAuditList {
+    export interface GetInstanceAuditList {
         auditSwitch: boolean;
         cosBucket: string;
         id: string;
@@ -7872,7 +7872,7 @@ export namespace Deprecatedcontainer {
 }
 
 export namespace Deprecatedeip {
-    export interface GetEipFilter {
+    export interface GetInstanceFilter {
         name: string;
         values: string[];
     }
@@ -8134,7 +8134,7 @@ export namespace Deprecatedmonitor {
 }
 
 export namespace Deprecatednats {
-    export interface GetNatsNat {
+    export interface GetInstanceNat {
         assignedEipSets: string[];
         bandwidth: number;
         createTime: string;
@@ -8171,7 +8171,7 @@ export namespace Deprecatedsecurity {
 }
 
 export namespace Dnats {
-    export interface GetDnatsDnatList {
+    export interface GetInstanceDnatList {
         description?: string;
         elasticIp: string;
         elasticPort: string;
@@ -8210,7 +8210,7 @@ export namespace Dnspod {
 }
 
 export namespace Domains {
-    export interface GetDomainsList {
+    export interface GetInstanceList {
         autoRenew: number;
         buyStatus: string;
         codeTld: string;
@@ -9143,7 +9143,7 @@ export namespace Eip {
 }
 
 export namespace Eips {
-    export interface GetEipsEipList {
+    export interface GetInstanceEipList {
         createTime: string;
         eipId: string;
         eipName: string;
@@ -9271,7 +9271,7 @@ export namespace Emr {
         storageType?: number;
     }
 
-    export interface GetEmrCluster {
+    export interface GetInstanceCluster {
         addTime: string;
         chargeType: number;
         clusterId: string;
@@ -9361,13 +9361,13 @@ export namespace Emr {
 }
 
 export namespace Eni {
-    export interface EniIpv4 {
+    export interface InstanceIpv4 {
         description?: string;
         ip: string;
         primary: boolean;
     }
 
-    export interface EniIpv4Info {
+    export interface InstanceIpv4Info {
         description: string;
         ip: string;
         primary: boolean;
@@ -9376,12 +9376,12 @@ export namespace Eni {
 }
 
 export namespace Enis {
-    export interface GetEnisEni {
+    export interface GetInstanceEni {
         createTime: string;
         description: string;
         id: string;
         instanceId: string;
-        ipv4s: outputs.Enis.GetEnisEniIpv4[];
+        ipv4s: outputs.Enis.GetInstanceEniIpv4[];
         mac: string;
         name: string;
         primary: boolean;
@@ -9392,7 +9392,7 @@ export namespace Enis {
         vpcId: string;
     }
 
-    export interface GetEnisEniIpv4 {
+    export interface GetInstanceEniIpv4 {
         description: string;
         ip: string;
         primary: boolean;
@@ -9581,7 +9581,7 @@ export namespace Ha {
 }
 
 export namespace Image {
-    export interface GetImageFilter {
+    export interface GetInstanceFilter {
         name: string;
         values: string[];
     }
@@ -9589,7 +9589,7 @@ export namespace Image {
 }
 
 export namespace Images {
-    export interface GetImagesImage {
+    export interface GetInstanceImage {
         architecture: string;
         createdTime: string;
         imageCreator: string;
@@ -9602,12 +9602,12 @@ export namespace Images {
         imageType: string;
         osName: string;
         platform: string;
-        snapshots: outputs.Images.GetImagesImageSnapshot[];
+        snapshots: outputs.Images.GetInstanceImageSnapshot[];
         supportCloudInit: boolean;
         syncPercent: number;
     }
 
-    export interface GetImagesImageSnapshot {
+    export interface GetInstanceImageSnapshot {
         diskSize: number;
         diskUsage: string;
         snapshotId: string;
@@ -9646,13 +9646,13 @@ export namespace Instance {
 }
 
 export namespace Instances {
-    export interface GetInstancesInstanceList {
+    export interface GetInstanceInstanceList {
         allocatePublicIp: boolean;
         availabilityZone: string;
         camRoleName: string;
         cpu: number;
         createTime: string;
-        dataDisks: outputs.Instances.GetInstancesInstanceListDataDisk[];
+        dataDisks: outputs.Instances.GetInstanceInstanceListDataDisk[];
         expiredTime: string;
         imageId: string;
         instanceChargeType: string;
@@ -9676,7 +9676,7 @@ export namespace Instances {
         vpcId: string;
     }
 
-    export interface GetInstancesInstanceListDataDisk {
+    export interface GetInstanceInstanceListDataDisk {
         dataDiskId: string;
         dataDiskSize: number;
         dataDiskType: string;
@@ -12945,7 +12945,7 @@ export namespace PrivateDns {
 }
 
 export namespace Projects {
-    export interface GetProjectsProject {
+    export interface GetInstanceProject {
         createTime: string;
         creatorUin: number;
         projectId: number;

@@ -25,8 +25,8 @@ func (m *module) Construct(ctx *pulumi.Context, name, typ, urn string) (r pulumi
 		r = &Attachment{}
 	case "tencentcloud:Ccn/bandwidthLimit:BandwidthLimit":
 		r = &BandwidthLimit{}
-	case "tencentcloud:Ccn/ccn:Ccn":
-		r = &Ccn{}
+	case "tencentcloud:Ccn/instance:Instance":
+		r = &Instance{}
 	case "tencentcloud:Ccn/instancesAcceptAttach:InstancesAcceptAttach":
 		r = &InstancesAcceptAttach{}
 	case "tencentcloud:Ccn/instancesRejectAttach:InstancesRejectAttach":
@@ -60,7 +60,7 @@ func init() {
 	)
 	pulumi.RegisterResourceModule(
 		"tencentcloud",
-		"Ccn/ccn",
+		"Ccn/instance",
 		&module{version},
 	)
 	pulumi.RegisterResourceModule(

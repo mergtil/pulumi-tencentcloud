@@ -101,8 +101,7 @@ export class ScalingConfig extends pulumi.CustomResource {
      */
     public readonly instanceTypes!: pulumi.Output<string[]>;
     /**
-     * Charge types for network traffic. Valid values: `BANDWIDTH_PREPAID`, `TRAFFIC_POSTPAID_BY_HOUR`,
-     * `TRAFFIC_POSTPAID_BY_HOUR` and `BANDWIDTH_PACKAGE`.
+     * Charge types for network traffic. Valid values: `BANDWIDTH_PREPAID`, `TRAFFIC_POSTPAID_BY_HOUR` and `BANDWIDTH_PACKAGE`.
      */
     public readonly internetChargeType!: pulumi.Output<string | undefined>;
     /**
@@ -321,8 +320,7 @@ export interface ScalingConfigState {
      */
     instanceTypes?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * Charge types for network traffic. Valid values: `BANDWIDTH_PREPAID`, `TRAFFIC_POSTPAID_BY_HOUR`,
-     * `TRAFFIC_POSTPAID_BY_HOUR` and `BANDWIDTH_PACKAGE`.
+     * Charge types for network traffic. Valid values: `BANDWIDTH_PREPAID`, `TRAFFIC_POSTPAID_BY_HOUR` and `BANDWIDTH_PACKAGE`.
      */
     internetChargeType?: pulumi.Input<string>;
     /**
@@ -448,8 +446,7 @@ export interface ScalingConfigArgs {
      */
     instanceTypes: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * Charge types for network traffic. Valid values: `BANDWIDTH_PREPAID`, `TRAFFIC_POSTPAID_BY_HOUR`,
-     * `TRAFFIC_POSTPAID_BY_HOUR` and `BANDWIDTH_PACKAGE`.
+     * Charge types for network traffic. Valid values: `BANDWIDTH_PREPAID`, `TRAFFIC_POSTPAID_BY_HOUR` and `BANDWIDTH_PACKAGE`.
      */
     internetChargeType?: pulumi.Input<string>;
     /**

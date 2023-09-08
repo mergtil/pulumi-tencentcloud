@@ -1143,7 +1143,7 @@ func (o ClusterResourceSpecTaskResourceSpecPtrOutput) StorageType() pulumi.IntPt
 	}).(pulumi.IntPtrOutput)
 }
 
-type GetEmrCluster struct {
+type GetInstanceCluster struct {
 	AddTime     string `pulumi:"addTime"`
 	ChargeType  int    `pulumi:"chargeType"`
 	ClusterId   string `pulumi:"clusterId"`
@@ -1158,18 +1158,18 @@ type GetEmrCluster struct {
 	ZoneId      int    `pulumi:"zoneId"`
 }
 
-// GetEmrClusterInput is an input type that accepts GetEmrClusterArgs and GetEmrClusterOutput values.
-// You can construct a concrete instance of `GetEmrClusterInput` via:
+// GetInstanceClusterInput is an input type that accepts GetInstanceClusterArgs and GetInstanceClusterOutput values.
+// You can construct a concrete instance of `GetInstanceClusterInput` via:
 //
-//	GetEmrClusterArgs{...}
-type GetEmrClusterInput interface {
+//	GetInstanceClusterArgs{...}
+type GetInstanceClusterInput interface {
 	pulumi.Input
 
-	ToGetEmrClusterOutput() GetEmrClusterOutput
-	ToGetEmrClusterOutputWithContext(context.Context) GetEmrClusterOutput
+	ToGetInstanceClusterOutput() GetInstanceClusterOutput
+	ToGetInstanceClusterOutputWithContext(context.Context) GetInstanceClusterOutput
 }
 
-type GetEmrClusterArgs struct {
+type GetInstanceClusterArgs struct {
 	AddTime     pulumi.StringInput `pulumi:"addTime"`
 	ChargeType  pulumi.IntInput    `pulumi:"chargeType"`
 	ClusterId   pulumi.StringInput `pulumi:"clusterId"`
@@ -1184,123 +1184,123 @@ type GetEmrClusterArgs struct {
 	ZoneId      pulumi.IntInput    `pulumi:"zoneId"`
 }
 
-func (GetEmrClusterArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetEmrCluster)(nil)).Elem()
+func (GetInstanceClusterArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetInstanceCluster)(nil)).Elem()
 }
 
-func (i GetEmrClusterArgs) ToGetEmrClusterOutput() GetEmrClusterOutput {
-	return i.ToGetEmrClusterOutputWithContext(context.Background())
+func (i GetInstanceClusterArgs) ToGetInstanceClusterOutput() GetInstanceClusterOutput {
+	return i.ToGetInstanceClusterOutputWithContext(context.Background())
 }
 
-func (i GetEmrClusterArgs) ToGetEmrClusterOutputWithContext(ctx context.Context) GetEmrClusterOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetEmrClusterOutput)
+func (i GetInstanceClusterArgs) ToGetInstanceClusterOutputWithContext(ctx context.Context) GetInstanceClusterOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetInstanceClusterOutput)
 }
 
-// GetEmrClusterArrayInput is an input type that accepts GetEmrClusterArray and GetEmrClusterArrayOutput values.
-// You can construct a concrete instance of `GetEmrClusterArrayInput` via:
+// GetInstanceClusterArrayInput is an input type that accepts GetInstanceClusterArray and GetInstanceClusterArrayOutput values.
+// You can construct a concrete instance of `GetInstanceClusterArrayInput` via:
 //
-//	GetEmrClusterArray{ GetEmrClusterArgs{...} }
-type GetEmrClusterArrayInput interface {
+//	GetInstanceClusterArray{ GetInstanceClusterArgs{...} }
+type GetInstanceClusterArrayInput interface {
 	pulumi.Input
 
-	ToGetEmrClusterArrayOutput() GetEmrClusterArrayOutput
-	ToGetEmrClusterArrayOutputWithContext(context.Context) GetEmrClusterArrayOutput
+	ToGetInstanceClusterArrayOutput() GetInstanceClusterArrayOutput
+	ToGetInstanceClusterArrayOutputWithContext(context.Context) GetInstanceClusterArrayOutput
 }
 
-type GetEmrClusterArray []GetEmrClusterInput
+type GetInstanceClusterArray []GetInstanceClusterInput
 
-func (GetEmrClusterArray) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]GetEmrCluster)(nil)).Elem()
+func (GetInstanceClusterArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetInstanceCluster)(nil)).Elem()
 }
 
-func (i GetEmrClusterArray) ToGetEmrClusterArrayOutput() GetEmrClusterArrayOutput {
-	return i.ToGetEmrClusterArrayOutputWithContext(context.Background())
+func (i GetInstanceClusterArray) ToGetInstanceClusterArrayOutput() GetInstanceClusterArrayOutput {
+	return i.ToGetInstanceClusterArrayOutputWithContext(context.Background())
 }
 
-func (i GetEmrClusterArray) ToGetEmrClusterArrayOutputWithContext(ctx context.Context) GetEmrClusterArrayOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetEmrClusterArrayOutput)
+func (i GetInstanceClusterArray) ToGetInstanceClusterArrayOutputWithContext(ctx context.Context) GetInstanceClusterArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetInstanceClusterArrayOutput)
 }
 
-type GetEmrClusterOutput struct{ *pulumi.OutputState }
+type GetInstanceClusterOutput struct{ *pulumi.OutputState }
 
-func (GetEmrClusterOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetEmrCluster)(nil)).Elem()
+func (GetInstanceClusterOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetInstanceCluster)(nil)).Elem()
 }
 
-func (o GetEmrClusterOutput) ToGetEmrClusterOutput() GetEmrClusterOutput {
+func (o GetInstanceClusterOutput) ToGetInstanceClusterOutput() GetInstanceClusterOutput {
 	return o
 }
 
-func (o GetEmrClusterOutput) ToGetEmrClusterOutputWithContext(ctx context.Context) GetEmrClusterOutput {
+func (o GetInstanceClusterOutput) ToGetInstanceClusterOutputWithContext(ctx context.Context) GetInstanceClusterOutput {
 	return o
 }
 
-func (o GetEmrClusterOutput) AddTime() pulumi.StringOutput {
-	return o.ApplyT(func(v GetEmrCluster) string { return v.AddTime }).(pulumi.StringOutput)
+func (o GetInstanceClusterOutput) AddTime() pulumi.StringOutput {
+	return o.ApplyT(func(v GetInstanceCluster) string { return v.AddTime }).(pulumi.StringOutput)
 }
 
-func (o GetEmrClusterOutput) ChargeType() pulumi.IntOutput {
-	return o.ApplyT(func(v GetEmrCluster) int { return v.ChargeType }).(pulumi.IntOutput)
+func (o GetInstanceClusterOutput) ChargeType() pulumi.IntOutput {
+	return o.ApplyT(func(v GetInstanceCluster) int { return v.ChargeType }).(pulumi.IntOutput)
 }
 
-func (o GetEmrClusterOutput) ClusterId() pulumi.StringOutput {
-	return o.ApplyT(func(v GetEmrCluster) string { return v.ClusterId }).(pulumi.StringOutput)
+func (o GetInstanceClusterOutput) ClusterId() pulumi.StringOutput {
+	return o.ApplyT(func(v GetInstanceCluster) string { return v.ClusterId }).(pulumi.StringOutput)
 }
 
-func (o GetEmrClusterOutput) ClusterName() pulumi.StringOutput {
-	return o.ApplyT(func(v GetEmrCluster) string { return v.ClusterName }).(pulumi.StringOutput)
+func (o GetInstanceClusterOutput) ClusterName() pulumi.StringOutput {
+	return o.ApplyT(func(v GetInstanceCluster) string { return v.ClusterName }).(pulumi.StringOutput)
 }
 
-func (o GetEmrClusterOutput) Ftitle() pulumi.StringOutput {
-	return o.ApplyT(func(v GetEmrCluster) string { return v.Ftitle }).(pulumi.StringOutput)
+func (o GetInstanceClusterOutput) Ftitle() pulumi.StringOutput {
+	return o.ApplyT(func(v GetInstanceCluster) string { return v.Ftitle }).(pulumi.StringOutput)
 }
 
-func (o GetEmrClusterOutput) Id() pulumi.IntOutput {
-	return o.ApplyT(func(v GetEmrCluster) int { return v.Id }).(pulumi.IntOutput)
+func (o GetInstanceClusterOutput) Id() pulumi.IntOutput {
+	return o.ApplyT(func(v GetInstanceCluster) int { return v.Id }).(pulumi.IntOutput)
 }
 
-func (o GetEmrClusterOutput) MasterIp() pulumi.StringOutput {
-	return o.ApplyT(func(v GetEmrCluster) string { return v.MasterIp }).(pulumi.StringOutput)
+func (o GetInstanceClusterOutput) MasterIp() pulumi.StringOutput {
+	return o.ApplyT(func(v GetInstanceCluster) string { return v.MasterIp }).(pulumi.StringOutput)
 }
 
-func (o GetEmrClusterOutput) ProjectId() pulumi.IntOutput {
-	return o.ApplyT(func(v GetEmrCluster) int { return v.ProjectId }).(pulumi.IntOutput)
+func (o GetInstanceClusterOutput) ProjectId() pulumi.IntOutput {
+	return o.ApplyT(func(v GetInstanceCluster) int { return v.ProjectId }).(pulumi.IntOutput)
 }
 
-func (o GetEmrClusterOutput) RegionId() pulumi.IntOutput {
-	return o.ApplyT(func(v GetEmrCluster) int { return v.RegionId }).(pulumi.IntOutput)
+func (o GetInstanceClusterOutput) RegionId() pulumi.IntOutput {
+	return o.ApplyT(func(v GetInstanceCluster) int { return v.RegionId }).(pulumi.IntOutput)
 }
 
-func (o GetEmrClusterOutput) Status() pulumi.IntOutput {
-	return o.ApplyT(func(v GetEmrCluster) int { return v.Status }).(pulumi.IntOutput)
+func (o GetInstanceClusterOutput) Status() pulumi.IntOutput {
+	return o.ApplyT(func(v GetInstanceCluster) int { return v.Status }).(pulumi.IntOutput)
 }
 
-func (o GetEmrClusterOutput) Zone() pulumi.StringOutput {
-	return o.ApplyT(func(v GetEmrCluster) string { return v.Zone }).(pulumi.StringOutput)
+func (o GetInstanceClusterOutput) Zone() pulumi.StringOutput {
+	return o.ApplyT(func(v GetInstanceCluster) string { return v.Zone }).(pulumi.StringOutput)
 }
 
-func (o GetEmrClusterOutput) ZoneId() pulumi.IntOutput {
-	return o.ApplyT(func(v GetEmrCluster) int { return v.ZoneId }).(pulumi.IntOutput)
+func (o GetInstanceClusterOutput) ZoneId() pulumi.IntOutput {
+	return o.ApplyT(func(v GetInstanceCluster) int { return v.ZoneId }).(pulumi.IntOutput)
 }
 
-type GetEmrClusterArrayOutput struct{ *pulumi.OutputState }
+type GetInstanceClusterArrayOutput struct{ *pulumi.OutputState }
 
-func (GetEmrClusterArrayOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]GetEmrCluster)(nil)).Elem()
+func (GetInstanceClusterArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetInstanceCluster)(nil)).Elem()
 }
 
-func (o GetEmrClusterArrayOutput) ToGetEmrClusterArrayOutput() GetEmrClusterArrayOutput {
+func (o GetInstanceClusterArrayOutput) ToGetInstanceClusterArrayOutput() GetInstanceClusterArrayOutput {
 	return o
 }
 
-func (o GetEmrClusterArrayOutput) ToGetEmrClusterArrayOutputWithContext(ctx context.Context) GetEmrClusterArrayOutput {
+func (o GetInstanceClusterArrayOutput) ToGetInstanceClusterArrayOutputWithContext(ctx context.Context) GetInstanceClusterArrayOutput {
 	return o
 }
 
-func (o GetEmrClusterArrayOutput) Index(i pulumi.IntInput) GetEmrClusterOutput {
-	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetEmrCluster {
-		return vs[0].([]GetEmrCluster)[vs[1].(int)]
-	}).(GetEmrClusterOutput)
+func (o GetInstanceClusterArrayOutput) Index(i pulumi.IntInput) GetInstanceClusterOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetInstanceCluster {
+		return vs[0].([]GetInstanceCluster)[vs[1].(int)]
+	}).(GetInstanceClusterOutput)
 }
 
 type GetNodesNode struct {
@@ -2026,8 +2026,8 @@ func init() {
 	pulumi.RegisterInputType(reflect.TypeOf((*ClusterResourceSpecMasterResourceSpecPtrInput)(nil)).Elem(), ClusterResourceSpecMasterResourceSpecArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*ClusterResourceSpecTaskResourceSpecInput)(nil)).Elem(), ClusterResourceSpecTaskResourceSpecArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*ClusterResourceSpecTaskResourceSpecPtrInput)(nil)).Elem(), ClusterResourceSpecTaskResourceSpecArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetEmrClusterInput)(nil)).Elem(), GetEmrClusterArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetEmrClusterArrayInput)(nil)).Elem(), GetEmrClusterArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetInstanceClusterInput)(nil)).Elem(), GetInstanceClusterArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetInstanceClusterArrayInput)(nil)).Elem(), GetInstanceClusterArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetNodesNodeInput)(nil)).Elem(), GetNodesNodeArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetNodesNodeArrayInput)(nil)).Elem(), GetNodesNodeArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetNodesNodeCdbNodeInfoInput)(nil)).Elem(), GetNodesNodeCdbNodeInfoArgs{})
@@ -2046,8 +2046,8 @@ func init() {
 	pulumi.RegisterOutputType(ClusterResourceSpecMasterResourceSpecPtrOutput{})
 	pulumi.RegisterOutputType(ClusterResourceSpecTaskResourceSpecOutput{})
 	pulumi.RegisterOutputType(ClusterResourceSpecTaskResourceSpecPtrOutput{})
-	pulumi.RegisterOutputType(GetEmrClusterOutput{})
-	pulumi.RegisterOutputType(GetEmrClusterArrayOutput{})
+	pulumi.RegisterOutputType(GetInstanceClusterOutput{})
+	pulumi.RegisterOutputType(GetInstanceClusterArrayOutput{})
 	pulumi.RegisterOutputType(GetNodesNodeOutput{})
 	pulumi.RegisterOutputType(GetNodesNodeArrayOutput{})
 	pulumi.RegisterOutputType(GetNodesNodeCdbNodeInfoOutput{})

@@ -50,7 +50,7 @@ class NodePoolArgs:
         :param pulumi.Input[str] vpc_id: ID of VPC network.
         :param pulumi.Input[int] default_cooldown: Seconds of scaling group cool down. Default value is `300`.
         :param pulumi.Input[bool] delete_keep_instance: Indicate to keep the CVM instance when delete the node pool. Default is `true`.
-        :param pulumi.Input[int] desired_capacity: Desired capacity ot the node. If `enable_auto_scale` is set `true`, this will be a computed parameter.
+        :param pulumi.Input[int] desired_capacity: Desired capacity of the node. If `enable_auto_scale` is set `true`, this will be a computed parameter.
         :param pulumi.Input[bool] enable_auto_scale: Indicate whether to enable auto scaling or not.
         :param pulumi.Input[Mapping[str, Any]] labels: Labels of kubernetes node pool created nodes. The label key name does not exceed 63 characters, only supports English,
                numbers,'/','-', and does not allow beginning with ('/').
@@ -213,7 +213,7 @@ class NodePoolArgs:
     @pulumi.getter(name="desiredCapacity")
     def desired_capacity(self) -> Optional[pulumi.Input[int]]:
         """
-        Desired capacity ot the node. If `enable_auto_scale` is set `true`, this will be a computed parameter.
+        Desired capacity of the node. If `enable_auto_scale` is set `true`, this will be a computed parameter.
         """
         return pulumi.get(self, "desired_capacity")
 
@@ -478,7 +478,7 @@ class _NodePoolState:
         :param pulumi.Input[str] cluster_id: ID of the cluster.
         :param pulumi.Input[int] default_cooldown: Seconds of scaling group cool down. Default value is `300`.
         :param pulumi.Input[bool] delete_keep_instance: Indicate to keep the CVM instance when delete the node pool. Default is `true`.
-        :param pulumi.Input[int] desired_capacity: Desired capacity ot the node. If `enable_auto_scale` is set `true`, this will be a computed parameter.
+        :param pulumi.Input[int] desired_capacity: Desired capacity of the node. If `enable_auto_scale` is set `true`, this will be a computed parameter.
         :param pulumi.Input[bool] enable_auto_scale: Indicate whether to enable auto scaling or not.
         :param pulumi.Input[Mapping[str, Any]] labels: Labels of kubernetes node pool created nodes. The label key name does not exceed 63 characters, only supports English,
                numbers,'/','-', and does not allow beginning with ('/').
@@ -653,7 +653,7 @@ class _NodePoolState:
     @pulumi.getter(name="desiredCapacity")
     def desired_capacity(self) -> Optional[pulumi.Input[int]]:
         """
-        Desired capacity ot the node. If `enable_auto_scale` is set `true`, this will be a computed parameter.
+        Desired capacity of the node. If `enable_auto_scale` is set `true`, this will be a computed parameter.
         """
         return pulumi.get(self, "desired_capacity")
 
@@ -999,7 +999,7 @@ class NodePool(pulumi.CustomResource):
         :param pulumi.Input[str] cluster_id: ID of the cluster.
         :param pulumi.Input[int] default_cooldown: Seconds of scaling group cool down. Default value is `300`.
         :param pulumi.Input[bool] delete_keep_instance: Indicate to keep the CVM instance when delete the node pool. Default is `true`.
-        :param pulumi.Input[int] desired_capacity: Desired capacity ot the node. If `enable_auto_scale` is set `true`, this will be a computed parameter.
+        :param pulumi.Input[int] desired_capacity: Desired capacity of the node. If `enable_auto_scale` is set `true`, this will be a computed parameter.
         :param pulumi.Input[bool] enable_auto_scale: Indicate whether to enable auto scaling or not.
         :param pulumi.Input[Mapping[str, Any]] labels: Labels of kubernetes node pool created nodes. The label key name does not exceed 63 characters, only supports English,
                numbers,'/','-', and does not allow beginning with ('/').
@@ -1183,7 +1183,7 @@ class NodePool(pulumi.CustomResource):
         :param pulumi.Input[str] cluster_id: ID of the cluster.
         :param pulumi.Input[int] default_cooldown: Seconds of scaling group cool down. Default value is `300`.
         :param pulumi.Input[bool] delete_keep_instance: Indicate to keep the CVM instance when delete the node pool. Default is `true`.
-        :param pulumi.Input[int] desired_capacity: Desired capacity ot the node. If `enable_auto_scale` is set `true`, this will be a computed parameter.
+        :param pulumi.Input[int] desired_capacity: Desired capacity of the node. If `enable_auto_scale` is set `true`, this will be a computed parameter.
         :param pulumi.Input[bool] enable_auto_scale: Indicate whether to enable auto scaling or not.
         :param pulumi.Input[Mapping[str, Any]] labels: Labels of kubernetes node pool created nodes. The label key name does not exceed 63 characters, only supports English,
                numbers,'/','-', and does not allow beginning with ('/').
@@ -1308,7 +1308,7 @@ class NodePool(pulumi.CustomResource):
     @pulumi.getter(name="desiredCapacity")
     def desired_capacity(self) -> pulumi.Output[int]:
         """
-        Desired capacity ot the node. If `enable_auto_scale` is set `true`, this will be a computed parameter.
+        Desired capacity of the node. If `enable_auto_scale` is set `true`, this will be a computed parameter.
         """
         return pulumi.get(self, "desired_capacity")
 

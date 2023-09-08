@@ -65,8 +65,7 @@ class ScalingConfigArgs:
                balance is sufficient. NOTE: it only works when instance_charge_type is set to `PREPAID`.
         :param pulumi.Input['ScalingConfigInstanceNameSettingsArgs'] instance_name_settings: Settings of CVM instance names.
         :param pulumi.Input[Mapping[str, Any]] instance_tags: A list of tags used to associate different resources.
-        :param pulumi.Input[str] internet_charge_type: Charge types for network traffic. Valid values: `BANDWIDTH_PREPAID`, `TRAFFIC_POSTPAID_BY_HOUR`,
-               `TRAFFIC_POSTPAID_BY_HOUR` and `BANDWIDTH_PACKAGE`.
+        :param pulumi.Input[str] internet_charge_type: Charge types for network traffic. Valid values: `BANDWIDTH_PREPAID`, `TRAFFIC_POSTPAID_BY_HOUR` and `BANDWIDTH_PACKAGE`.
         :param pulumi.Input[int] internet_max_bandwidth_out: Max bandwidth of Internet access in Mbps. Default is `0`.
         :param pulumi.Input[bool] keep_image_login: Specify whether to keep original settings of a CVM image. And it can't be used with password or key_ids together.
         :param pulumi.Input[Sequence[pulumi.Input[str]]] key_ids: ID list of keys.
@@ -312,8 +311,7 @@ class ScalingConfigArgs:
     @pulumi.getter(name="internetChargeType")
     def internet_charge_type(self) -> Optional[pulumi.Input[str]]:
         """
-        Charge types for network traffic. Valid values: `BANDWIDTH_PREPAID`, `TRAFFIC_POSTPAID_BY_HOUR`,
-        `TRAFFIC_POSTPAID_BY_HOUR` and `BANDWIDTH_PACKAGE`.
+        Charge types for network traffic. Valid values: `BANDWIDTH_PREPAID`, `TRAFFIC_POSTPAID_BY_HOUR` and `BANDWIDTH_PACKAGE`.
         """
         return pulumi.get(self, "internet_charge_type")
 
@@ -523,8 +521,7 @@ class _ScalingConfigState:
         :param pulumi.Input['ScalingConfigInstanceNameSettingsArgs'] instance_name_settings: Settings of CVM instance names.
         :param pulumi.Input[Mapping[str, Any]] instance_tags: A list of tags used to associate different resources.
         :param pulumi.Input[Sequence[pulumi.Input[str]]] instance_types: Specified types of CVM instances.
-        :param pulumi.Input[str] internet_charge_type: Charge types for network traffic. Valid values: `BANDWIDTH_PREPAID`, `TRAFFIC_POSTPAID_BY_HOUR`,
-               `TRAFFIC_POSTPAID_BY_HOUR` and `BANDWIDTH_PACKAGE`.
+        :param pulumi.Input[str] internet_charge_type: Charge types for network traffic. Valid values: `BANDWIDTH_PREPAID`, `TRAFFIC_POSTPAID_BY_HOUR` and `BANDWIDTH_PACKAGE`.
         :param pulumi.Input[int] internet_max_bandwidth_out: Max bandwidth of Internet access in Mbps. Default is `0`.
         :param pulumi.Input[bool] keep_image_login: Specify whether to keep original settings of a CVM image. And it can't be used with password or key_ids together.
         :param pulumi.Input[Sequence[pulumi.Input[str]]] key_ids: ID list of keys.
@@ -790,8 +787,7 @@ class _ScalingConfigState:
     @pulumi.getter(name="internetChargeType")
     def internet_charge_type(self) -> Optional[pulumi.Input[str]]:
         """
-        Charge types for network traffic. Valid values: `BANDWIDTH_PREPAID`, `TRAFFIC_POSTPAID_BY_HOUR`,
-        `TRAFFIC_POSTPAID_BY_HOUR` and `BANDWIDTH_PACKAGE`.
+        Charge types for network traffic. Valid values: `BANDWIDTH_PREPAID`, `TRAFFIC_POSTPAID_BY_HOUR` and `BANDWIDTH_PACKAGE`.
         """
         return pulumi.get(self, "internet_charge_type")
 
@@ -1015,8 +1011,7 @@ class ScalingConfig(pulumi.CustomResource):
         :param pulumi.Input[pulumi.InputType['ScalingConfigInstanceNameSettingsArgs']] instance_name_settings: Settings of CVM instance names.
         :param pulumi.Input[Mapping[str, Any]] instance_tags: A list of tags used to associate different resources.
         :param pulumi.Input[Sequence[pulumi.Input[str]]] instance_types: Specified types of CVM instances.
-        :param pulumi.Input[str] internet_charge_type: Charge types for network traffic. Valid values: `BANDWIDTH_PREPAID`, `TRAFFIC_POSTPAID_BY_HOUR`,
-               `TRAFFIC_POSTPAID_BY_HOUR` and `BANDWIDTH_PACKAGE`.
+        :param pulumi.Input[str] internet_charge_type: Charge types for network traffic. Valid values: `BANDWIDTH_PREPAID`, `TRAFFIC_POSTPAID_BY_HOUR` and `BANDWIDTH_PACKAGE`.
         :param pulumi.Input[int] internet_max_bandwidth_out: Max bandwidth of Internet access in Mbps. Default is `0`.
         :param pulumi.Input[bool] keep_image_login: Specify whether to keep original settings of a CVM image. And it can't be used with password or key_ids together.
         :param pulumi.Input[Sequence[pulumi.Input[str]]] key_ids: ID list of keys.
@@ -1195,8 +1190,7 @@ class ScalingConfig(pulumi.CustomResource):
         :param pulumi.Input[pulumi.InputType['ScalingConfigInstanceNameSettingsArgs']] instance_name_settings: Settings of CVM instance names.
         :param pulumi.Input[Mapping[str, Any]] instance_tags: A list of tags used to associate different resources.
         :param pulumi.Input[Sequence[pulumi.Input[str]]] instance_types: Specified types of CVM instances.
-        :param pulumi.Input[str] internet_charge_type: Charge types for network traffic. Valid values: `BANDWIDTH_PREPAID`, `TRAFFIC_POSTPAID_BY_HOUR`,
-               `TRAFFIC_POSTPAID_BY_HOUR` and `BANDWIDTH_PACKAGE`.
+        :param pulumi.Input[str] internet_charge_type: Charge types for network traffic. Valid values: `BANDWIDTH_PREPAID`, `TRAFFIC_POSTPAID_BY_HOUR` and `BANDWIDTH_PACKAGE`.
         :param pulumi.Input[int] internet_max_bandwidth_out: Max bandwidth of Internet access in Mbps. Default is `0`.
         :param pulumi.Input[bool] keep_image_login: Specify whether to keep original settings of a CVM image. And it can't be used with password or key_ids together.
         :param pulumi.Input[Sequence[pulumi.Input[str]]] key_ids: ID list of keys.
@@ -1378,8 +1372,7 @@ class ScalingConfig(pulumi.CustomResource):
     @pulumi.getter(name="internetChargeType")
     def internet_charge_type(self) -> pulumi.Output[Optional[str]]:
         """
-        Charge types for network traffic. Valid values: `BANDWIDTH_PREPAID`, `TRAFFIC_POSTPAID_BY_HOUR`,
-        `TRAFFIC_POSTPAID_BY_HOUR` and `BANDWIDTH_PACKAGE`.
+        Charge types for network traffic. Valid values: `BANDWIDTH_PREPAID`, `TRAFFIC_POSTPAID_BY_HOUR` and `BANDWIDTH_PACKAGE`.
         """
         return pulumi.get(self, "internet_charge_type")
 

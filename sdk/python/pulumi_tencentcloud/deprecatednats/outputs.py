@@ -10,11 +10,11 @@ from typing import Any, Mapping, Optional, Sequence, Union, overload
 from .. import _utilities
 
 __all__ = [
-    'GetNatsNatResult',
+    'GetInstanceNatResult',
 ]
 
 @pulumi.output_type
-class GetNatsNatResult(dict):
+class GetInstanceNatResult(dict):
     def __init__(__self__, *,
                  assigned_eip_sets: Sequence[str],
                  bandwidth: int,

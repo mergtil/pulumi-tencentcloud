@@ -4,8 +4,8 @@
 import * as utilities from "../utilities";
 
 // Export members:
-export { GetEnisArgs, GetEnisResult, GetEnisOutputArgs } from "./getEnis";
-export const getEnis: typeof import("./getEnis").getEnis = null as any;
-export const getEnisOutput: typeof import("./getEnis").getEnisOutput = null as any;
-utilities.lazyLoad(exports, ["getEnis","getEnisOutput"], () => require("./getEnis"));
+export { GetInstanceArgs, GetInstanceResult, GetInstanceOutputArgs } from "./getInstance";
+export const getInstance: typeof import("./getInstance").getInstance = null as any;
+export const getInstanceOutput: typeof import("./getInstance").getInstanceOutput = null as any;
+utilities.lazyLoad(exports, ["getInstance","getInstanceOutput"], () => require("./getInstance"));
 

@@ -49,7 +49,7 @@ namespace Pulumi.Tencentcloud.Kubernetes
         public Output<bool?> DeleteKeepInstance { get; private set; } = null!;
 
         /// <summary>
-        /// Desired capacity ot the node. If `enable_auto_scale` is set `true`, this will be a computed parameter.
+        /// Desired capacity of the node. If `enable_auto_scale` is set `true`, this will be a computed parameter.
         /// </summary>
         [Output("desiredCapacity")]
         public Output<int> DesiredCapacity { get; private set; } = null!;
@@ -279,7 +279,7 @@ namespace Pulumi.Tencentcloud.Kubernetes
         public Input<bool>? DeleteKeepInstance { get; set; }
 
         /// <summary>
-        /// Desired capacity ot the node. If `enable_auto_scale` is set `true`, this will be a computed parameter.
+        /// Desired capacity of the node. If `enable_auto_scale` is set `true`, this will be a computed parameter.
         /// </summary>
         [Input("desiredCapacity")]
         public Input<int>? DesiredCapacity { get; set; }
@@ -489,7 +489,7 @@ namespace Pulumi.Tencentcloud.Kubernetes
         public Input<bool>? DeleteKeepInstance { get; set; }
 
         /// <summary>
-        /// Desired capacity ot the node. If `enable_auto_scale` is set `true`, this will be a computed parameter.
+        /// Desired capacity of the node. If `enable_auto_scale` is set `true`, this will be a computed parameter.
         /// </summary>
         [Input("desiredCapacity")]
         public Input<int>? DesiredCapacity { get; set; }

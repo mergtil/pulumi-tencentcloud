@@ -66,6 +66,8 @@ type PayCertificate struct {
 	Status pulumi.IntOutput `pulumi:"status"`
 	// Certificate period, currently only supports 1 year certificate purchase.
 	TimeSpan pulumi.IntPtrOutput `pulumi:"timeSpan"`
+	// If `wait_commit_flag` is set to true, info will not be submitted temporarily, false opposite.
+	WaitCommitFlag pulumi.BoolPtrOutput `pulumi:"waitCommitFlag"`
 }
 
 // NewPayCertificate registers a new resource with the given unique name, arguments, and options.
@@ -158,6 +160,8 @@ type payCertificateState struct {
 	Status *int `pulumi:"status"`
 	// Certificate period, currently only supports 1 year certificate purchase.
 	TimeSpan *int `pulumi:"timeSpan"`
+	// If `wait_commit_flag` is set to true, info will not be submitted temporarily, false opposite.
+	WaitCommitFlag *bool `pulumi:"waitCommitFlag"`
 }
 
 type PayCertificateState struct {
@@ -212,6 +216,8 @@ type PayCertificateState struct {
 	Status pulumi.IntPtrInput
 	// Certificate period, currently only supports 1 year certificate purchase.
 	TimeSpan pulumi.IntPtrInput
+	// If `wait_commit_flag` is set to true, info will not be submitted temporarily, false opposite.
+	WaitCommitFlag pulumi.BoolPtrInput
 }
 
 func (PayCertificateState) ElementType() reflect.Type {
@@ -226,6 +232,8 @@ type payCertificateArgs struct {
 	ConfirmLetter *string `pulumi:"confirmLetter"`
 	// Number of domain names included in the certificate.
 	DomainNum int `pulumi:"domainNum"`
+	// DV certification information.
+	DvAuths []PayCertificateDvAuth `pulumi:"dvAuths"`
 	// Certificate information.
 	Information PayCertificateInformation `pulumi:"information"`
 	// Certificate commodity ID. Valid value ranges: (3~42). `3` means SecureSite enhanced Enterprise Edition (EV Pro), `4`
@@ -262,6 +270,8 @@ type payCertificateArgs struct {
 	ProjectId *int `pulumi:"projectId"`
 	// Certificate period, currently only supports 1 year certificate purchase.
 	TimeSpan *int `pulumi:"timeSpan"`
+	// If `wait_commit_flag` is set to true, info will not be submitted temporarily, false opposite.
+	WaitCommitFlag *bool `pulumi:"waitCommitFlag"`
 }
 
 // The set of arguments for constructing a PayCertificate resource.
@@ -273,6 +283,8 @@ type PayCertificateArgs struct {
 	ConfirmLetter pulumi.StringPtrInput
 	// Number of domain names included in the certificate.
 	DomainNum pulumi.IntInput
+	// DV certification information.
+	DvAuths PayCertificateDvAuthArrayInput
 	// Certificate information.
 	Information PayCertificateInformationInput
 	// Certificate commodity ID. Valid value ranges: (3~42). `3` means SecureSite enhanced Enterprise Edition (EV Pro), `4`
@@ -309,6 +321,8 @@ type PayCertificateArgs struct {
 	ProjectId pulumi.IntPtrInput
 	// Certificate period, currently only supports 1 year certificate purchase.
 	TimeSpan pulumi.IntPtrInput
+	// If `wait_commit_flag` is set to true, info will not be submitted temporarily, false opposite.
+	WaitCommitFlag pulumi.BoolPtrInput
 }
 
 func (PayCertificateArgs) ElementType() reflect.Type {
@@ -480,6 +494,11 @@ func (o PayCertificateOutput) Status() pulumi.IntOutput {
 // Certificate period, currently only supports 1 year certificate purchase.
 func (o PayCertificateOutput) TimeSpan() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *PayCertificate) pulumi.IntPtrOutput { return v.TimeSpan }).(pulumi.IntPtrOutput)
+}
+
+// If `wait_commit_flag` is set to true, info will not be submitted temporarily, false opposite.
+func (o PayCertificateOutput) WaitCommitFlag() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v *PayCertificate) pulumi.BoolPtrOutput { return v.WaitCommitFlag }).(pulumi.BoolPtrOutput)
 }
 
 type PayCertificateArrayOutput struct{ *pulumi.OutputState }

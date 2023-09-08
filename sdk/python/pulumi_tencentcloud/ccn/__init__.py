@@ -7,13 +7,13 @@ import typing
 # Export this package's modules as members:
 from .attachment import *
 from .bandwidth_limit import *
-from .ccn import *
 from .get_bandwidth_limits import *
 from .get_cross_border_compliance import *
 from .get_cross_border_flow_monitor import *
 from .get_cross_border_region_bandwidth_limits import *
 from .get_instances import *
 from .get_tenant_instances import *
+from .instance import *
 from .instances_accept_attach import *
 from .instances_reject_attach import *
 from .instances_reset_attach import *

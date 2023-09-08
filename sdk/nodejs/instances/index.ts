@@ -4,10 +4,10 @@
 import * as utilities from "../utilities";
 
 // Export members:
-export { GetInstancesArgs, GetInstancesResult, GetInstancesOutputArgs } from "./getInstances";
-export const getInstances: typeof import("./getInstances").getInstances = null as any;
-export const getInstancesOutput: typeof import("./getInstances").getInstancesOutput = null as any;
-utilities.lazyLoad(exports, ["getInstances","getInstancesOutput"], () => require("./getInstances"));
+export { GetInstanceArgs, GetInstanceResult, GetInstanceOutputArgs } from "./getInstance";
+export const getInstance: typeof import("./getInstance").getInstance = null as any;
+export const getInstanceOutput: typeof import("./getInstance").getInstanceOutput = null as any;
+utilities.lazyLoad(exports, ["getInstance","getInstanceOutput"], () => require("./getInstance"));
 
 export { GetSetArgs, GetSetResult, GetSetOutputArgs } from "./getSet";
 export const getSet: typeof import("./getSet").getSet = null as any;

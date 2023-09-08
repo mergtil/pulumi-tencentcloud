@@ -3758,12 +3758,12 @@ export namespace Deprecatedcontainer {
 }
 
 export namespace Deprecatedeip {
-    export interface GetEipFilter {
+    export interface GetInstanceFilter {
         name: string;
         values: string[];
     }
 
-    export interface GetEipFilterArgs {
+    export interface GetInstanceFilterArgs {
         name: pulumi.Input<string>;
         values: pulumi.Input<pulumi.Input<string>[]>;
     }
@@ -4537,13 +4537,13 @@ export namespace Emr {
 }
 
 export namespace Eni {
-    export interface EniIpv4 {
+    export interface InstanceIpv4 {
         description?: pulumi.Input<string>;
         ip: pulumi.Input<string>;
         primary: pulumi.Input<boolean>;
     }
 
-    export interface EniIpv4Info {
+    export interface InstanceIpv4Info {
         description?: pulumi.Input<string>;
         ip?: pulumi.Input<string>;
         primary?: pulumi.Input<boolean>;
@@ -4573,12 +4573,12 @@ export namespace Ha {
 }
 
 export namespace Image {
-    export interface GetImageFilter {
+    export interface GetInstanceFilter {
         name: string;
         values: string[];
     }
 
-    export interface GetImageFilterArgs {
+    export interface GetInstanceFilterArgs {
         name: pulumi.Input<string>;
         values: pulumi.Input<pulumi.Input<string>[]>;
     }

@@ -13,7 +13,7 @@ import (
 
 var _ = internal.GetEnvOrDefault
 
-type GetNatsNat struct {
+type GetInstanceNat struct {
 	AssignedEipSets []string `pulumi:"assignedEipSets"`
 	Bandwidth       int      `pulumi:"bandwidth"`
 	CreateTime      string   `pulumi:"createTime"`
@@ -24,18 +24,18 @@ type GetNatsNat struct {
 	VpcId           string   `pulumi:"vpcId"`
 }
 
-// GetNatsNatInput is an input type that accepts GetNatsNatArgs and GetNatsNatOutput values.
-// You can construct a concrete instance of `GetNatsNatInput` via:
+// GetInstanceNatInput is an input type that accepts GetInstanceNatArgs and GetInstanceNatOutput values.
+// You can construct a concrete instance of `GetInstanceNatInput` via:
 //
-//	GetNatsNatArgs{...}
-type GetNatsNatInput interface {
+//	GetInstanceNatArgs{...}
+type GetInstanceNatInput interface {
 	pulumi.Input
 
-	ToGetNatsNatOutput() GetNatsNatOutput
-	ToGetNatsNatOutputWithContext(context.Context) GetNatsNatOutput
+	ToGetInstanceNatOutput() GetInstanceNatOutput
+	ToGetInstanceNatOutputWithContext(context.Context) GetInstanceNatOutput
 }
 
-type GetNatsNatArgs struct {
+type GetInstanceNatArgs struct {
 	AssignedEipSets pulumi.StringArrayInput `pulumi:"assignedEipSets"`
 	Bandwidth       pulumi.IntInput         `pulumi:"bandwidth"`
 	CreateTime      pulumi.StringInput      `pulumi:"createTime"`
@@ -46,112 +46,112 @@ type GetNatsNatArgs struct {
 	VpcId           pulumi.StringInput      `pulumi:"vpcId"`
 }
 
-func (GetNatsNatArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetNatsNat)(nil)).Elem()
+func (GetInstanceNatArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetInstanceNat)(nil)).Elem()
 }
 
-func (i GetNatsNatArgs) ToGetNatsNatOutput() GetNatsNatOutput {
-	return i.ToGetNatsNatOutputWithContext(context.Background())
+func (i GetInstanceNatArgs) ToGetInstanceNatOutput() GetInstanceNatOutput {
+	return i.ToGetInstanceNatOutputWithContext(context.Background())
 }
 
-func (i GetNatsNatArgs) ToGetNatsNatOutputWithContext(ctx context.Context) GetNatsNatOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetNatsNatOutput)
+func (i GetInstanceNatArgs) ToGetInstanceNatOutputWithContext(ctx context.Context) GetInstanceNatOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetInstanceNatOutput)
 }
 
-// GetNatsNatArrayInput is an input type that accepts GetNatsNatArray and GetNatsNatArrayOutput values.
-// You can construct a concrete instance of `GetNatsNatArrayInput` via:
+// GetInstanceNatArrayInput is an input type that accepts GetInstanceNatArray and GetInstanceNatArrayOutput values.
+// You can construct a concrete instance of `GetInstanceNatArrayInput` via:
 //
-//	GetNatsNatArray{ GetNatsNatArgs{...} }
-type GetNatsNatArrayInput interface {
+//	GetInstanceNatArray{ GetInstanceNatArgs{...} }
+type GetInstanceNatArrayInput interface {
 	pulumi.Input
 
-	ToGetNatsNatArrayOutput() GetNatsNatArrayOutput
-	ToGetNatsNatArrayOutputWithContext(context.Context) GetNatsNatArrayOutput
+	ToGetInstanceNatArrayOutput() GetInstanceNatArrayOutput
+	ToGetInstanceNatArrayOutputWithContext(context.Context) GetInstanceNatArrayOutput
 }
 
-type GetNatsNatArray []GetNatsNatInput
+type GetInstanceNatArray []GetInstanceNatInput
 
-func (GetNatsNatArray) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]GetNatsNat)(nil)).Elem()
+func (GetInstanceNatArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetInstanceNat)(nil)).Elem()
 }
 
-func (i GetNatsNatArray) ToGetNatsNatArrayOutput() GetNatsNatArrayOutput {
-	return i.ToGetNatsNatArrayOutputWithContext(context.Background())
+func (i GetInstanceNatArray) ToGetInstanceNatArrayOutput() GetInstanceNatArrayOutput {
+	return i.ToGetInstanceNatArrayOutputWithContext(context.Background())
 }
 
-func (i GetNatsNatArray) ToGetNatsNatArrayOutputWithContext(ctx context.Context) GetNatsNatArrayOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetNatsNatArrayOutput)
+func (i GetInstanceNatArray) ToGetInstanceNatArrayOutputWithContext(ctx context.Context) GetInstanceNatArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetInstanceNatArrayOutput)
 }
 
-type GetNatsNatOutput struct{ *pulumi.OutputState }
+type GetInstanceNatOutput struct{ *pulumi.OutputState }
 
-func (GetNatsNatOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetNatsNat)(nil)).Elem()
+func (GetInstanceNatOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetInstanceNat)(nil)).Elem()
 }
 
-func (o GetNatsNatOutput) ToGetNatsNatOutput() GetNatsNatOutput {
+func (o GetInstanceNatOutput) ToGetInstanceNatOutput() GetInstanceNatOutput {
 	return o
 }
 
-func (o GetNatsNatOutput) ToGetNatsNatOutputWithContext(ctx context.Context) GetNatsNatOutput {
+func (o GetInstanceNatOutput) ToGetInstanceNatOutputWithContext(ctx context.Context) GetInstanceNatOutput {
 	return o
 }
 
-func (o GetNatsNatOutput) AssignedEipSets() pulumi.StringArrayOutput {
-	return o.ApplyT(func(v GetNatsNat) []string { return v.AssignedEipSets }).(pulumi.StringArrayOutput)
+func (o GetInstanceNatOutput) AssignedEipSets() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v GetInstanceNat) []string { return v.AssignedEipSets }).(pulumi.StringArrayOutput)
 }
 
-func (o GetNatsNatOutput) Bandwidth() pulumi.IntOutput {
-	return o.ApplyT(func(v GetNatsNat) int { return v.Bandwidth }).(pulumi.IntOutput)
+func (o GetInstanceNatOutput) Bandwidth() pulumi.IntOutput {
+	return o.ApplyT(func(v GetInstanceNat) int { return v.Bandwidth }).(pulumi.IntOutput)
 }
 
-func (o GetNatsNatOutput) CreateTime() pulumi.StringOutput {
-	return o.ApplyT(func(v GetNatsNat) string { return v.CreateTime }).(pulumi.StringOutput)
+func (o GetInstanceNatOutput) CreateTime() pulumi.StringOutput {
+	return o.ApplyT(func(v GetInstanceNat) string { return v.CreateTime }).(pulumi.StringOutput)
 }
 
-func (o GetNatsNatOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v GetNatsNat) string { return v.Id }).(pulumi.StringOutput)
+func (o GetInstanceNatOutput) Id() pulumi.StringOutput {
+	return o.ApplyT(func(v GetInstanceNat) string { return v.Id }).(pulumi.StringOutput)
 }
 
-func (o GetNatsNatOutput) MaxConcurrent() pulumi.IntOutput {
-	return o.ApplyT(func(v GetNatsNat) int { return v.MaxConcurrent }).(pulumi.IntOutput)
+func (o GetInstanceNatOutput) MaxConcurrent() pulumi.IntOutput {
+	return o.ApplyT(func(v GetInstanceNat) int { return v.MaxConcurrent }).(pulumi.IntOutput)
 }
 
-func (o GetNatsNatOutput) Name() pulumi.StringOutput {
-	return o.ApplyT(func(v GetNatsNat) string { return v.Name }).(pulumi.StringOutput)
+func (o GetInstanceNatOutput) Name() pulumi.StringOutput {
+	return o.ApplyT(func(v GetInstanceNat) string { return v.Name }).(pulumi.StringOutput)
 }
 
-func (o GetNatsNatOutput) State() pulumi.IntOutput {
-	return o.ApplyT(func(v GetNatsNat) int { return v.State }).(pulumi.IntOutput)
+func (o GetInstanceNatOutput) State() pulumi.IntOutput {
+	return o.ApplyT(func(v GetInstanceNat) int { return v.State }).(pulumi.IntOutput)
 }
 
-func (o GetNatsNatOutput) VpcId() pulumi.StringOutput {
-	return o.ApplyT(func(v GetNatsNat) string { return v.VpcId }).(pulumi.StringOutput)
+func (o GetInstanceNatOutput) VpcId() pulumi.StringOutput {
+	return o.ApplyT(func(v GetInstanceNat) string { return v.VpcId }).(pulumi.StringOutput)
 }
 
-type GetNatsNatArrayOutput struct{ *pulumi.OutputState }
+type GetInstanceNatArrayOutput struct{ *pulumi.OutputState }
 
-func (GetNatsNatArrayOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]GetNatsNat)(nil)).Elem()
+func (GetInstanceNatArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetInstanceNat)(nil)).Elem()
 }
 
-func (o GetNatsNatArrayOutput) ToGetNatsNatArrayOutput() GetNatsNatArrayOutput {
+func (o GetInstanceNatArrayOutput) ToGetInstanceNatArrayOutput() GetInstanceNatArrayOutput {
 	return o
 }
 
-func (o GetNatsNatArrayOutput) ToGetNatsNatArrayOutputWithContext(ctx context.Context) GetNatsNatArrayOutput {
+func (o GetInstanceNatArrayOutput) ToGetInstanceNatArrayOutputWithContext(ctx context.Context) GetInstanceNatArrayOutput {
 	return o
 }
 
-func (o GetNatsNatArrayOutput) Index(i pulumi.IntInput) GetNatsNatOutput {
-	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetNatsNat {
-		return vs[0].([]GetNatsNat)[vs[1].(int)]
-	}).(GetNatsNatOutput)
+func (o GetInstanceNatArrayOutput) Index(i pulumi.IntInput) GetInstanceNatOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetInstanceNat {
+		return vs[0].([]GetInstanceNat)[vs[1].(int)]
+	}).(GetInstanceNatOutput)
 }
 
 func init() {
-	pulumi.RegisterInputType(reflect.TypeOf((*GetNatsNatInput)(nil)).Elem(), GetNatsNatArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetNatsNatArrayInput)(nil)).Elem(), GetNatsNatArray{})
-	pulumi.RegisterOutputType(GetNatsNatOutput{})
-	pulumi.RegisterOutputType(GetNatsNatArrayOutput{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetInstanceNatInput)(nil)).Elem(), GetInstanceNatArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetInstanceNatArrayInput)(nil)).Elem(), GetInstanceNatArray{})
+	pulumi.RegisterOutputType(GetInstanceNatOutput{})
+	pulumi.RegisterOutputType(GetInstanceNatArrayOutput{})
 }

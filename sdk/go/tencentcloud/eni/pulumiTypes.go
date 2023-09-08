@@ -13,225 +13,225 @@ import (
 
 var _ = internal.GetEnvOrDefault
 
-type EniIpv4 struct {
+type InstanceIpv4 struct {
 	Description *string `pulumi:"description"`
 	Ip          string  `pulumi:"ip"`
 	Primary     bool    `pulumi:"primary"`
 }
 
-// EniIpv4Input is an input type that accepts EniIpv4Args and EniIpv4Output values.
-// You can construct a concrete instance of `EniIpv4Input` via:
+// InstanceIpv4Input is an input type that accepts InstanceIpv4Args and InstanceIpv4Output values.
+// You can construct a concrete instance of `InstanceIpv4Input` via:
 //
-//	EniIpv4Args{...}
-type EniIpv4Input interface {
+//	InstanceIpv4Args{...}
+type InstanceIpv4Input interface {
 	pulumi.Input
 
-	ToEniIpv4Output() EniIpv4Output
-	ToEniIpv4OutputWithContext(context.Context) EniIpv4Output
+	ToInstanceIpv4Output() InstanceIpv4Output
+	ToInstanceIpv4OutputWithContext(context.Context) InstanceIpv4Output
 }
 
-type EniIpv4Args struct {
+type InstanceIpv4Args struct {
 	Description pulumi.StringPtrInput `pulumi:"description"`
 	Ip          pulumi.StringInput    `pulumi:"ip"`
 	Primary     pulumi.BoolInput      `pulumi:"primary"`
 }
 
-func (EniIpv4Args) ElementType() reflect.Type {
-	return reflect.TypeOf((*EniIpv4)(nil)).Elem()
+func (InstanceIpv4Args) ElementType() reflect.Type {
+	return reflect.TypeOf((*InstanceIpv4)(nil)).Elem()
 }
 
-func (i EniIpv4Args) ToEniIpv4Output() EniIpv4Output {
-	return i.ToEniIpv4OutputWithContext(context.Background())
+func (i InstanceIpv4Args) ToInstanceIpv4Output() InstanceIpv4Output {
+	return i.ToInstanceIpv4OutputWithContext(context.Background())
 }
 
-func (i EniIpv4Args) ToEniIpv4OutputWithContext(ctx context.Context) EniIpv4Output {
-	return pulumi.ToOutputWithContext(ctx, i).(EniIpv4Output)
+func (i InstanceIpv4Args) ToInstanceIpv4OutputWithContext(ctx context.Context) InstanceIpv4Output {
+	return pulumi.ToOutputWithContext(ctx, i).(InstanceIpv4Output)
 }
 
-// EniIpv4ArrayInput is an input type that accepts EniIpv4Array and EniIpv4ArrayOutput values.
-// You can construct a concrete instance of `EniIpv4ArrayInput` via:
+// InstanceIpv4ArrayInput is an input type that accepts InstanceIpv4Array and InstanceIpv4ArrayOutput values.
+// You can construct a concrete instance of `InstanceIpv4ArrayInput` via:
 //
-//	EniIpv4Array{ EniIpv4Args{...} }
-type EniIpv4ArrayInput interface {
+//	InstanceIpv4Array{ InstanceIpv4Args{...} }
+type InstanceIpv4ArrayInput interface {
 	pulumi.Input
 
-	ToEniIpv4ArrayOutput() EniIpv4ArrayOutput
-	ToEniIpv4ArrayOutputWithContext(context.Context) EniIpv4ArrayOutput
+	ToInstanceIpv4ArrayOutput() InstanceIpv4ArrayOutput
+	ToInstanceIpv4ArrayOutputWithContext(context.Context) InstanceIpv4ArrayOutput
 }
 
-type EniIpv4Array []EniIpv4Input
+type InstanceIpv4Array []InstanceIpv4Input
 
-func (EniIpv4Array) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]EniIpv4)(nil)).Elem()
+func (InstanceIpv4Array) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]InstanceIpv4)(nil)).Elem()
 }
 
-func (i EniIpv4Array) ToEniIpv4ArrayOutput() EniIpv4ArrayOutput {
-	return i.ToEniIpv4ArrayOutputWithContext(context.Background())
+func (i InstanceIpv4Array) ToInstanceIpv4ArrayOutput() InstanceIpv4ArrayOutput {
+	return i.ToInstanceIpv4ArrayOutputWithContext(context.Background())
 }
 
-func (i EniIpv4Array) ToEniIpv4ArrayOutputWithContext(ctx context.Context) EniIpv4ArrayOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(EniIpv4ArrayOutput)
+func (i InstanceIpv4Array) ToInstanceIpv4ArrayOutputWithContext(ctx context.Context) InstanceIpv4ArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(InstanceIpv4ArrayOutput)
 }
 
-type EniIpv4Output struct{ *pulumi.OutputState }
+type InstanceIpv4Output struct{ *pulumi.OutputState }
 
-func (EniIpv4Output) ElementType() reflect.Type {
-	return reflect.TypeOf((*EniIpv4)(nil)).Elem()
+func (InstanceIpv4Output) ElementType() reflect.Type {
+	return reflect.TypeOf((*InstanceIpv4)(nil)).Elem()
 }
 
-func (o EniIpv4Output) ToEniIpv4Output() EniIpv4Output {
+func (o InstanceIpv4Output) ToInstanceIpv4Output() InstanceIpv4Output {
 	return o
 }
 
-func (o EniIpv4Output) ToEniIpv4OutputWithContext(ctx context.Context) EniIpv4Output {
+func (o InstanceIpv4Output) ToInstanceIpv4OutputWithContext(ctx context.Context) InstanceIpv4Output {
 	return o
 }
 
-func (o EniIpv4Output) Description() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v EniIpv4) *string { return v.Description }).(pulumi.StringPtrOutput)
+func (o InstanceIpv4Output) Description() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v InstanceIpv4) *string { return v.Description }).(pulumi.StringPtrOutput)
 }
 
-func (o EniIpv4Output) Ip() pulumi.StringOutput {
-	return o.ApplyT(func(v EniIpv4) string { return v.Ip }).(pulumi.StringOutput)
+func (o InstanceIpv4Output) Ip() pulumi.StringOutput {
+	return o.ApplyT(func(v InstanceIpv4) string { return v.Ip }).(pulumi.StringOutput)
 }
 
-func (o EniIpv4Output) Primary() pulumi.BoolOutput {
-	return o.ApplyT(func(v EniIpv4) bool { return v.Primary }).(pulumi.BoolOutput)
+func (o InstanceIpv4Output) Primary() pulumi.BoolOutput {
+	return o.ApplyT(func(v InstanceIpv4) bool { return v.Primary }).(pulumi.BoolOutput)
 }
 
-type EniIpv4ArrayOutput struct{ *pulumi.OutputState }
+type InstanceIpv4ArrayOutput struct{ *pulumi.OutputState }
 
-func (EniIpv4ArrayOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]EniIpv4)(nil)).Elem()
+func (InstanceIpv4ArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]InstanceIpv4)(nil)).Elem()
 }
 
-func (o EniIpv4ArrayOutput) ToEniIpv4ArrayOutput() EniIpv4ArrayOutput {
+func (o InstanceIpv4ArrayOutput) ToInstanceIpv4ArrayOutput() InstanceIpv4ArrayOutput {
 	return o
 }
 
-func (o EniIpv4ArrayOutput) ToEniIpv4ArrayOutputWithContext(ctx context.Context) EniIpv4ArrayOutput {
+func (o InstanceIpv4ArrayOutput) ToInstanceIpv4ArrayOutputWithContext(ctx context.Context) InstanceIpv4ArrayOutput {
 	return o
 }
 
-func (o EniIpv4ArrayOutput) Index(i pulumi.IntInput) EniIpv4Output {
-	return pulumi.All(o, i).ApplyT(func(vs []interface{}) EniIpv4 {
-		return vs[0].([]EniIpv4)[vs[1].(int)]
-	}).(EniIpv4Output)
+func (o InstanceIpv4ArrayOutput) Index(i pulumi.IntInput) InstanceIpv4Output {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) InstanceIpv4 {
+		return vs[0].([]InstanceIpv4)[vs[1].(int)]
+	}).(InstanceIpv4Output)
 }
 
-type EniIpv4Info struct {
+type InstanceIpv4Info struct {
 	Description *string `pulumi:"description"`
 	Ip          *string `pulumi:"ip"`
 	Primary     *bool   `pulumi:"primary"`
 }
 
-// EniIpv4InfoInput is an input type that accepts EniIpv4InfoArgs and EniIpv4InfoOutput values.
-// You can construct a concrete instance of `EniIpv4InfoInput` via:
+// InstanceIpv4InfoInput is an input type that accepts InstanceIpv4InfoArgs and InstanceIpv4InfoOutput values.
+// You can construct a concrete instance of `InstanceIpv4InfoInput` via:
 //
-//	EniIpv4InfoArgs{...}
-type EniIpv4InfoInput interface {
+//	InstanceIpv4InfoArgs{...}
+type InstanceIpv4InfoInput interface {
 	pulumi.Input
 
-	ToEniIpv4InfoOutput() EniIpv4InfoOutput
-	ToEniIpv4InfoOutputWithContext(context.Context) EniIpv4InfoOutput
+	ToInstanceIpv4InfoOutput() InstanceIpv4InfoOutput
+	ToInstanceIpv4InfoOutputWithContext(context.Context) InstanceIpv4InfoOutput
 }
 
-type EniIpv4InfoArgs struct {
+type InstanceIpv4InfoArgs struct {
 	Description pulumi.StringPtrInput `pulumi:"description"`
 	Ip          pulumi.StringPtrInput `pulumi:"ip"`
 	Primary     pulumi.BoolPtrInput   `pulumi:"primary"`
 }
 
-func (EniIpv4InfoArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*EniIpv4Info)(nil)).Elem()
+func (InstanceIpv4InfoArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*InstanceIpv4Info)(nil)).Elem()
 }
 
-func (i EniIpv4InfoArgs) ToEniIpv4InfoOutput() EniIpv4InfoOutput {
-	return i.ToEniIpv4InfoOutputWithContext(context.Background())
+func (i InstanceIpv4InfoArgs) ToInstanceIpv4InfoOutput() InstanceIpv4InfoOutput {
+	return i.ToInstanceIpv4InfoOutputWithContext(context.Background())
 }
 
-func (i EniIpv4InfoArgs) ToEniIpv4InfoOutputWithContext(ctx context.Context) EniIpv4InfoOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(EniIpv4InfoOutput)
+func (i InstanceIpv4InfoArgs) ToInstanceIpv4InfoOutputWithContext(ctx context.Context) InstanceIpv4InfoOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(InstanceIpv4InfoOutput)
 }
 
-// EniIpv4InfoArrayInput is an input type that accepts EniIpv4InfoArray and EniIpv4InfoArrayOutput values.
-// You can construct a concrete instance of `EniIpv4InfoArrayInput` via:
+// InstanceIpv4InfoArrayInput is an input type that accepts InstanceIpv4InfoArray and InstanceIpv4InfoArrayOutput values.
+// You can construct a concrete instance of `InstanceIpv4InfoArrayInput` via:
 //
-//	EniIpv4InfoArray{ EniIpv4InfoArgs{...} }
-type EniIpv4InfoArrayInput interface {
+//	InstanceIpv4InfoArray{ InstanceIpv4InfoArgs{...} }
+type InstanceIpv4InfoArrayInput interface {
 	pulumi.Input
 
-	ToEniIpv4InfoArrayOutput() EniIpv4InfoArrayOutput
-	ToEniIpv4InfoArrayOutputWithContext(context.Context) EniIpv4InfoArrayOutput
+	ToInstanceIpv4InfoArrayOutput() InstanceIpv4InfoArrayOutput
+	ToInstanceIpv4InfoArrayOutputWithContext(context.Context) InstanceIpv4InfoArrayOutput
 }
 
-type EniIpv4InfoArray []EniIpv4InfoInput
+type InstanceIpv4InfoArray []InstanceIpv4InfoInput
 
-func (EniIpv4InfoArray) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]EniIpv4Info)(nil)).Elem()
+func (InstanceIpv4InfoArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]InstanceIpv4Info)(nil)).Elem()
 }
 
-func (i EniIpv4InfoArray) ToEniIpv4InfoArrayOutput() EniIpv4InfoArrayOutput {
-	return i.ToEniIpv4InfoArrayOutputWithContext(context.Background())
+func (i InstanceIpv4InfoArray) ToInstanceIpv4InfoArrayOutput() InstanceIpv4InfoArrayOutput {
+	return i.ToInstanceIpv4InfoArrayOutputWithContext(context.Background())
 }
 
-func (i EniIpv4InfoArray) ToEniIpv4InfoArrayOutputWithContext(ctx context.Context) EniIpv4InfoArrayOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(EniIpv4InfoArrayOutput)
+func (i InstanceIpv4InfoArray) ToInstanceIpv4InfoArrayOutputWithContext(ctx context.Context) InstanceIpv4InfoArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(InstanceIpv4InfoArrayOutput)
 }
 
-type EniIpv4InfoOutput struct{ *pulumi.OutputState }
+type InstanceIpv4InfoOutput struct{ *pulumi.OutputState }
 
-func (EniIpv4InfoOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*EniIpv4Info)(nil)).Elem()
+func (InstanceIpv4InfoOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*InstanceIpv4Info)(nil)).Elem()
 }
 
-func (o EniIpv4InfoOutput) ToEniIpv4InfoOutput() EniIpv4InfoOutput {
+func (o InstanceIpv4InfoOutput) ToInstanceIpv4InfoOutput() InstanceIpv4InfoOutput {
 	return o
 }
 
-func (o EniIpv4InfoOutput) ToEniIpv4InfoOutputWithContext(ctx context.Context) EniIpv4InfoOutput {
+func (o InstanceIpv4InfoOutput) ToInstanceIpv4InfoOutputWithContext(ctx context.Context) InstanceIpv4InfoOutput {
 	return o
 }
 
-func (o EniIpv4InfoOutput) Description() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v EniIpv4Info) *string { return v.Description }).(pulumi.StringPtrOutput)
+func (o InstanceIpv4InfoOutput) Description() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v InstanceIpv4Info) *string { return v.Description }).(pulumi.StringPtrOutput)
 }
 
-func (o EniIpv4InfoOutput) Ip() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v EniIpv4Info) *string { return v.Ip }).(pulumi.StringPtrOutput)
+func (o InstanceIpv4InfoOutput) Ip() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v InstanceIpv4Info) *string { return v.Ip }).(pulumi.StringPtrOutput)
 }
 
-func (o EniIpv4InfoOutput) Primary() pulumi.BoolPtrOutput {
-	return o.ApplyT(func(v EniIpv4Info) *bool { return v.Primary }).(pulumi.BoolPtrOutput)
+func (o InstanceIpv4InfoOutput) Primary() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v InstanceIpv4Info) *bool { return v.Primary }).(pulumi.BoolPtrOutput)
 }
 
-type EniIpv4InfoArrayOutput struct{ *pulumi.OutputState }
+type InstanceIpv4InfoArrayOutput struct{ *pulumi.OutputState }
 
-func (EniIpv4InfoArrayOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]EniIpv4Info)(nil)).Elem()
+func (InstanceIpv4InfoArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]InstanceIpv4Info)(nil)).Elem()
 }
 
-func (o EniIpv4InfoArrayOutput) ToEniIpv4InfoArrayOutput() EniIpv4InfoArrayOutput {
+func (o InstanceIpv4InfoArrayOutput) ToInstanceIpv4InfoArrayOutput() InstanceIpv4InfoArrayOutput {
 	return o
 }
 
-func (o EniIpv4InfoArrayOutput) ToEniIpv4InfoArrayOutputWithContext(ctx context.Context) EniIpv4InfoArrayOutput {
+func (o InstanceIpv4InfoArrayOutput) ToInstanceIpv4InfoArrayOutputWithContext(ctx context.Context) InstanceIpv4InfoArrayOutput {
 	return o
 }
 
-func (o EniIpv4InfoArrayOutput) Index(i pulumi.IntInput) EniIpv4InfoOutput {
-	return pulumi.All(o, i).ApplyT(func(vs []interface{}) EniIpv4Info {
-		return vs[0].([]EniIpv4Info)[vs[1].(int)]
-	}).(EniIpv4InfoOutput)
+func (o InstanceIpv4InfoArrayOutput) Index(i pulumi.IntInput) InstanceIpv4InfoOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) InstanceIpv4Info {
+		return vs[0].([]InstanceIpv4Info)[vs[1].(int)]
+	}).(InstanceIpv4InfoOutput)
 }
 
 func init() {
-	pulumi.RegisterInputType(reflect.TypeOf((*EniIpv4Input)(nil)).Elem(), EniIpv4Args{})
-	pulumi.RegisterInputType(reflect.TypeOf((*EniIpv4ArrayInput)(nil)).Elem(), EniIpv4Array{})
-	pulumi.RegisterInputType(reflect.TypeOf((*EniIpv4InfoInput)(nil)).Elem(), EniIpv4InfoArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*EniIpv4InfoArrayInput)(nil)).Elem(), EniIpv4InfoArray{})
-	pulumi.RegisterOutputType(EniIpv4Output{})
-	pulumi.RegisterOutputType(EniIpv4ArrayOutput{})
-	pulumi.RegisterOutputType(EniIpv4InfoOutput{})
-	pulumi.RegisterOutputType(EniIpv4InfoArrayOutput{})
+	pulumi.RegisterInputType(reflect.TypeOf((*InstanceIpv4Input)(nil)).Elem(), InstanceIpv4Args{})
+	pulumi.RegisterInputType(reflect.TypeOf((*InstanceIpv4ArrayInput)(nil)).Elem(), InstanceIpv4Array{})
+	pulumi.RegisterInputType(reflect.TypeOf((*InstanceIpv4InfoInput)(nil)).Elem(), InstanceIpv4InfoArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*InstanceIpv4InfoArrayInput)(nil)).Elem(), InstanceIpv4InfoArray{})
+	pulumi.RegisterOutputType(InstanceIpv4Output{})
+	pulumi.RegisterOutputType(InstanceIpv4ArrayOutput{})
+	pulumi.RegisterOutputType(InstanceIpv4InfoOutput{})
+	pulumi.RegisterOutputType(InstanceIpv4InfoArrayOutput{})
 }

@@ -200,6 +200,11 @@ export const getUsedIpAddress: typeof import("./getUsedIpAddress").getUsedIpAddr
 export const getUsedIpAddressOutput: typeof import("./getUsedIpAddress").getUsedIpAddressOutput = null as any;
 utilities.lazyLoad(exports, ["getUsedIpAddress","getUsedIpAddressOutput"], () => require("./getUsedIpAddress"));
 
+export { InstanceArgs, InstanceState } from "./instance";
+export type Instance = import("./instance").Instance;
+export const Instance: typeof import("./instance").Instance = null as any;
+utilities.lazyLoad(exports, ["Instance"], () => require("./instance"));
+
 export { Ipv6CidrBlockArgs, Ipv6CidrBlockState } from "./ipv6CidrBlock";
 export type Ipv6CidrBlock = import("./ipv6CidrBlock").Ipv6CidrBlock;
 export const Ipv6CidrBlock: typeof import("./ipv6CidrBlock").Ipv6CidrBlock = null as any;
@@ -260,11 +265,6 @@ export type TrafficPackage = import("./trafficPackage").TrafficPackage;
 export const TrafficPackage: typeof import("./trafficPackage").TrafficPackage = null as any;
 utilities.lazyLoad(exports, ["TrafficPackage"], () => require("./trafficPackage"));
 
-export { VpcArgs, VpcState } from "./vpc";
-export type Vpc = import("./vpc").Vpc;
-export const Vpc: typeof import("./vpc").Vpc = null as any;
-utilities.lazyLoad(exports, ["Vpc"], () => require("./vpc"));
-
 
 const _module = {
     version: utilities.getVersion(),
@@ -296,6 +296,8 @@ const _module = {
                 return new FlowLog(name, <any>undefined, { urn })
             case "tencentcloud:Vpc/flowLogConfig:FlowLogConfig":
                 return new FlowLogConfig(name, <any>undefined, { urn })
+            case "tencentcloud:Vpc/instance:Instance":
+                return new Instance(name, <any>undefined, { urn })
             case "tencentcloud:Vpc/ipv6CidrBlock:Ipv6CidrBlock":
                 return new Ipv6CidrBlock(name, <any>undefined, { urn })
             case "tencentcloud:Vpc/ipv6EniAddress:Ipv6EniAddress":
@@ -320,8 +322,6 @@ const _module = {
                 return new SnapshotPolicyConfig(name, <any>undefined, { urn })
             case "tencentcloud:Vpc/trafficPackage:TrafficPackage":
                 return new TrafficPackage(name, <any>undefined, { urn })
-            case "tencentcloud:Vpc/vpc:Vpc":
-                return new Vpc(name, <any>undefined, { urn })
             default:
                 throw new Error(`unknown resource type ${type}`);
         }
@@ -340,6 +340,7 @@ pulumi.runtime.registerResourceModule("tencentcloud", "Vpc/endPointService", _mo
 pulumi.runtime.registerResourceModule("tencentcloud", "Vpc/endPointServiceWhiteList", _module)
 pulumi.runtime.registerResourceModule("tencentcloud", "Vpc/flowLog", _module)
 pulumi.runtime.registerResourceModule("tencentcloud", "Vpc/flowLogConfig", _module)
+pulumi.runtime.registerResourceModule("tencentcloud", "Vpc/instance", _module)
 pulumi.runtime.registerResourceModule("tencentcloud", "Vpc/ipv6CidrBlock", _module)
 pulumi.runtime.registerResourceModule("tencentcloud", "Vpc/ipv6EniAddress", _module)
 pulumi.runtime.registerResourceModule("tencentcloud", "Vpc/ipv6SubnetCidrBlock", _module)
@@ -352,4 +353,3 @@ pulumi.runtime.registerResourceModule("tencentcloud", "Vpc/snapshotPolicy", _mod
 pulumi.runtime.registerResourceModule("tencentcloud", "Vpc/snapshotPolicyAttachment", _module)
 pulumi.runtime.registerResourceModule("tencentcloud", "Vpc/snapshotPolicyConfig", _module)
 pulumi.runtime.registerResourceModule("tencentcloud", "Vpc/trafficPackage", _module)
-pulumi.runtime.registerResourceModule("tencentcloud", "Vpc/vpc", _module)

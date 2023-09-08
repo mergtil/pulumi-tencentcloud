@@ -51,8 +51,7 @@ type ScalingConfig struct {
 	InstanceTags pulumi.MapOutput `pulumi:"instanceTags"`
 	// Specified types of CVM instances.
 	InstanceTypes pulumi.StringArrayOutput `pulumi:"instanceTypes"`
-	// Charge types for network traffic. Valid values: `BANDWIDTH_PREPAID`, `TRAFFIC_POSTPAID_BY_HOUR`,
-	// `TRAFFIC_POSTPAID_BY_HOUR` and `BANDWIDTH_PACKAGE`.
+	// Charge types for network traffic. Valid values: `BANDWIDTH_PREPAID`, `TRAFFIC_POSTPAID_BY_HOUR` and `BANDWIDTH_PACKAGE`.
 	InternetChargeType pulumi.StringPtrOutput `pulumi:"internetChargeType"`
 	// Max bandwidth of Internet access in Mbps. Default is `0`.
 	InternetMaxBandwidthOut pulumi.IntPtrOutput `pulumi:"internetMaxBandwidthOut"`
@@ -166,8 +165,7 @@ type scalingConfigState struct {
 	InstanceTags map[string]interface{} `pulumi:"instanceTags"`
 	// Specified types of CVM instances.
 	InstanceTypes []string `pulumi:"instanceTypes"`
-	// Charge types for network traffic. Valid values: `BANDWIDTH_PREPAID`, `TRAFFIC_POSTPAID_BY_HOUR`,
-	// `TRAFFIC_POSTPAID_BY_HOUR` and `BANDWIDTH_PACKAGE`.
+	// Charge types for network traffic. Valid values: `BANDWIDTH_PREPAID`, `TRAFFIC_POSTPAID_BY_HOUR` and `BANDWIDTH_PACKAGE`.
 	InternetChargeType *string `pulumi:"internetChargeType"`
 	// Max bandwidth of Internet access in Mbps. Default is `0`.
 	InternetMaxBandwidthOut *int `pulumi:"internetMaxBandwidthOut"`
@@ -236,8 +234,7 @@ type ScalingConfigState struct {
 	InstanceTags pulumi.MapInput
 	// Specified types of CVM instances.
 	InstanceTypes pulumi.StringArrayInput
-	// Charge types for network traffic. Valid values: `BANDWIDTH_PREPAID`, `TRAFFIC_POSTPAID_BY_HOUR`,
-	// `TRAFFIC_POSTPAID_BY_HOUR` and `BANDWIDTH_PACKAGE`.
+	// Charge types for network traffic. Valid values: `BANDWIDTH_PREPAID`, `TRAFFIC_POSTPAID_BY_HOUR` and `BANDWIDTH_PACKAGE`.
 	InternetChargeType pulumi.StringPtrInput
 	// Max bandwidth of Internet access in Mbps. Default is `0`.
 	InternetMaxBandwidthOut pulumi.IntPtrInput
@@ -308,8 +305,7 @@ type scalingConfigArgs struct {
 	InstanceTags map[string]interface{} `pulumi:"instanceTags"`
 	// Specified types of CVM instances.
 	InstanceTypes []string `pulumi:"instanceTypes"`
-	// Charge types for network traffic. Valid values: `BANDWIDTH_PREPAID`, `TRAFFIC_POSTPAID_BY_HOUR`,
-	// `TRAFFIC_POSTPAID_BY_HOUR` and `BANDWIDTH_PACKAGE`.
+	// Charge types for network traffic. Valid values: `BANDWIDTH_PREPAID`, `TRAFFIC_POSTPAID_BY_HOUR` and `BANDWIDTH_PACKAGE`.
 	InternetChargeType *string `pulumi:"internetChargeType"`
 	// Max bandwidth of Internet access in Mbps. Default is `0`.
 	InternetMaxBandwidthOut *int `pulumi:"internetMaxBandwidthOut"`
@@ -375,8 +371,7 @@ type ScalingConfigArgs struct {
 	InstanceTags pulumi.MapInput
 	// Specified types of CVM instances.
 	InstanceTypes pulumi.StringArrayInput
-	// Charge types for network traffic. Valid values: `BANDWIDTH_PREPAID`, `TRAFFIC_POSTPAID_BY_HOUR`,
-	// `TRAFFIC_POSTPAID_BY_HOUR` and `BANDWIDTH_PACKAGE`.
+	// Charge types for network traffic. Valid values: `BANDWIDTH_PREPAID`, `TRAFFIC_POSTPAID_BY_HOUR` and `BANDWIDTH_PACKAGE`.
 	InternetChargeType pulumi.StringPtrInput
 	// Max bandwidth of Internet access in Mbps. Default is `0`.
 	InternetMaxBandwidthOut pulumi.IntPtrInput
@@ -574,8 +569,7 @@ func (o ScalingConfigOutput) InstanceTypes() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *ScalingConfig) pulumi.StringArrayOutput { return v.InstanceTypes }).(pulumi.StringArrayOutput)
 }
 
-// Charge types for network traffic. Valid values: `BANDWIDTH_PREPAID`, `TRAFFIC_POSTPAID_BY_HOUR`,
-// `TRAFFIC_POSTPAID_BY_HOUR` and `BANDWIDTH_PACKAGE`.
+// Charge types for network traffic. Valid values: `BANDWIDTH_PREPAID`, `TRAFFIC_POSTPAID_BY_HOUR` and `BANDWIDTH_PACKAGE`.
 func (o ScalingConfigOutput) InternetChargeType() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ScalingConfig) pulumi.StringPtrOutput { return v.InternetChargeType }).(pulumi.StringPtrOutput)
 }

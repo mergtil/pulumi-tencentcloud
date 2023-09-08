@@ -13,303 +13,303 @@ import (
 
 var _ = internal.GetEnvOrDefault
 
-type GetImagesImage struct {
-	Architecture     string                   `pulumi:"architecture"`
-	CreatedTime      string                   `pulumi:"createdTime"`
-	ImageCreator     string                   `pulumi:"imageCreator"`
-	ImageDescription string                   `pulumi:"imageDescription"`
-	ImageId          string                   `pulumi:"imageId"`
-	ImageName        string                   `pulumi:"imageName"`
-	ImageSize        int                      `pulumi:"imageSize"`
-	ImageSource      string                   `pulumi:"imageSource"`
-	ImageState       string                   `pulumi:"imageState"`
-	ImageType        string                   `pulumi:"imageType"`
-	OsName           string                   `pulumi:"osName"`
-	Platform         string                   `pulumi:"platform"`
-	Snapshots        []GetImagesImageSnapshot `pulumi:"snapshots"`
-	SupportCloudInit bool                     `pulumi:"supportCloudInit"`
-	SyncPercent      int                      `pulumi:"syncPercent"`
+type GetInstanceImage struct {
+	Architecture     string                     `pulumi:"architecture"`
+	CreatedTime      string                     `pulumi:"createdTime"`
+	ImageCreator     string                     `pulumi:"imageCreator"`
+	ImageDescription string                     `pulumi:"imageDescription"`
+	ImageId          string                     `pulumi:"imageId"`
+	ImageName        string                     `pulumi:"imageName"`
+	ImageSize        int                        `pulumi:"imageSize"`
+	ImageSource      string                     `pulumi:"imageSource"`
+	ImageState       string                     `pulumi:"imageState"`
+	ImageType        string                     `pulumi:"imageType"`
+	OsName           string                     `pulumi:"osName"`
+	Platform         string                     `pulumi:"platform"`
+	Snapshots        []GetInstanceImageSnapshot `pulumi:"snapshots"`
+	SupportCloudInit bool                       `pulumi:"supportCloudInit"`
+	SyncPercent      int                        `pulumi:"syncPercent"`
 }
 
-// GetImagesImageInput is an input type that accepts GetImagesImageArgs and GetImagesImageOutput values.
-// You can construct a concrete instance of `GetImagesImageInput` via:
+// GetInstanceImageInput is an input type that accepts GetInstanceImageArgs and GetInstanceImageOutput values.
+// You can construct a concrete instance of `GetInstanceImageInput` via:
 //
-//	GetImagesImageArgs{...}
-type GetImagesImageInput interface {
+//	GetInstanceImageArgs{...}
+type GetInstanceImageInput interface {
 	pulumi.Input
 
-	ToGetImagesImageOutput() GetImagesImageOutput
-	ToGetImagesImageOutputWithContext(context.Context) GetImagesImageOutput
+	ToGetInstanceImageOutput() GetInstanceImageOutput
+	ToGetInstanceImageOutputWithContext(context.Context) GetInstanceImageOutput
 }
 
-type GetImagesImageArgs struct {
-	Architecture     pulumi.StringInput               `pulumi:"architecture"`
-	CreatedTime      pulumi.StringInput               `pulumi:"createdTime"`
-	ImageCreator     pulumi.StringInput               `pulumi:"imageCreator"`
-	ImageDescription pulumi.StringInput               `pulumi:"imageDescription"`
-	ImageId          pulumi.StringInput               `pulumi:"imageId"`
-	ImageName        pulumi.StringInput               `pulumi:"imageName"`
-	ImageSize        pulumi.IntInput                  `pulumi:"imageSize"`
-	ImageSource      pulumi.StringInput               `pulumi:"imageSource"`
-	ImageState       pulumi.StringInput               `pulumi:"imageState"`
-	ImageType        pulumi.StringInput               `pulumi:"imageType"`
-	OsName           pulumi.StringInput               `pulumi:"osName"`
-	Platform         pulumi.StringInput               `pulumi:"platform"`
-	Snapshots        GetImagesImageSnapshotArrayInput `pulumi:"snapshots"`
-	SupportCloudInit pulumi.BoolInput                 `pulumi:"supportCloudInit"`
-	SyncPercent      pulumi.IntInput                  `pulumi:"syncPercent"`
+type GetInstanceImageArgs struct {
+	Architecture     pulumi.StringInput                 `pulumi:"architecture"`
+	CreatedTime      pulumi.StringInput                 `pulumi:"createdTime"`
+	ImageCreator     pulumi.StringInput                 `pulumi:"imageCreator"`
+	ImageDescription pulumi.StringInput                 `pulumi:"imageDescription"`
+	ImageId          pulumi.StringInput                 `pulumi:"imageId"`
+	ImageName        pulumi.StringInput                 `pulumi:"imageName"`
+	ImageSize        pulumi.IntInput                    `pulumi:"imageSize"`
+	ImageSource      pulumi.StringInput                 `pulumi:"imageSource"`
+	ImageState       pulumi.StringInput                 `pulumi:"imageState"`
+	ImageType        pulumi.StringInput                 `pulumi:"imageType"`
+	OsName           pulumi.StringInput                 `pulumi:"osName"`
+	Platform         pulumi.StringInput                 `pulumi:"platform"`
+	Snapshots        GetInstanceImageSnapshotArrayInput `pulumi:"snapshots"`
+	SupportCloudInit pulumi.BoolInput                   `pulumi:"supportCloudInit"`
+	SyncPercent      pulumi.IntInput                    `pulumi:"syncPercent"`
 }
 
-func (GetImagesImageArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetImagesImage)(nil)).Elem()
+func (GetInstanceImageArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetInstanceImage)(nil)).Elem()
 }
 
-func (i GetImagesImageArgs) ToGetImagesImageOutput() GetImagesImageOutput {
-	return i.ToGetImagesImageOutputWithContext(context.Background())
+func (i GetInstanceImageArgs) ToGetInstanceImageOutput() GetInstanceImageOutput {
+	return i.ToGetInstanceImageOutputWithContext(context.Background())
 }
 
-func (i GetImagesImageArgs) ToGetImagesImageOutputWithContext(ctx context.Context) GetImagesImageOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetImagesImageOutput)
+func (i GetInstanceImageArgs) ToGetInstanceImageOutputWithContext(ctx context.Context) GetInstanceImageOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetInstanceImageOutput)
 }
 
-// GetImagesImageArrayInput is an input type that accepts GetImagesImageArray and GetImagesImageArrayOutput values.
-// You can construct a concrete instance of `GetImagesImageArrayInput` via:
+// GetInstanceImageArrayInput is an input type that accepts GetInstanceImageArray and GetInstanceImageArrayOutput values.
+// You can construct a concrete instance of `GetInstanceImageArrayInput` via:
 //
-//	GetImagesImageArray{ GetImagesImageArgs{...} }
-type GetImagesImageArrayInput interface {
+//	GetInstanceImageArray{ GetInstanceImageArgs{...} }
+type GetInstanceImageArrayInput interface {
 	pulumi.Input
 
-	ToGetImagesImageArrayOutput() GetImagesImageArrayOutput
-	ToGetImagesImageArrayOutputWithContext(context.Context) GetImagesImageArrayOutput
+	ToGetInstanceImageArrayOutput() GetInstanceImageArrayOutput
+	ToGetInstanceImageArrayOutputWithContext(context.Context) GetInstanceImageArrayOutput
 }
 
-type GetImagesImageArray []GetImagesImageInput
+type GetInstanceImageArray []GetInstanceImageInput
 
-func (GetImagesImageArray) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]GetImagesImage)(nil)).Elem()
+func (GetInstanceImageArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetInstanceImage)(nil)).Elem()
 }
 
-func (i GetImagesImageArray) ToGetImagesImageArrayOutput() GetImagesImageArrayOutput {
-	return i.ToGetImagesImageArrayOutputWithContext(context.Background())
+func (i GetInstanceImageArray) ToGetInstanceImageArrayOutput() GetInstanceImageArrayOutput {
+	return i.ToGetInstanceImageArrayOutputWithContext(context.Background())
 }
 
-func (i GetImagesImageArray) ToGetImagesImageArrayOutputWithContext(ctx context.Context) GetImagesImageArrayOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetImagesImageArrayOutput)
+func (i GetInstanceImageArray) ToGetInstanceImageArrayOutputWithContext(ctx context.Context) GetInstanceImageArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetInstanceImageArrayOutput)
 }
 
-type GetImagesImageOutput struct{ *pulumi.OutputState }
+type GetInstanceImageOutput struct{ *pulumi.OutputState }
 
-func (GetImagesImageOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetImagesImage)(nil)).Elem()
+func (GetInstanceImageOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetInstanceImage)(nil)).Elem()
 }
 
-func (o GetImagesImageOutput) ToGetImagesImageOutput() GetImagesImageOutput {
+func (o GetInstanceImageOutput) ToGetInstanceImageOutput() GetInstanceImageOutput {
 	return o
 }
 
-func (o GetImagesImageOutput) ToGetImagesImageOutputWithContext(ctx context.Context) GetImagesImageOutput {
+func (o GetInstanceImageOutput) ToGetInstanceImageOutputWithContext(ctx context.Context) GetInstanceImageOutput {
 	return o
 }
 
-func (o GetImagesImageOutput) Architecture() pulumi.StringOutput {
-	return o.ApplyT(func(v GetImagesImage) string { return v.Architecture }).(pulumi.StringOutput)
+func (o GetInstanceImageOutput) Architecture() pulumi.StringOutput {
+	return o.ApplyT(func(v GetInstanceImage) string { return v.Architecture }).(pulumi.StringOutput)
 }
 
-func (o GetImagesImageOutput) CreatedTime() pulumi.StringOutput {
-	return o.ApplyT(func(v GetImagesImage) string { return v.CreatedTime }).(pulumi.StringOutput)
+func (o GetInstanceImageOutput) CreatedTime() pulumi.StringOutput {
+	return o.ApplyT(func(v GetInstanceImage) string { return v.CreatedTime }).(pulumi.StringOutput)
 }
 
-func (o GetImagesImageOutput) ImageCreator() pulumi.StringOutput {
-	return o.ApplyT(func(v GetImagesImage) string { return v.ImageCreator }).(pulumi.StringOutput)
+func (o GetInstanceImageOutput) ImageCreator() pulumi.StringOutput {
+	return o.ApplyT(func(v GetInstanceImage) string { return v.ImageCreator }).(pulumi.StringOutput)
 }
 
-func (o GetImagesImageOutput) ImageDescription() pulumi.StringOutput {
-	return o.ApplyT(func(v GetImagesImage) string { return v.ImageDescription }).(pulumi.StringOutput)
+func (o GetInstanceImageOutput) ImageDescription() pulumi.StringOutput {
+	return o.ApplyT(func(v GetInstanceImage) string { return v.ImageDescription }).(pulumi.StringOutput)
 }
 
-func (o GetImagesImageOutput) ImageId() pulumi.StringOutput {
-	return o.ApplyT(func(v GetImagesImage) string { return v.ImageId }).(pulumi.StringOutput)
+func (o GetInstanceImageOutput) ImageId() pulumi.StringOutput {
+	return o.ApplyT(func(v GetInstanceImage) string { return v.ImageId }).(pulumi.StringOutput)
 }
 
-func (o GetImagesImageOutput) ImageName() pulumi.StringOutput {
-	return o.ApplyT(func(v GetImagesImage) string { return v.ImageName }).(pulumi.StringOutput)
+func (o GetInstanceImageOutput) ImageName() pulumi.StringOutput {
+	return o.ApplyT(func(v GetInstanceImage) string { return v.ImageName }).(pulumi.StringOutput)
 }
 
-func (o GetImagesImageOutput) ImageSize() pulumi.IntOutput {
-	return o.ApplyT(func(v GetImagesImage) int { return v.ImageSize }).(pulumi.IntOutput)
+func (o GetInstanceImageOutput) ImageSize() pulumi.IntOutput {
+	return o.ApplyT(func(v GetInstanceImage) int { return v.ImageSize }).(pulumi.IntOutput)
 }
 
-func (o GetImagesImageOutput) ImageSource() pulumi.StringOutput {
-	return o.ApplyT(func(v GetImagesImage) string { return v.ImageSource }).(pulumi.StringOutput)
+func (o GetInstanceImageOutput) ImageSource() pulumi.StringOutput {
+	return o.ApplyT(func(v GetInstanceImage) string { return v.ImageSource }).(pulumi.StringOutput)
 }
 
-func (o GetImagesImageOutput) ImageState() pulumi.StringOutput {
-	return o.ApplyT(func(v GetImagesImage) string { return v.ImageState }).(pulumi.StringOutput)
+func (o GetInstanceImageOutput) ImageState() pulumi.StringOutput {
+	return o.ApplyT(func(v GetInstanceImage) string { return v.ImageState }).(pulumi.StringOutput)
 }
 
-func (o GetImagesImageOutput) ImageType() pulumi.StringOutput {
-	return o.ApplyT(func(v GetImagesImage) string { return v.ImageType }).(pulumi.StringOutput)
+func (o GetInstanceImageOutput) ImageType() pulumi.StringOutput {
+	return o.ApplyT(func(v GetInstanceImage) string { return v.ImageType }).(pulumi.StringOutput)
 }
 
-func (o GetImagesImageOutput) OsName() pulumi.StringOutput {
-	return o.ApplyT(func(v GetImagesImage) string { return v.OsName }).(pulumi.StringOutput)
+func (o GetInstanceImageOutput) OsName() pulumi.StringOutput {
+	return o.ApplyT(func(v GetInstanceImage) string { return v.OsName }).(pulumi.StringOutput)
 }
 
-func (o GetImagesImageOutput) Platform() pulumi.StringOutput {
-	return o.ApplyT(func(v GetImagesImage) string { return v.Platform }).(pulumi.StringOutput)
+func (o GetInstanceImageOutput) Platform() pulumi.StringOutput {
+	return o.ApplyT(func(v GetInstanceImage) string { return v.Platform }).(pulumi.StringOutput)
 }
 
-func (o GetImagesImageOutput) Snapshots() GetImagesImageSnapshotArrayOutput {
-	return o.ApplyT(func(v GetImagesImage) []GetImagesImageSnapshot { return v.Snapshots }).(GetImagesImageSnapshotArrayOutput)
+func (o GetInstanceImageOutput) Snapshots() GetInstanceImageSnapshotArrayOutput {
+	return o.ApplyT(func(v GetInstanceImage) []GetInstanceImageSnapshot { return v.Snapshots }).(GetInstanceImageSnapshotArrayOutput)
 }
 
-func (o GetImagesImageOutput) SupportCloudInit() pulumi.BoolOutput {
-	return o.ApplyT(func(v GetImagesImage) bool { return v.SupportCloudInit }).(pulumi.BoolOutput)
+func (o GetInstanceImageOutput) SupportCloudInit() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetInstanceImage) bool { return v.SupportCloudInit }).(pulumi.BoolOutput)
 }
 
-func (o GetImagesImageOutput) SyncPercent() pulumi.IntOutput {
-	return o.ApplyT(func(v GetImagesImage) int { return v.SyncPercent }).(pulumi.IntOutput)
+func (o GetInstanceImageOutput) SyncPercent() pulumi.IntOutput {
+	return o.ApplyT(func(v GetInstanceImage) int { return v.SyncPercent }).(pulumi.IntOutput)
 }
 
-type GetImagesImageArrayOutput struct{ *pulumi.OutputState }
+type GetInstanceImageArrayOutput struct{ *pulumi.OutputState }
 
-func (GetImagesImageArrayOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]GetImagesImage)(nil)).Elem()
+func (GetInstanceImageArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetInstanceImage)(nil)).Elem()
 }
 
-func (o GetImagesImageArrayOutput) ToGetImagesImageArrayOutput() GetImagesImageArrayOutput {
+func (o GetInstanceImageArrayOutput) ToGetInstanceImageArrayOutput() GetInstanceImageArrayOutput {
 	return o
 }
 
-func (o GetImagesImageArrayOutput) ToGetImagesImageArrayOutputWithContext(ctx context.Context) GetImagesImageArrayOutput {
+func (o GetInstanceImageArrayOutput) ToGetInstanceImageArrayOutputWithContext(ctx context.Context) GetInstanceImageArrayOutput {
 	return o
 }
 
-func (o GetImagesImageArrayOutput) Index(i pulumi.IntInput) GetImagesImageOutput {
-	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetImagesImage {
-		return vs[0].([]GetImagesImage)[vs[1].(int)]
-	}).(GetImagesImageOutput)
+func (o GetInstanceImageArrayOutput) Index(i pulumi.IntInput) GetInstanceImageOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetInstanceImage {
+		return vs[0].([]GetInstanceImage)[vs[1].(int)]
+	}).(GetInstanceImageOutput)
 }
 
-type GetImagesImageSnapshot struct {
+type GetInstanceImageSnapshot struct {
 	DiskSize     int    `pulumi:"diskSize"`
 	DiskUsage    string `pulumi:"diskUsage"`
 	SnapshotId   string `pulumi:"snapshotId"`
 	SnapshotName string `pulumi:"snapshotName"`
 }
 
-// GetImagesImageSnapshotInput is an input type that accepts GetImagesImageSnapshotArgs and GetImagesImageSnapshotOutput values.
-// You can construct a concrete instance of `GetImagesImageSnapshotInput` via:
+// GetInstanceImageSnapshotInput is an input type that accepts GetInstanceImageSnapshotArgs and GetInstanceImageSnapshotOutput values.
+// You can construct a concrete instance of `GetInstanceImageSnapshotInput` via:
 //
-//	GetImagesImageSnapshotArgs{...}
-type GetImagesImageSnapshotInput interface {
+//	GetInstanceImageSnapshotArgs{...}
+type GetInstanceImageSnapshotInput interface {
 	pulumi.Input
 
-	ToGetImagesImageSnapshotOutput() GetImagesImageSnapshotOutput
-	ToGetImagesImageSnapshotOutputWithContext(context.Context) GetImagesImageSnapshotOutput
+	ToGetInstanceImageSnapshotOutput() GetInstanceImageSnapshotOutput
+	ToGetInstanceImageSnapshotOutputWithContext(context.Context) GetInstanceImageSnapshotOutput
 }
 
-type GetImagesImageSnapshotArgs struct {
+type GetInstanceImageSnapshotArgs struct {
 	DiskSize     pulumi.IntInput    `pulumi:"diskSize"`
 	DiskUsage    pulumi.StringInput `pulumi:"diskUsage"`
 	SnapshotId   pulumi.StringInput `pulumi:"snapshotId"`
 	SnapshotName pulumi.StringInput `pulumi:"snapshotName"`
 }
 
-func (GetImagesImageSnapshotArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetImagesImageSnapshot)(nil)).Elem()
+func (GetInstanceImageSnapshotArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetInstanceImageSnapshot)(nil)).Elem()
 }
 
-func (i GetImagesImageSnapshotArgs) ToGetImagesImageSnapshotOutput() GetImagesImageSnapshotOutput {
-	return i.ToGetImagesImageSnapshotOutputWithContext(context.Background())
+func (i GetInstanceImageSnapshotArgs) ToGetInstanceImageSnapshotOutput() GetInstanceImageSnapshotOutput {
+	return i.ToGetInstanceImageSnapshotOutputWithContext(context.Background())
 }
 
-func (i GetImagesImageSnapshotArgs) ToGetImagesImageSnapshotOutputWithContext(ctx context.Context) GetImagesImageSnapshotOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetImagesImageSnapshotOutput)
+func (i GetInstanceImageSnapshotArgs) ToGetInstanceImageSnapshotOutputWithContext(ctx context.Context) GetInstanceImageSnapshotOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetInstanceImageSnapshotOutput)
 }
 
-// GetImagesImageSnapshotArrayInput is an input type that accepts GetImagesImageSnapshotArray and GetImagesImageSnapshotArrayOutput values.
-// You can construct a concrete instance of `GetImagesImageSnapshotArrayInput` via:
+// GetInstanceImageSnapshotArrayInput is an input type that accepts GetInstanceImageSnapshotArray and GetInstanceImageSnapshotArrayOutput values.
+// You can construct a concrete instance of `GetInstanceImageSnapshotArrayInput` via:
 //
-//	GetImagesImageSnapshotArray{ GetImagesImageSnapshotArgs{...} }
-type GetImagesImageSnapshotArrayInput interface {
+//	GetInstanceImageSnapshotArray{ GetInstanceImageSnapshotArgs{...} }
+type GetInstanceImageSnapshotArrayInput interface {
 	pulumi.Input
 
-	ToGetImagesImageSnapshotArrayOutput() GetImagesImageSnapshotArrayOutput
-	ToGetImagesImageSnapshotArrayOutputWithContext(context.Context) GetImagesImageSnapshotArrayOutput
+	ToGetInstanceImageSnapshotArrayOutput() GetInstanceImageSnapshotArrayOutput
+	ToGetInstanceImageSnapshotArrayOutputWithContext(context.Context) GetInstanceImageSnapshotArrayOutput
 }
 
-type GetImagesImageSnapshotArray []GetImagesImageSnapshotInput
+type GetInstanceImageSnapshotArray []GetInstanceImageSnapshotInput
 
-func (GetImagesImageSnapshotArray) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]GetImagesImageSnapshot)(nil)).Elem()
+func (GetInstanceImageSnapshotArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetInstanceImageSnapshot)(nil)).Elem()
 }
 
-func (i GetImagesImageSnapshotArray) ToGetImagesImageSnapshotArrayOutput() GetImagesImageSnapshotArrayOutput {
-	return i.ToGetImagesImageSnapshotArrayOutputWithContext(context.Background())
+func (i GetInstanceImageSnapshotArray) ToGetInstanceImageSnapshotArrayOutput() GetInstanceImageSnapshotArrayOutput {
+	return i.ToGetInstanceImageSnapshotArrayOutputWithContext(context.Background())
 }
 
-func (i GetImagesImageSnapshotArray) ToGetImagesImageSnapshotArrayOutputWithContext(ctx context.Context) GetImagesImageSnapshotArrayOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetImagesImageSnapshotArrayOutput)
+func (i GetInstanceImageSnapshotArray) ToGetInstanceImageSnapshotArrayOutputWithContext(ctx context.Context) GetInstanceImageSnapshotArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetInstanceImageSnapshotArrayOutput)
 }
 
-type GetImagesImageSnapshotOutput struct{ *pulumi.OutputState }
+type GetInstanceImageSnapshotOutput struct{ *pulumi.OutputState }
 
-func (GetImagesImageSnapshotOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetImagesImageSnapshot)(nil)).Elem()
+func (GetInstanceImageSnapshotOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetInstanceImageSnapshot)(nil)).Elem()
 }
 
-func (o GetImagesImageSnapshotOutput) ToGetImagesImageSnapshotOutput() GetImagesImageSnapshotOutput {
+func (o GetInstanceImageSnapshotOutput) ToGetInstanceImageSnapshotOutput() GetInstanceImageSnapshotOutput {
 	return o
 }
 
-func (o GetImagesImageSnapshotOutput) ToGetImagesImageSnapshotOutputWithContext(ctx context.Context) GetImagesImageSnapshotOutput {
+func (o GetInstanceImageSnapshotOutput) ToGetInstanceImageSnapshotOutputWithContext(ctx context.Context) GetInstanceImageSnapshotOutput {
 	return o
 }
 
-func (o GetImagesImageSnapshotOutput) DiskSize() pulumi.IntOutput {
-	return o.ApplyT(func(v GetImagesImageSnapshot) int { return v.DiskSize }).(pulumi.IntOutput)
+func (o GetInstanceImageSnapshotOutput) DiskSize() pulumi.IntOutput {
+	return o.ApplyT(func(v GetInstanceImageSnapshot) int { return v.DiskSize }).(pulumi.IntOutput)
 }
 
-func (o GetImagesImageSnapshotOutput) DiskUsage() pulumi.StringOutput {
-	return o.ApplyT(func(v GetImagesImageSnapshot) string { return v.DiskUsage }).(pulumi.StringOutput)
+func (o GetInstanceImageSnapshotOutput) DiskUsage() pulumi.StringOutput {
+	return o.ApplyT(func(v GetInstanceImageSnapshot) string { return v.DiskUsage }).(pulumi.StringOutput)
 }
 
-func (o GetImagesImageSnapshotOutput) SnapshotId() pulumi.StringOutput {
-	return o.ApplyT(func(v GetImagesImageSnapshot) string { return v.SnapshotId }).(pulumi.StringOutput)
+func (o GetInstanceImageSnapshotOutput) SnapshotId() pulumi.StringOutput {
+	return o.ApplyT(func(v GetInstanceImageSnapshot) string { return v.SnapshotId }).(pulumi.StringOutput)
 }
 
-func (o GetImagesImageSnapshotOutput) SnapshotName() pulumi.StringOutput {
-	return o.ApplyT(func(v GetImagesImageSnapshot) string { return v.SnapshotName }).(pulumi.StringOutput)
+func (o GetInstanceImageSnapshotOutput) SnapshotName() pulumi.StringOutput {
+	return o.ApplyT(func(v GetInstanceImageSnapshot) string { return v.SnapshotName }).(pulumi.StringOutput)
 }
 
-type GetImagesImageSnapshotArrayOutput struct{ *pulumi.OutputState }
+type GetInstanceImageSnapshotArrayOutput struct{ *pulumi.OutputState }
 
-func (GetImagesImageSnapshotArrayOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]GetImagesImageSnapshot)(nil)).Elem()
+func (GetInstanceImageSnapshotArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetInstanceImageSnapshot)(nil)).Elem()
 }
 
-func (o GetImagesImageSnapshotArrayOutput) ToGetImagesImageSnapshotArrayOutput() GetImagesImageSnapshotArrayOutput {
+func (o GetInstanceImageSnapshotArrayOutput) ToGetInstanceImageSnapshotArrayOutput() GetInstanceImageSnapshotArrayOutput {
 	return o
 }
 
-func (o GetImagesImageSnapshotArrayOutput) ToGetImagesImageSnapshotArrayOutputWithContext(ctx context.Context) GetImagesImageSnapshotArrayOutput {
+func (o GetInstanceImageSnapshotArrayOutput) ToGetInstanceImageSnapshotArrayOutputWithContext(ctx context.Context) GetInstanceImageSnapshotArrayOutput {
 	return o
 }
 
-func (o GetImagesImageSnapshotArrayOutput) Index(i pulumi.IntInput) GetImagesImageSnapshotOutput {
-	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetImagesImageSnapshot {
-		return vs[0].([]GetImagesImageSnapshot)[vs[1].(int)]
-	}).(GetImagesImageSnapshotOutput)
+func (o GetInstanceImageSnapshotArrayOutput) Index(i pulumi.IntInput) GetInstanceImageSnapshotOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetInstanceImageSnapshot {
+		return vs[0].([]GetInstanceImageSnapshot)[vs[1].(int)]
+	}).(GetInstanceImageSnapshotOutput)
 }
 
 func init() {
-	pulumi.RegisterInputType(reflect.TypeOf((*GetImagesImageInput)(nil)).Elem(), GetImagesImageArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetImagesImageArrayInput)(nil)).Elem(), GetImagesImageArray{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetImagesImageSnapshotInput)(nil)).Elem(), GetImagesImageSnapshotArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetImagesImageSnapshotArrayInput)(nil)).Elem(), GetImagesImageSnapshotArray{})
-	pulumi.RegisterOutputType(GetImagesImageOutput{})
-	pulumi.RegisterOutputType(GetImagesImageArrayOutput{})
-	pulumi.RegisterOutputType(GetImagesImageSnapshotOutput{})
-	pulumi.RegisterOutputType(GetImagesImageSnapshotArrayOutput{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetInstanceImageInput)(nil)).Elem(), GetInstanceImageArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetInstanceImageArrayInput)(nil)).Elem(), GetInstanceImageArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetInstanceImageSnapshotInput)(nil)).Elem(), GetInstanceImageSnapshotArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetInstanceImageSnapshotArrayInput)(nil)).Elem(), GetInstanceImageSnapshotArray{})
+	pulumi.RegisterOutputType(GetInstanceImageOutput{})
+	pulumi.RegisterOutputType(GetInstanceImageArrayOutput{})
+	pulumi.RegisterOutputType(GetInstanceImageSnapshotOutput{})
+	pulumi.RegisterOutputType(GetInstanceImageSnapshotArrayOutput{})
 }

@@ -4,8 +4,8 @@
 import * as utilities from "../utilities";
 
 // Export members:
-export { GetDomainsArgs, GetDomainsResult, GetDomainsOutputArgs } from "./getDomains";
-export const getDomains: typeof import("./getDomains").getDomains = null as any;
-export const getDomainsOutput: typeof import("./getDomains").getDomainsOutput = null as any;
-utilities.lazyLoad(exports, ["getDomains","getDomainsOutput"], () => require("./getDomains"));
+export { GetInstanceArgs, GetInstanceResult, GetInstanceOutputArgs } from "./getInstance";
+export const getInstance: typeof import("./getInstance").getInstance = null as any;
+export const getInstanceOutput: typeof import("./getInstance").getInstanceOutput = null as any;
+utilities.lazyLoad(exports, ["getInstance","getInstanceOutput"], () => require("./getInstance"));
 

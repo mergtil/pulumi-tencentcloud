@@ -10,6 +10,11 @@ export type Certificate = import("./certificate").Certificate;
 export const Certificate: typeof import("./certificate").Certificate = null as any;
 utilities.lazyLoad(exports, ["Certificate"], () => require("./certificate"));
 
+export { CommitCertificateInformationArgs, CommitCertificateInformationState } from "./commitCertificateInformation";
+export type CommitCertificateInformation = import("./commitCertificateInformation").CommitCertificateInformation;
+export const CommitCertificateInformation: typeof import("./commitCertificateInformation").CommitCertificateInformation = null as any;
+utilities.lazyLoad(exports, ["CommitCertificateInformation"], () => require("./commitCertificateInformation"));
+
 export { FreeCertificateArgs, FreeCertificateState } from "./freeCertificate";
 export type FreeCertificate = import("./freeCertificate").FreeCertificate;
 export const FreeCertificate: typeof import("./freeCertificate").FreeCertificate = null as any;
@@ -32,6 +37,8 @@ const _module = {
         switch (type) {
             case "tencentcloud:Ssl/certificate:Certificate":
                 return new Certificate(name, <any>undefined, { urn })
+            case "tencentcloud:Ssl/commitCertificateInformation:CommitCertificateInformation":
+                return new CommitCertificateInformation(name, <any>undefined, { urn })
             case "tencentcloud:Ssl/freeCertificate:FreeCertificate":
                 return new FreeCertificate(name, <any>undefined, { urn })
             case "tencentcloud:Ssl/payCertificate:PayCertificate":
@@ -42,5 +49,6 @@ const _module = {
     },
 };
 pulumi.runtime.registerResourceModule("tencentcloud", "Ssl/certificate", _module)
+pulumi.runtime.registerResourceModule("tencentcloud", "Ssl/commitCertificateInformation", _module)
 pulumi.runtime.registerResourceModule("tencentcloud", "Ssl/freeCertificate", _module)
 pulumi.runtime.registerResourceModule("tencentcloud", "Ssl/payCertificate", _module)

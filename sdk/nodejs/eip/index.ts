@@ -15,11 +15,6 @@ export type Association = import("./association").Association;
 export const Association: typeof import("./association").Association = null as any;
 utilities.lazyLoad(exports, ["Association"], () => require("./association"));
 
-export { EipArgs, EipState } from "./eip";
-export type Eip = import("./eip").Eip;
-export const Eip: typeof import("./eip").Eip = null as any;
-utilities.lazyLoad(exports, ["Eip"], () => require("./eip"));
-
 export { GetAddressQuotaArgs, GetAddressQuotaResult, GetAddressQuotaOutputArgs } from "./getAddressQuota";
 export const getAddressQuota: typeof import("./getAddressQuota").getAddressQuota = null as any;
 export const getAddressQuotaOutput: typeof import("./getAddressQuota").getAddressQuotaOutput = null as any;
@@ -29,6 +24,11 @@ export { GetNetworkAccountTypeArgs, GetNetworkAccountTypeResult, GetNetworkAccou
 export const getNetworkAccountType: typeof import("./getNetworkAccountType").getNetworkAccountType = null as any;
 export const getNetworkAccountTypeOutput: typeof import("./getNetworkAccountType").getNetworkAccountTypeOutput = null as any;
 utilities.lazyLoad(exports, ["getNetworkAccountType","getNetworkAccountTypeOutput"], () => require("./getNetworkAccountType"));
+
+export { InstanceArgs, InstanceState } from "./instance";
+export type Instance = import("./instance").Instance;
+export const Instance: typeof import("./instance").Instance = null as any;
+utilities.lazyLoad(exports, ["Instance"], () => require("./instance"));
 
 export { NormalAddressReturnArgs, NormalAddressReturnState } from "./normalAddressReturn";
 export type NormalAddressReturn = import("./normalAddressReturn").NormalAddressReturn;
@@ -49,8 +49,8 @@ const _module = {
                 return new AddressTransform(name, <any>undefined, { urn })
             case "tencentcloud:Eip/association:Association":
                 return new Association(name, <any>undefined, { urn })
-            case "tencentcloud:Eip/eip:Eip":
-                return new Eip(name, <any>undefined, { urn })
+            case "tencentcloud:Eip/instance:Instance":
+                return new Instance(name, <any>undefined, { urn })
             case "tencentcloud:Eip/normalAddressReturn:NormalAddressReturn":
                 return new NormalAddressReturn(name, <any>undefined, { urn })
             case "tencentcloud:Eip/publicAddressAdjust:PublicAddressAdjust":
@@ -62,6 +62,6 @@ const _module = {
 };
 pulumi.runtime.registerResourceModule("tencentcloud", "Eip/addressTransform", _module)
 pulumi.runtime.registerResourceModule("tencentcloud", "Eip/association", _module)
-pulumi.runtime.registerResourceModule("tencentcloud", "Eip/eip", _module)
+pulumi.runtime.registerResourceModule("tencentcloud", "Eip/instance", _module)
 pulumi.runtime.registerResourceModule("tencentcloud", "Eip/normalAddressReturn", _module)
 pulumi.runtime.registerResourceModule("tencentcloud", "Eip/publicAddressAdjust", _module)

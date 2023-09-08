@@ -5,21 +5,21 @@ import * as pulumi from "@pulumi/pulumi";
 import * as utilities from "../utilities";
 
 // Export members:
-export { AuditArgs, AuditState } from "./audit";
-export type Audit = import("./audit").Audit;
-export const Audit: typeof import("./audit").Audit = null as any;
-utilities.lazyLoad(exports, ["Audit"], () => require("./audit"));
+export { InstanceArgs, InstanceState } from "./instance";
+export type Instance = import("./instance").Instance;
+export const Instance: typeof import("./instance").Instance = null as any;
+utilities.lazyLoad(exports, ["Instance"], () => require("./instance"));
 
 
 const _module = {
     version: utilities.getVersion(),
     construct: (name: string, type: string, urn: string): pulumi.Resource => {
         switch (type) {
-            case "tencentcloud:Deprecatedaudit/audit:Audit":
-                return new Audit(name, <any>undefined, { urn })
+            case "tencentcloud:Deprecatedaudit/instance:Instance":
+                return new Instance(name, <any>undefined, { urn })
             default:
                 throw new Error(`unknown resource type ${type}`);
         }
     },
 };
-pulumi.runtime.registerResourceModule("tencentcloud", "Deprecatedaudit/audit", _module)
+pulumi.runtime.registerResourceModule("tencentcloud", "Deprecatedaudit/instance", _module)

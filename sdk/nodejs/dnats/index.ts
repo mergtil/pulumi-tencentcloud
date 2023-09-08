@@ -4,8 +4,8 @@
 import * as utilities from "../utilities";
 
 // Export members:
-export { GetDnatsArgs, GetDnatsResult, GetDnatsOutputArgs } from "./getDnats";
-export const getDnats: typeof import("./getDnats").getDnats = null as any;
-export const getDnatsOutput: typeof import("./getDnats").getDnatsOutput = null as any;
-utilities.lazyLoad(exports, ["getDnats","getDnatsOutput"], () => require("./getDnats"));
+export { GetInstanceArgs, GetInstanceResult, GetInstanceOutputArgs } from "./getInstance";
+export const getInstance: typeof import("./getInstance").getInstance = null as any;
+export const getInstanceOutput: typeof import("./getInstance").getInstanceOutput = null as any;
+utilities.lazyLoad(exports, ["getInstance","getInstanceOutput"], () => require("./getInstance"));
 

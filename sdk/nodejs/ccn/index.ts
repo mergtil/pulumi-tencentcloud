@@ -15,11 +15,6 @@ export type BandwidthLimit = import("./bandwidthLimit").BandwidthLimit;
 export const BandwidthLimit: typeof import("./bandwidthLimit").BandwidthLimit = null as any;
 utilities.lazyLoad(exports, ["BandwidthLimit"], () => require("./bandwidthLimit"));
 
-export { CcnArgs, CcnState } from "./ccn";
-export type Ccn = import("./ccn").Ccn;
-export const Ccn: typeof import("./ccn").Ccn = null as any;
-utilities.lazyLoad(exports, ["Ccn"], () => require("./ccn"));
-
 export { GetBandwidthLimitsArgs, GetBandwidthLimitsResult, GetBandwidthLimitsOutputArgs } from "./getBandwidthLimits";
 export const getBandwidthLimits: typeof import("./getBandwidthLimits").getBandwidthLimits = null as any;
 export const getBandwidthLimitsOutput: typeof import("./getBandwidthLimits").getBandwidthLimitsOutput = null as any;
@@ -50,6 +45,11 @@ export const getTenantInstances: typeof import("./getTenantInstances").getTenant
 export const getTenantInstancesOutput: typeof import("./getTenantInstances").getTenantInstancesOutput = null as any;
 utilities.lazyLoad(exports, ["getTenantInstances","getTenantInstancesOutput"], () => require("./getTenantInstances"));
 
+export { InstanceArgs, InstanceState } from "./instance";
+export type Instance = import("./instance").Instance;
+export const Instance: typeof import("./instance").Instance = null as any;
+utilities.lazyLoad(exports, ["Instance"], () => require("./instance"));
+
 export { InstancesAcceptAttachArgs, InstancesAcceptAttachState } from "./instancesAcceptAttach";
 export type InstancesAcceptAttach = import("./instancesAcceptAttach").InstancesAcceptAttach;
 export const InstancesAcceptAttach: typeof import("./instancesAcceptAttach").InstancesAcceptAttach = null as any;
@@ -79,8 +79,8 @@ const _module = {
                 return new Attachment(name, <any>undefined, { urn })
             case "tencentcloud:Ccn/bandwidthLimit:BandwidthLimit":
                 return new BandwidthLimit(name, <any>undefined, { urn })
-            case "tencentcloud:Ccn/ccn:Ccn":
-                return new Ccn(name, <any>undefined, { urn })
+            case "tencentcloud:Ccn/instance:Instance":
+                return new Instance(name, <any>undefined, { urn })
             case "tencentcloud:Ccn/instancesAcceptAttach:InstancesAcceptAttach":
                 return new InstancesAcceptAttach(name, <any>undefined, { urn })
             case "tencentcloud:Ccn/instancesRejectAttach:InstancesRejectAttach":
@@ -96,7 +96,7 @@ const _module = {
 };
 pulumi.runtime.registerResourceModule("tencentcloud", "Ccn/attachment", _module)
 pulumi.runtime.registerResourceModule("tencentcloud", "Ccn/bandwidthLimit", _module)
-pulumi.runtime.registerResourceModule("tencentcloud", "Ccn/ccn", _module)
+pulumi.runtime.registerResourceModule("tencentcloud", "Ccn/instance", _module)
 pulumi.runtime.registerResourceModule("tencentcloud", "Ccn/instancesAcceptAttach", _module)
 pulumi.runtime.registerResourceModule("tencentcloud", "Ccn/instancesRejectAttach", _module)
 pulumi.runtime.registerResourceModule("tencentcloud", "Ccn/instancesResetAttach", _module)
